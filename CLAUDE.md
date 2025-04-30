@@ -3,11 +3,13 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Build & Test Commands
-- **Setup**: `pip install -e .` (install in development mode)
-- **Run tests**: `pytest` (all tests), `pytest tests/path/to/test.py::test_function -v` (single test)
+- **Setup**: `gmake setup` (create virtual environment and install dependencies)
+- **Environment**: `source scripts/activate.sh` (activate environment with helper aliases)
+- **Run tests**: `gmake test` (all tests), `pytest tests/path/to/test.py::test_function -v` (single test)
 - **Jupyter**: `jupyter notebook notebooks/` (start notebook server)
-- **Lint**: `flake8 values_explorer/` (lint Python code)
-- **Type checking**: `mypy values_explorer/` (check types)
+- **Lint**: `gmake lint` (run all linters)
+- **Format**: `gmake format` (format code with black, isort, and ruff)
+- **Data processing**: `gmake data-help` (see available data commands)
 - **Dataset access**: Use `datasets` library: `load_dataset("Anthropic/values-in-the-wild", "values_frequencies")`
 
 ## Code Style Guidelines

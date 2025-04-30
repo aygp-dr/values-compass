@@ -24,7 +24,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Conventional Commits**: Use format `<type>(<scope>): <description>` 
 - **Types**: feat, fix, docs, style, refactor, perf, test, chore
 - **Example**: `feat(visualization): add scatter plot for value frequency`
-- **Co-authors**: Do not include co-author info in commit message body
-- **Attribution**: 
-  - Co-Authored-By: Claude <claude@anthropic.com>
-  - Reviewed-By: Jason Walsh <j@wal.sh>
+- **Commit Trailers**: Use `--trailer` for attribution, not in message body
+  ```bash
+  git commit -m "feat(scope): description" \
+    --trailer "Co-Authored-By: Claude <claude@anthropic.com>" \
+    --trailer "Reviewed-By: Jason Walsh <j@wal.sh>"
+  ```

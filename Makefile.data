@@ -1,0 +1,215 @@
+# Makefile for Anthropic Values-in-the-Wild dataset exploration
+
+# Configuration
+DATASET_NAME = Anthropic/values-in-the-wild
+DATA_DIR = data
+OUTPUT_DIR = output
+HF_FILES_URL = https://huggingface.co/datasets/$(DATASET_NAME)/resolve/main
+
+# CSV file paths
+FREQ_CSV = $(DATA_DIR)/values_frequencies.csv
+TREE_CSV = $(DATA_DIR)/values_tree.csv
+ALL_CSV = $(FREQ_CSV) $(TREE_CSV)
+
+# Output files
+SUMMARY_MD = $(OUTPUT_DIR)/summary.md
+INFO_MD = $(OUTPUT_DIR)/dataset_info.md
+TOP_VALUES_TXT = $(OUTPUT_DIR)/top_values.txt
+CATEGORIES_TXT = $(OUTPUT_DIR)/categories.txt
+LEVEL_COUNTS_TXT = $(OUTPUT_DIR)/level_counts.txt
+
+# Make sure the directories exist
+$(DATA_DIR):
+	mkdir -p $(DATA_DIR)
+
+$(OUTPUT_DIR):
+	mkdir -p $(OUTPUT_DIR)
+
+# Download individual CSV files (only if they don't exist)
+$(FREQ_CSV): | $(DATA_DIR)
+	@echo "Downloading values_frequencies.csv..."
+	@curl -s -L $(HF_FILES_URL)/values_frequencies.csv -o $@
+	@echo "✓ Downloaded $(notdir $@) ($(shell du -h $@ | cut -f1))"
+
+$(TREE_CSV): | $(DATA_DIR)
+	@echo "Downloading values_tree.csv..."
+	@curl -s -L $(HF_FILES_URL)/values_tree.csv -o $@
+	@echo "✓ Downloaded $(notdir $@) ($(shell du -h $@ | cut -f1))"
+
+# Download all CSV files
+download-csv: $(ALL_CSV)
+	@echo "All files downloaded."
+
+# Check if the files have been downloaded
+check-files:
+	@echo "Checking for dataset files..."
+	@for file in $(ALL_CSV); do \
+		if [ -f $$file ]; then \
+			echo "✓ $$file exists ($(shell du -h $$file | cut -f1))"; \
+		else \
+			echo "✗ $$file not found"; \
+		fi; \
+	done
+
+# Top values - depends on frequency CSV file
+$(TOP_VALUES_TXT): $(FREQ_CSV) | $(OUTPUT_DIR)
+	@echo "Generating top values list..."
+	@echo "Top 10 values by frequency:" > $@
+	@xsv select value,pct_convos $(FREQ_CSV) | \
+		xsv sort -R -s pct_convos | \
+		xsv head -n 10 | \
+		xsv table >> $@
+	@echo "✓ Generated $(notdir $@)"
+
+# Value categories - depends on tree CSV file
+$(CATEGORIES_TXT): $(TREE_CSV) | $(OUTPUT_DIR)
+	@echo "Generating value categories list..."
+	@echo "Value categories from hierarchy:" > $@
+	@xsv select name,level,description $(TREE_CSV) | \
+		xsv search -s level "^3$$" | \
+		xsv sort -s name | \
+		xsv table >> $@
+	@echo "✓ Generated $(notdir $@)"
+
+# Count by level - depends on tree CSV file
+$(LEVEL_COUNTS_TXT): $(TREE_CSV) | $(OUTPUT_DIR)
+	@echo "Generating level counts..."
+	@echo "Count of values by hierarchical level:" > $@
+	@xsv select level $(TREE_CSV) | \
+		xsv frequency | \
+		xsv sort -s field | \
+		xsv table >> $@
+	@echo "✓ Generated $(notdir $@)"
+
+# Generate summary report - depends on both CSV files
+$(SUMMARY_MD): $(ALL_CSV) | $(OUTPUT_DIR)
+	@echo "Generating dataset summary..."
+	@echo "## Values-in-the-Wild Dataset Summary" > $@
+	@echo "" >> $@
+	@echo "### Top 20 Values" >> $@
+	@echo "" >> $@
+	@echo "| Value | Frequency (%) |" >> $@
+	@echo "|-------|---------------|" >> $@
+	@xsv select value,pct_convos $(FREQ_CSV) | \
+		xsv sort -R -s pct_convos | \
+		xsv head -n 20 | \
+		xsv fmt -t "| {} | {} |" >> $@
+	@echo "" >> $@
+	@echo "### Value Categories" >> $@
+	@echo "" >> $@
+	@echo "| Category | Description |" >> $@
+	@echo "|----------|-------------|" >> $@
+	@xsv select name,description $(TREE_CSV) | \
+		xsv search -s name "Values" | \
+		xsv fmt -t "| {} | {} |" >> $@
+	@echo "✓ Generated $(notdir $@)"
+
+# Dataset info - depends on both CSV files
+$(INFO_MD): $(ALL_CSV) | $(OUTPUT_DIR)
+	@echo "Creating dataset info snapshot..."
+	@echo "# Anthropic Values-in-the-Wild Dataset" > $@
+	@echo "" >> $@
+	@echo "Generated: $(shell date)" >> $@
+	@echo "" >> $@
+	@echo "## Files" >> $@
+	@for file in $(ALL_CSV); do \
+		echo "- $$(basename $$file): $$(wc -l < $$file) rows ($$(du -h $$file | cut -f1))" >> $@; \
+	done
+	@echo "" >> $@
+	@echo "## Value Distribution" >> $@
+	@echo "" >> $@
+	@echo "Total number of unique values: $$(xsv count $(FREQ_CSV))" >> $@
+	@echo "" >> $@
+	@echo "### Top-level categories:" >> $@
+	@xsv select name,description $(TREE_CSV) | \
+		xsv search -s name "Values" | \
+		xsv fmt -t "- **{}**: {}" >> $@
+	@echo "✓ Generated $(notdir $@)"
+
+# Target for displaying top values - uses file if exists, otherwise generates it
+top-values: $(TOP_VALUES_TXT)
+	@cat $(TOP_VALUES_TXT)
+
+# Target for displaying value categories - uses file if exists, otherwise generates it
+value-categories: $(CATEGORIES_TXT)
+	@cat $(CATEGORIES_TXT)
+
+# Target for displaying level counts - uses file if exists, otherwise generates it
+count-by-level: $(LEVEL_COUNTS_TXT)
+	@cat $(LEVEL_COUNTS_TXT)
+
+# Search for a specific value by keyword - always executes
+search-value: $(FREQ_CSV)
+	@if [ -z "$(KEYWORD)" ]; then \
+		echo "Please provide a keyword: make search-value KEYWORD=your_search_term"; \
+	else \
+		echo "Searching for values containing '$(KEYWORD)'..."; \
+		xsv search -i "$(KEYWORD)" $(FREQ_CSV) | \
+		xsv select value,pct_convos | \
+		xsv sort -R -s pct_convos | \
+		xsv table; \
+	fi
+
+# Find child values for a top-level category - always executes
+category-children: $(TREE_CSV)
+	@if [ -z "$(CATEGORY)" ]; then \
+		echo "Please provide a category: make category-children CATEGORY=\"Category Name\""; \
+	else \
+		echo "Finding children of category '$(CATEGORY)'..."; \
+		PARENT_ID=$$(xsv search -i "$(CATEGORY)" $(TREE_CSV) | xsv select cluster_id | xsv slice -s 1 | tr -d '\r\n'); \
+		if [ -z "$$PARENT_ID" ]; then \
+			echo "Category not found."; \
+		else \
+			echo "Children of '$(CATEGORY)' (Cluster ID: $$PARENT_ID):"; \
+			xsv search -s parent_cluster_id "$$PARENT_ID" $(TREE_CSV) | \
+			xsv select name,description | \
+			xsv table; \
+		fi; \
+	fi
+
+# Convert the values_frequencies CSV to a simple text-based bar chart
+text-chart: $(FREQ_CSV)
+	@echo "Top 10 values by frequency (%):"
+	@xsv select value,pct_convos $(FREQ_CSV) | \
+		xsv sort -R -s pct_convos | \
+		xsv head -n 10 | \
+		awk -F, '{printf "%-20s ", $$1; for (i=0; i<$$2; i+=1) printf "█"; printf " %.1f%\n", $$2}'
+
+# Force regeneration of output files
+refresh: clean-output $(TOP_VALUES_TXT) $(CATEGORIES_TXT) $(LEVEL_COUNTS_TXT) $(SUMMARY_MD) $(INFO_MD)
+	@echo "All output files have been refreshed."
+
+# Clean output files
+clean-output:
+	@echo "Cleaning output files..."
+	@rm -f $(TOP_VALUES_TXT) $(CATEGORIES_TXT) $(LEVEL_COUNTS_TXT) $(SUMMARY_MD) $(INFO_MD)
+	@echo "Output files cleaned."
+
+# Clean all downloaded and generated files
+clean-all: clean-output
+	@echo "Cleaning all files..."
+	@rm -f $(ALL_CSV)
+	@echo "All files cleaned."
+
+# All-in-one target to download and generate all output files
+data-all: $(ALL_CSV) $(TOP_VALUES_TXT) $(CATEGORIES_TXT) $(LEVEL_COUNTS_TXT) $(SUMMARY_MD) $(INFO_MD)
+	@echo "All files downloaded and processed."
+
+# Data help target
+data-help:
+	@echo "Available data targets:"
+	@echo "  download-csv        - Download CSV files (only if they don't exist)"
+	@echo "  check-files         - Check if dataset files are present"
+	@echo "  top-values          - Show top 10 values by frequency"
+	@echo "  value-categories    - List all value categories from hierarchy"
+	@echo "  count-by-level      - Count values by hierarchical level"
+	@echo "  search-value        - Search for values by keyword (use: make search-value KEYWORD=term)"
+	@echo "  category-children   - Find children of a category (use: make category-children CATEGORY=\"Category Name\")"
+	@echo "  text-chart          - Display a simple text-based bar chart of top values"
+	@echo "  refresh             - Force regeneration of all output files"
+	@echo "  clean-output        - Remove all generated output files"
+	@echo "  clean-all           - Remove all downloaded and generated files"
+	@echo "  data-all            - Download and process all files"
+	@echo "  data-help           - Show this help message"
+
+.PHONY: download-csv check-files top-values value-categories count-by-level search-value category-children text-chart refresh clean-output clean-all data-all data-help

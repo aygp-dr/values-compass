@@ -54,6 +54,9 @@ dev = [
     "pytest-cov",
     "ruff",
 ]
+data = [
+    "xsv>=0.13.0",
+]
 
 [tool.setuptools]
 packages = ["values_explorer"]

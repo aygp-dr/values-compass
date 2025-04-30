@@ -1,5 +1,8 @@
 .PHONY: setup clean test run lint deps
 
+# Python command to use (using uv for better dependency isolation)
+PYTHON = uv run python
+
 # Default target
 all: setup
 
@@ -11,6 +14,7 @@ all: setup
 deps: .venv
 	. .venv/bin/activate && pip install -U pip uv
 	. .venv/bin/activate && uv pip install -e ".[dev]"
+	@echo "UV installed successfully. You can now use 'uv run python' for isolated environments."
 
 # Project setup (creates virtual environment and installs dependencies)
 setup: .venv deps
@@ -38,21 +42,21 @@ clean-all: clean
 
 # Run tests
 test: .venv
-	. .venv/bin/activate && python -m pytest
+	. .venv/bin/activate && $(PYTHON) -m pytest
 
 # Run linters
 lint: .venv
-	. .venv/bin/activate && ruff check .
-	. .venv/bin/activate && black --check .
-	. .venv/bin/activate && isort --check .
-	. .venv/bin/activate && mypy values_explorer/
+	. .venv/bin/activate && uv run ruff check .
+	. .venv/bin/activate && uv run black --check .
+	. .venv/bin/activate && uv run isort --check .
+	. .venv/bin/activate && uv run mypy values_explorer/
 
 # Format code
 format: .venv
-	. .venv/bin/activate && ruff check --fix .
-	. .venv/bin/activate && black .
-	. .venv/bin/activate && isort .
+	. .venv/bin/activate && uv run ruff check --fix .
+	. .venv/bin/activate && uv run black .
+	. .venv/bin/activate && uv run isort .
 
 # Run project
 run: .venv
-	. .venv/bin/activate && python -m values_explorer.main
+	. .venv/bin/activate && $(PYTHON) -m values_explorer.main

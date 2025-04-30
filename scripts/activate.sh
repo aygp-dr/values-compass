@@ -28,5 +28,15 @@ if ! python -c "import values_explorer" &>/dev/null; then
     uv pip install -e ".[dev]"
 fi
 
+# Setup helpful aliases
+alias py="uv run python"
+alias pytest="uv run pytest"
+alias ruff="uv run ruff"
+alias black="uv run black"
+alias isort="uv run isort"
+alias mypy="uv run mypy"
+
 echo "Values Compass environment activated with Python $(python --version)"
+echo "Helper aliases created: py, pytest, ruff, black, isort, mypy"
+echo "Use 'py' command to run Python with proper isolation"
 echo "Run 'deactivate' to exit the virtual environment"

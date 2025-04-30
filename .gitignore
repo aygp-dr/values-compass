@@ -21,6 +21,7 @@ wheels/
 *.egg
 
 # Distribution / packaging
+.Python
 env/
 build/
 develop-eggs/
@@ -60,6 +61,8 @@ coverage.xml
 env/
 venv/
 ENV/
+.direnv/
+.cache/
 
 # Project specific
 output/
@@ -67,9 +70,5 @@ data/downloads/
 notebooks/images/
 *.pkl
 
-# Emacs backup files
+# Backup files
 *~
-
-# OS specific
-.DS_Store
-Thumbs.db

@@ -1,19 +1,19 @@
-.PHONY: setup clean test run lint venv deps
+.PHONY: setup clean test run lint deps
 
 # Default target
 all: setup
 
 # Create virtual environment
-venv:
+.venv:
 	python -m venv .venv
 
 # Install dependencies
-deps:
-	pip install -U pip uv
-	uv pip install -e ".[dev]"
+deps: .venv
+	. .venv/bin/activate && pip install -U pip uv
+	. .venv/bin/activate && uv pip install -e ".[dev]"
 
 # Project setup (creates virtual environment and installs dependencies)
-setup: venv deps
+setup: .venv deps
 
 # Create shell with environment loaded
 shell:
@@ -37,22 +37,22 @@ clean-all: clean
 	rm -rf .cache/
 
 # Run tests
-test:
-	python -m pytest
+test: .venv
+	. .venv/bin/activate && python -m pytest
 
 # Run linters
-lint:
-	ruff check .
-	black --check .
-	isort --check .
-	mypy values_explorer/
+lint: .venv
+	. .venv/bin/activate && ruff check .
+	. .venv/bin/activate && black --check .
+	. .venv/bin/activate && isort --check .
+	. .venv/bin/activate && mypy values_explorer/
 
 # Format code
-format:
-	ruff check --fix .
-	black .
-	isort .
+format: .venv
+	. .venv/bin/activate && ruff check --fix .
+	. .venv/bin/activate && black .
+	. .venv/bin/activate && isort .
 
 # Run project
-run:
-	python -m values_explorer.main
+run: .venv
+	. .venv/bin/activate && python -m values_explorer.main

@@ -1,0 +1,96 @@
+#+TITLE: Exploring Anthropic's Values-in-the-Wild Dataset
+#+AUTHOR: Aidan Pace
+#+EMAIL: apace@defrecord.com
+#+DATE: [2025-04-30 Wed]
+
+* Values in the Wild: Understanding AI Values System
+
+This project provides tools for exploring and analyzing Anthropic's Values-in-the-Wild dataset, which offers a comprehensive taxonomy of values expressed by AI assistants in real-world interactions.
+
+** Background
+
+The Values-in-the-Wild dataset is a groundbreaking resource from Anthropic that catalogs and taxonomizes 3,307 unique values expressed by Claude during hundreds of thousands of real-world conversations. Using a privacy-preserving methodology, Anthropic researchers extracted these values without human reviewers needing to access any conversation content.
+
+The research presents the first large-scale empirical taxonomy of AI values observed in deployment contexts, revealing both consistent patterns and contextual variations in how AI systems express values across different interaction types.
+
+** Dataset Overview
+
+The dataset contains two main configurations:
+
+- ~values_frequencies~: Contains data about how frequently different values appear
+- ~values_tree~: Contains the hierarchical structure of the values taxonomy
+
+The values are organized into five primary conceptual domains:
+1. Practical Values (31.4%)
+2. Epistemic Values (22.2%)
+3. Social Values (21.4%)
+4. Protective Values (13.9%)
+5. Personal Values (11.1%)
+
+The most common AI values include:
+- Helpfulness (23.4%)
+- Professionalism (22.9%)
+- Transparency (17.4%)
+- Clarity (16.6%)
+- Thoroughness (14.3%)
+
+** Key Findings
+
+The research demonstrates that while Claude expresses thousands of diverse values that respond to and engage with varied human perspectives, it tends to express some common trans-situational values—primarily centered around competent and supportive assistance, such as "helpfulness," "professionalism," "transparency," and "clarity."
+
+Values are highly context-dependent:
+- "Healthy boundaries" appears disproportionately when providing relationship advice
+- "Historical accuracy" appears when analyzing controversial historical events
+- "Human agency" features prominently in technology ethics discussions
+
+Claude's response to human values varies:
+- It often mirrors positive human values (e.g., responding to "authenticity" with "authenticity")
+- It counters values like "deception" with "ethical integrity" and "honesty"
+
+** References
+
+1. Anthropic. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
+
+2. Huang, S., Durmus, E., McCain, M., Handa, K., Tamkin, A., Hong, J., Stern, M., Somani, A., Zhang, X., & Ganguli, D. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://assets.anthropic.com/m/18d20cca3cde3503/original/Values-in-the-Wild-Paper.pdf][Research Paper]]
+
+3. Hoover, S. (2025). Anthropic mapped Claude's morality: Here's what the chatbot values and doesn't. [[https://www.zdnet.com/article/anthropic-mapped-claudes-morality-heres-what-the-chatbot-values-and-doesnt/][ZDNet]]
+
+** Dataset Access
+
+The dataset is available on Hugging Face:
+#+BEGIN_SRC python
+from datasets import load_dataset
+dataset_values_frequencies = load_dataset("Anthropic/values-in-the-wild", "values_frequencies")
+dataset_values_tree = load_dataset("Anthropic/values-in-the-wild", "values_tree")
+#+END_SRC
+
+** Project Structure
+
+This repository contains tools for exploring and analyzing the Values-in-the-Wild dataset:
+
+#+BEGIN_SRC
+values_explorer/
+├── .gitignore
+├── README.org
+├── requirements.txt
+├── setup.py
+├── notebooks/
+│   └── exploration.org
+└── values_explorer/
+    ├── __init__.py
+    ├── data/
+    │   └── loader.py
+    ├── analysis/
+    │   ├── __init__.py
+    │   ├── clustering.py
+    │   └── visualization.py
+    └── utils/
+        ├── __init__.py
+        └── helpers.py
+#+END_SRC
+
+** Getting Started
+
+1. Clone this repository
+2. Install dependencies: ~pip install -e .~
+3. Open exploration notebook: ~emacs notebooks/exploration.org~

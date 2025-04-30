@@ -1,0 +1,662 @@
+#+TITLE: Project Setup for Values Compass
+#+AUTHOR: Aidan Pace
+#+EMAIL: apace@defrecord.com
+#+DATE: [2025-04-30 Wed]
+#+PROPERTY: header-args :mkdirp yes
+
+* Project Structure Setup
+
+This is a temporary setup file used to scaffold the Values Compass project.
+After running ~org-babel-tangle~ (C-c C-v t), you can remove this file.
+
+** Directory Structure
+
+Let's create the basic directory structure for our project:
+
+#+begin_src sh :tangle yes
+mkdir -p values_explorer/data
+mkdir -p values_explorer/analysis
+mkdir -p values_explorer/utils
+mkdir -p notebooks
+#+end_src
+
+** Core Files
+
+*** Setup.py
+
+#+begin_src python :tangle setup.py
+from setuptools import setup, find_packages
+
+setup(
+    name="values_explorer",
+    version="0.1.0",
+    packages=find_packages(),
+    install_requires=[
+        "datasets>=2.9.0",
+        "huggingface-hub>=0.12.0",
+        "matplotlib>=3.5.0",
+        "networkx>=2.7.0",
+        "numpy>=1.20.0",
+        "pandas>=1.3.0",
+        "scikit-learn>=1.0.0",
+        "seaborn>=0.11.0",
+        "torch>=1.10.0",
+        "transformers>=4.15.0",
+    ],
+    author="Aidan Pace",
+    author_email="apace@defrecord.com",
+    description="A toolkit for exploring the Anthropic Values-in-the-Wild dataset",
+    keywords="ai, ethics, values, anthropic, nlp",
+    url="https://github.com/aidanpace/values-compass",
+)
+#+end_src
+
+*** Requirements.txt
+
+#+begin_src text :tangle requirements.txt
+datasets>=2.9.0
+huggingface-hub>=0.12.0
+matplotlib>=3.5.0
+networkx>=2.7.0
+numpy>=1.20.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+seaborn>=0.11.0
+torch>=1.10.0
+transformers>=4.15.0
+#+end_src
+
+*** Makefile
+
+#+begin_src makefile :tangle Makefile
+.PHONY: setup clean test run
+
+setup:
+	pip install -e .
+
+clean:
+	rm -rf build/
+	rm -rf dist/
+	rm -rf *.egg-info/
+	find . -type d -name __pycache__ -exec rm -rf {} +
+	find . -type f -name "*.pyc" -delete
+
+test:
+	pytest
+
+run:
+	python -m values_explorer.main
+#+end_src
+
+*** .gitignore
+
+#+begin_src text :tangle .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Project specific
+output/
+data/downloads/
+notebooks/images/
+*.pkl
+#+end_src
+
+** Python Module Files
+
+*** values_explorer/__init__.py
+
+#+begin_src python :tangle values_explorer/__init__.py
+"""Values Compass - A toolkit for exploring Anthropic's Values-in-the-Wild dataset."""
+
+__version__ = "0.1.0"
+#+end_src
+
+*** values_explorer/data/loader.py
+
+#+begin_src python :tangle values_explorer/data/loader.py
+"""Data loading utilities for the Values-in-the-Wild dataset."""
+from datasets import load_dataset
+from typing import Dict, Optional, Union
+
+
+def load_values_dataset(config: str = "values_tree", split: str = "train") -> Dict:
+    """
+    Load the Values-in-the-Wild dataset.
+    
+    Args:
+        config: Dataset configuration - either "values_frequencies" or "values_tree"
+        split: Dataset split to load (default: "train")
+        
+    Returns:
+        Dataset object
+    """
+    return load_dataset("Anthropic/values-in-the-wild", config, split=split)
+
+
+def get_value_by_id(dataset, value_id: str) -> Optional[Dict]:
+    """
+    Retrieve a specific value by its ID.
+    
+    Args:
+        dataset: The loaded dataset
+        value_id: ID of the value to retrieve
+        
+    Returns:
+        Dictionary containing the value data or None if not found
+    """
+    # This implementation will need to be adjusted based on actual dataset structure
+    for item in dataset:
+        if item.get('id') == value_id:
+            return item
+    return None
+
+
+def get_values_by_category(dataset, category: str) -> list:
+    """
+    Get all values belonging to a specific category.
+    
+    Args:
+        dataset: The loaded dataset
+        category: Category name to filter by
+        
+    Returns:
+        List of values in the specified category
+    """
+    # This implementation will need to be adjusted based on actual dataset structure
+    return [item for item in dataset if item.get('category') == category]
+#+end_src
+
+*** values_explorer/data/__init__.py
+
+#+begin_src python :tangle values_explorer/data/__init__.py
+"""Data module for Values Compass."""
+#+end_src
+
+*** values_explorer/analysis/visualization.py
+
+#+begin_src python :tangle values_explorer/analysis/visualization.py
+"""Visualization utilities for the Values-in-the-Wild dataset."""
+import matplotlib.pyplot as plt
+import networkx as nx
+import pandas as pd
+from typing import Dict, List, Optional
+import seaborn as sns
+
+
+def plot_value_distribution(values_data, field: str = 'category', title: str = 'Value Distribution'):
+    """
+    Plot the distribution of values by a specific field.
+    
+    Args:
+        values_data: Dataset containing values
+        field: Field to group by for distribution
+        title: Plot title
+    """
+    # Convert to DataFrame for easier manipulation
+    if not isinstance(values_data, pd.DataFrame):
+        # This assumes values_data is a Hugging Face dataset
+        values_df = pd.DataFrame(values_data)
+    else:
+        values_df = values_data
+        
+    # Count values by the specified field
+    value_counts = values_df[field].value_counts()
+    
+    # Create plot
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=value_counts.index, y=value_counts.values)
+    plt.title(title)
+    plt.xlabel(field.capitalize())
+    plt.ylabel('Count')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    
+    return plt.gcf()
+
+
+def plot_value_hierarchy(values_tree_data, max_depth: int = 3):
+    """
+    Create a network graph visualization of the value hierarchy.
+    
+    Args:
+        values_tree_data: Dataset containing the hierarchical tree of values
+        max_depth: Maximum depth of the hierarchy to display
+    """
+    G = nx.DiGraph()
+    
+    # This implementation will need to be adjusted based on actual dataset structure
+    # For now, we assume there's a parent-child relationship in the data
+    
+    # Add nodes and edges
+    for item in values_tree_data:
+        node_id = item.get('id')
+        parent_id = item.get('parent_id')
+        
+        G.add_node(node_id, label=item.get('name', ''))
+        
+        if parent_id:
+            G.add_edge(parent_id, node_id)
+    
+    # Create layout
+    pos = nx.spring_layout(G)
+    
+    # Plot
+    plt.figure(figsize=(12, 10))
+    nx.draw(
+        G, pos, with_labels=True, 
+        node_color='lightblue', 
+        node_size=1000, 
+        font_size=8,
+        arrows=True
+    )
+    plt.title('Value Hierarchy Network')
+    
+    return plt.gcf()
+#+end_src
+
+*** values_explorer/analysis/clustering.py
+
+#+begin_src python :tangle values_explorer/analysis/clustering.py
+"""Clustering and taxonomy analysis for the Values-in-the-Wild dataset."""
+import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.feature_extraction.text import TfidfVectorizer
+from typing import Dict, List, Tuple
+
+
+def vectorize_values(values_data, text_field: str = 'description'):
+    """
+    Vectorize value descriptions for clustering analysis.
+    
+    Args:
+        values_data: Dataset containing values
+        text_field: Field containing text to vectorize
+        
+    Returns:
+        Tuple of (vectorizer, matrix)
+    """
+    # Extract text data
+    texts = [item[text_field] for item in values_data if text_field in item]
+    
+    # Vectorize
+    vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
+    matrix = vectorizer.fit_transform(texts)
+    
+    return vectorizer, matrix
+
+
+def cluster_values(feature_matrix, n_clusters: int = 5):
+    """
+    Cluster values based on their vectorized representations.
+    
+    Args:
+        feature_matrix: Matrix of vectorized value descriptions
+        n_clusters: Number of clusters to create
+        
+    Returns:
+        Cluster assignments for each value
+    """
+    kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+    clusters = kmeans.fit_predict(feature_matrix)
+    
+    return clusters
+
+
+def analyze_value_clusters(values_data, clusters, text_field: str = 'description'):
+    """
+    Analyze clusters to identify common themes.
+    
+    Args:
+        values_data: Dataset containing values
+        clusters: Cluster assignments for each value
+        text_field: Field containing text used for clustering
+        
+    Returns:
+        Dictionary mapping cluster IDs to representative values
+    """
+    cluster_analysis = {}
+    
+    for cluster_id in np.unique(clusters):
+        # Get indices of values in this cluster
+        indices = np.where(clusters == cluster_id)[0]
+        
+        # Get sample values
+        samples = [values_data[idx][text_field] for idx in indices[:5] if idx < len(values_data)]
+        
+        cluster_analysis[cluster_id] = {
+            'size': len(indices),
+            'samples': samples
+        }
+    
+    return cluster_analysis
+#+end_src
+
+*** values_explorer/analysis/__init__.py
+
+#+begin_src python :tangle values_explorer/analysis/__init__.py
+"""Analysis module for Values Compass."""
+#+end_src
+
+*** values_explorer/utils/helpers.py
+
+#+begin_src python :tangle values_explorer/utils/helpers.py
+"""Helper utilities for working with the Values-in-the-Wild dataset."""
+import json
+import os
+from typing import Dict, List, Optional
+
+
+def save_json(data, filepath: str):
+    """
+    Save data to JSON file.
+    
+    Args:
+        data: Data to save
+        filepath: Path to save file
+    """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    
+    with open(filepath, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def load_json(filepath: str):
+    """
+    Load data from JSON file.
+    
+    Args:
+        filepath: Path to JSON file
+        
+    Returns:
+        Loaded data
+    """
+    with open(filepath, 'r') as f:
+        return json.load(f)
+
+
+def filter_values(values_data, filter_fn):
+    """
+    Filter values using a custom filter function.
+    
+    Args:
+        values_data: Dataset containing values
+        filter_fn: Function that takes a value and returns True if it should be included
+        
+    Returns:
+        Filtered list of values
+    """
+    return [item for item in values_data if filter_fn(item)]
+#+end_src
+
+*** values_explorer/utils/__init__.py
+
+#+begin_src python :tangle values_explorer/utils/__init__.py
+"""Utilities module for Values Compass."""
+#+end_src
+
+*** values_explorer/main.py
+
+#+begin_src python :tangle values_explorer/main.py
+"""Main entry point for the Values Compass toolkit."""
+import argparse
+import os
+from values_explorer.data.loader import load_values_dataset
+from values_explorer.analysis.visualization import plot_value_distribution
+from values_explorer.utils.helpers import save_json
+
+
+def main():
+    """Run the main program."""
+    parser = argparse.ArgumentParser(description='Values Compass - Explore the Values-in-the-Wild dataset')
+    parser.add_argument('--config', type=str, default='values_tree', 
+                        choices=['values_tree', 'values_frequencies'],
+                        help='Dataset configuration to load')
+    parser.add_argument('--output', type=str, default='output',
+                        help='Directory to save output files')
+    args = parser.parse_args()
+    
+    # Create output directory
+    os.makedirs(args.output, exist_ok=True)
+    
+    print(f"Loading {args.config} dataset...")
+    dataset = load_values_dataset(args.config)
+    
+    print(f"Dataset loaded with {len(dataset['train'])} items")
+    
+    # Example: Save first 10 items as JSON
+    print(f"Saving sample data to {args.output}/sample_data.json")
+    sample_data = dataset['train'][:10]
+    save_json(sample_data, os.path.join(args.output, 'sample_data.json'))
+    
+    print("Done!")
+
+
+if __name__ == "__main__":
+    main()
+#+end_src
+
+** Notebook for Exploration
+
+*** notebooks/exploration.org
+
+#+begin_src org :tangle notebooks/exploration.org
+#+TITLE: Values-in-the-Wild Dataset Exploration
+#+AUTHOR: Aidan Pace
+#+EMAIL: apace@defrecord.com
+#+OPTIONS: toc:2 num:t
+#+PROPERTY: header-args:python :session *Python* :results output drawer replace
+#+PROPERTY: header-args:mermaid :file images/mermaid-output.png :exports results
+
+* Introduction
+
+This notebook explores the Anthropic/values-in-the-wild dataset, which contains a taxonomy of values expressed by Claude in real-world conversations.
+
+* Setup
+
+#+begin_src python :results none
+import os
+import sys
+from pathlib import Path
+
+# Add the project root to the path
+module_path = str(Path.cwd().parent)
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+# Import project modules
+from values_explorer.data.loader import load_values_dataset
+from values_explorer.analysis.visualization import plot_value_distribution
+from values_explorer.analysis.clustering import analyze_value_clusters
+#+end_src
+
+* Dataset Loading and Exploration
+
+#+begin_src python
+from datasets import load_dataset
+
+# Load the two configurations of the dataset
+dataset_values_frequencies = load_dataset("Anthropic/values-in-the-wild", "values_frequencies")
+dataset_values_tree = load_dataset("Anthropic/values-in-the-wild", "values_tree")
+
+# Display basic information
+print("Values Frequencies Dataset:")
+print(dataset_values_frequencies)
+print("\nValues Tree Dataset:")
+print(dataset_values_tree)
+
+# Explore the first few examples
+print("\nSample from values_frequencies:")
+print(dataset_values_frequencies["train"][0])
+print("\nSample from values_tree:")
+print(dataset_values_tree["train"][0])
+#+end_src
+
+* Values Hierarchy Visualization
+
+#+begin_src mermaid
+graph TD
+    A[Values Taxonomy] --> B[Practical Values]
+    A --> C[Epistemic Values]
+    A --> D[Social Values]
+    A --> E[Protective Values]
+    A --> F[Personal Values]
+    
+    B --> B1[Professional Excellence]
+    B --> B2[Efficiency]
+    
+    C --> C1[Critical Thinking]
+    C --> C2[Transparency]
+    
+    D --> D1[Helpfulness]
+    D --> D2[Respect]
+    
+    E --> E1[Safety]
+    E --> E2[Harm Prevention]
+    
+    F --> F1[Creativity]
+    F --> F2[Personal Growth]
+#+end_src
+
+* Analysis of Value Frequencies
+
+#+begin_src python
+# Analyze the distribution of values by category
+from collections import Counter
+import matplotlib.pyplot as plt
+import numpy as np
+
+# This is a placeholder - the actual field names will depend on the dataset structure
+if 'value_category' in dataset_values_frequencies['train'].features:
+    categories = [item['value_category'] for item in dataset_values_frequencies['train']]
+    category_counts = Counter(categories)
+    
+    # Plot the distribution
+    plt.figure(figsize=(10, 6))
+    plt.bar(category_counts.keys(), category_counts.values())
+    plt.title('Distribution of Value Categories')
+    plt.xlabel('Category')
+    plt.ylabel('Frequency')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('images/value_distribution.png')
+    print("Value distribution plot saved to 'images/value_distribution.png'")
+else:
+    print("Dataset structure doesn't match expected schema. Please inspect the actual structure.")
+#+end_src
+
+* Cluster Analysis of Related Values
+
+#+begin_src python
+# Analyzing clusters of related values
+# This is a placeholder - actual implementation will depend on dataset structure
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+
+# Extract value descriptions for clustering
+# Adjust field names based on actual dataset structure
+if 'value_description' in dataset_values_tree['train'].features:
+    descriptions = [item['value_description'] for item in dataset_values_tree['train']]
+    
+    # Vectorize descriptions
+    vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
+    X = vectorizer.fit_transform(descriptions)
+    
+    # Cluster
+    kmeans = KMeans(n_clusters=5, random_state=42)
+    clusters = kmeans.fit_predict(X)
+    
+    # Analyze clusters
+    for i in range(5):
+        print(f"Cluster {i}:")
+        cluster_indices = np.where(clusters == i)[0]
+        sample_indices = np.random.choice(cluster_indices, size=min(5, len(cluster_indices)), replace=False)
+        for idx in sample_indices:
+            print(f"  - {descriptions[idx][:100]}...")
+else:
+    print("Dataset structure doesn't match expected schema. Please inspect the actual structure.")
+#+end_src
+
+* Exporting Results for Further Analysis
+
+#+begin_src python
+# Export processed data for further analysis
+import json
+
+# Create output directory if it doesn't exist
+os.makedirs('output', exist_ok=True)
+
+# Export a summary of the dataset
+summary = {
+    'total_values': len(dataset_values_tree['train']),
+    'value_categories': {},  # This would be populated based on actual data
+}
+
+with open('output/dataset_summary.json', 'w') as f:
+    json.dump(summary, f, indent=2)
+
+print("Summary exported to 'output/dataset_summary.json'")
+#+end_src
+#+end_src
+
+This completes the scaffolding for your Values Compass project. After tangling, you'll have a complete project structure ready for exploring the Anthropic Values-in-the-Wild dataset.

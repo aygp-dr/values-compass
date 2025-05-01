@@ -1,0 +1,544 @@
+#+TITLE: Robert F. Kennedy's Speech on the Assassination of Martin Luther King Jr.
+#+AUTHOR: Robert F. Kennedy
+#+DATE: April 4, 1968
+#+LOCATION: Indianapolis, Indiana
+#+PROPERTY: header-args:mermaid :file "rfk-speech-values.png" :exports both
+#+PROPERTY: header-args :tangle yes :mkdirp t
+#+DESCRIPTION: Delivered impromptu to a predominantly Black audience in Indianapolis on the night of Martin Luther King Jr.'s assassination.
+#+VALUES_COMPASS: https://github.com/aygp-dr/values-compass
+
+* Introduction and Context
+:PROPERTIES:
+:ID: context
+:END:
+
+This speech was delivered by Robert F. Kennedy during his presidential campaign, speaking to a largely African American crowd in Indianapolis. Kennedy informed the crowd of King's assassination, having learned of it just before the rally. Indianapolis was one of the few major cities that did not experience riots following King's assassination, which many attribute to the impact of this speech.
+
+* Speech Text with Value Annotations
+
+** Announcement of King's Death
+:PROPERTIES:
+:ID: para-1
+:TOPICS: assassination, news, communication
+:END:
+
+#+BEGIN_QUOTE
+I have bad news for you, for all of our fellow citizens, and people who love peace all over the world, and that is that Martin Luther King was shot and killed tonight.
+#+END_QUOTE
+
+#+NAME: values-para-1
+| Value               | Cluster                     | Category  | Confidence | Frequency |
+|---------------------+-----------------------------+-----------+------------+-----------|
+| Transparency        | Epistemic values            | Epistemic |        0.9 |    17.391 |
+| Honesty             | Ethical communication       | Social    |        0.8 |     2.145 |
+| Responsibility      | Duty to others              | Social    |        0.8 |     2.707 |
+| Clear communication | Information sharing         | Epistemic |        0.7 |     2.563 |
+| Directness          | Straightforward interaction | Social    |        0.7 |     0.223 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Transparency] --> B["Direct communication of difficult truth"]
+  C[Value: Honesty] --> B
+  D[Value: Responsibility] --> E["Taking responsibility to deliver painful news"]
+  F[Category: Epistemic] -.-> A
+  G[Category: Social] -.-> C
+  G -.-> D
+#+END_SRC
+
+** King's Legacy and Mission
+:PROPERTIES:
+:ID: para-2
+:TOPICS: legacy, justice, sacrifice
+:END:
+
+#+BEGIN_QUOTE
+Martin Luther King dedicated his life to love and to justice for his fellow human beings, and he died because of that effort.
+#+END_QUOTE
+
+#+NAME: values-para-2
+| Value          | Cluster                     | Category | Confidence | Frequency |
+|----------------+-----------------------------+----------+------------+-----------|
+| Dignity        | Respect for personhood      | Social   |        0.9 |     0.255 |
+| Social justice | Fairness and equity         | Social   |        0.9 |     0.488 |
+| Respect        | Interpersonal consideration | Social   |        0.8 |     0.705 |
+| Sacrifice      | Altruism                    | Personal |        0.8 |     0.046 |
+| Human dignity  | Respect for personhood      | Social   |        0.7 |     0.738 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Dignity] --> B["Recognition of King's life purpose"]
+  C[Value: Social Justice] --> B
+  D[Value: Respect] --> E["Honoring King's sacrifice"]
+  F[Category: Social] -.-> A
+  F -.-> C
+  F -.-> D
+#+END_SRC
+
+** National Reflection
+:PROPERTIES:
+:ID: para-3
+:TOPICS: national identity, introspection, direction
+:END:
+
+#+BEGIN_QUOTE
+In this difficult day, in this difficult time for the United States, it is perhaps well to ask what kind of a nation we are and what direction we want to move in.
+#+END_QUOTE
+
+#+NAME: values-para-3
+| Value                | Cluster                | Category  | Confidence | Frequency |
+|----------------------+------------------------+-----------+------------+-----------|
+| Intellectual honesty | Critical thinking      | Epistemic |        0.9 |     4.806 |
+| Accountability       | Responsible governance | Social    |        0.8 |     2.019 |
+| Critical thinking    | Intellectual rigor     | Epistemic |        0.8 |     0.470 |
+| National identity    | Collective identity    | Social    |        0.7 |     0.021 |
+| Forward planning     | Strategic thought      | Practical |        0.7 |     0.029 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Intellectual Honesty] --> B["Collective self-examination"]
+  C[Value: Accountability] --> B
+  D[Value: Critical Thinking] --> E["National reflection in crisis"]
+  F[Category: Epistemic] -.-> A
+  F -.-> D
+  G[Category: Social] -.-> C
+#+END_SRC
+
+** Addressing Racial Tension
+:PROPERTIES:
+:ID: para-4
+:TOPICS: race, violence, division
+:END:
+
+#+BEGIN_QUOTE
+For those of you who are black—considering the evidence there evidently is that there were white people who were responsible—you can be filled with bitterness, with hatred, and a desire for revenge. We can move in that direction as a country, in great polarization—black people amongst black, white people amongst white, filled with hatred toward one another.
+#+END_QUOTE
+
+#+NAME: values-para-4
+| Value              | Cluster                  | Category   | Confidence | Frequency |
+|--------------------+--------------------------+------------+------------+-----------|
+| Transparency       | Truth-telling            | Epistemic  |        0.9 |    17.391 |
+| Intellectual rigor | Critical thinking        | Epistemic  |        0.8 |     2.658 |
+| Analytical clarity | Evidence-based reasoning | Epistemic  |        0.8 |     0.157 |
+| Risk awareness     | Harm prevention          | Protective |        0.7 |     0.168 |
+| Social harmony     | Peaceful coexistence     | Social     |        0.7 |     0.236 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Transparency] --> B["Acknowledging racial reality"]
+  C[Value: Intellectual Rigor] --> D["Recognizing natural emotional responses"]
+  E[Value: Analytical Clarity] --> F["Identifying potential negative outcomes"]
+  G[Category: Epistemic] -.-> A
+  G -.-> C
+  G -.-> E
+#+END_SRC
+
+** Alternative Path
+:PROPERTIES:
+:ID: para-5
+:TOPICS: compassion, nonviolence, understanding
+:END:
+
+#+BEGIN_QUOTE
+Or we can make an effort, as Martin Luther King did, to understand and to comprehend, and to replace that violence, that stain of bloodshed that has spread across our land, with an effort to understand with compassion and love.
+#+END_QUOTE
+
+#+NAME: values-para-5
+| Value                 | Cluster              | Category   | Confidence | Frequency |
+|-----------------------+----------------------+------------+------------+-----------|
+| Compassion            | Care for others      | Social     |        0.9 |     0.477 |
+| Empathy               | Understanding others | Social     |        0.9 |     2.318 |
+| Harm prevention       | Safety promotion     | Protective |        0.8 |     1.735 |
+| Constructive guidance | Helpful direction    | Practical  |        0.8 |     0.235 |
+| Non-violence          | Peace promotion      | Protective |        0.7 |     0.054 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Compassion] --> B["Advocacy for understanding over violence"]
+  C[Value: Empathy] --> B
+  D[Value: Harm Prevention] --> E["Offering peaceful alternative"]
+  F[Value: Constructive Guidance] --> E
+  G[Category: Social] -.-> A
+  G -.-> C
+  H[Category: Protective] -.-> D
+  I[Category: Practical] -.-> F
+#+END_SRC
+
+** Personal Loss
+:PROPERTIES:
+:ID: para-6
+:TOPICS: grief, personal experience, unity
+:END:
+
+#+BEGIN_QUOTE
+For those of you who are black and are tempted to be filled with hatred and distrust at the injustice of such an act, against all white people, I can only say that I feel in my own heart the same kind of feeling. I had a member of my family killed, but he was killed by a white man. But we have to make an effort in the United States, we have to make an effort to understand, to go beyond these rather difficult times.
+#+END_QUOTE
+
+#+NAME: values-para-6
+| Value           | Cluster                | Category | Confidence | Frequency |
+|-----------------+------------------------+----------+------------+-----------|
+| Vulnerability   | Emotional authenticity | Personal |        0.9 |     0.060 |
+| Authenticity    | Personal integrity     | Personal |        0.9 |     6.042 |
+| Bridge-building | Social connection      | Social   |        0.8 |     0.014 |
+| Emotional depth | Emotional wisdom       | Personal |        0.8 |     0.338 |
+| Unity           | Collective action      | Social   |        0.7 |     0.033 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Vulnerability] --> B["Sharing personal grief experience"]
+  C[Value: Authenticity] --> B
+  D[Value: Bridge-Building] --> E["Finding common ground in suffering"]
+  F[Value: Emotional Depth] --> G["Acknowledging painful emotions"]
+  H[Category: Personal] -.-> A
+  H -.-> C
+  H -.-> F
+  I[Category: Social] -.-> D
+#+END_SRC
+
+** Poetic Reflection
+:PROPERTIES:
+:ID: para-7
+:TOPICS: poetry, wisdom, suffering
+:END:
+
+#+BEGIN_QUOTE
+My favorite poet was Aeschylus. He wrote: "In our sleep, pain which cannot forget falls drop by drop upon the heart until, in our own despair, against our will, comes wisdom through the awful grace of God."
+#+END_QUOTE
+
+#+NAME: values-para-7
+| Value               | Cluster               | Category  | Confidence | Frequency |
+|---------------------+-----------------------+-----------+------------+-----------|
+| Wisdom-seeking      | Knowledge acquisition | Epistemic |        0.9 |     0.030 |
+| Intellectual depth  | Deep understanding    | Epistemic |        0.8 |     0.133 |
+| Meaning-making      | Finding purpose       | Personal  |        0.8 |     0.029 |
+| Philosophical depth | Profound thinking     | Epistemic |        0.7 |     0.032 |
+| Spiritual growth    | Inner development     | Personal  |        0.6 |     0.107 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Wisdom-Seeking] --> B["Drawing on philosophical tradition"]
+  C[Value: Intellectual Depth] --> B
+  D[Value: Meaning-Making] --> E["Finding purpose in suffering"]
+  F[Category: Epistemic] -.-> A
+  F -.-> C
+  G[Category: Personal] -.-> D
+#+END_SRC
+
+** Call for Unity and Peace
+:PROPERTIES:
+:ID: para-8
+:TOPICS: unity, justice, compassion
+:END:
+
+#+BEGIN_QUOTE
+What we need in the United States is not division; what we need in the United States is not hatred; what we need in the United States is not violence or lawlessness; but love and wisdom, and compassion toward one another, and a feeling of justice toward those who still suffer within our country, whether they be white or they be black.
+#+END_QUOTE
+
+#+NAME: values-para-8
+| Value          | Cluster               | Category | Confidence | Frequency |
+|----------------+-----------------------+----------+------------+-----------|
+| Unity          | Collective cohesion   | Social   |        0.9 |     0.033 |
+| Social harmony | Peace-building        | Social   |        0.9 |     0.236 |
+| Compassion     | Care for others       | Social   |        0.8 |     0.477 |
+| Justice        | Fairness              | Social   |        0.8 |     0.153 |
+| Inclusion      | Diverse participation | Social   |        0.7 |     0.104 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Unity] --> B["Call for national cohesion"]
+  C[Value: Social Harmony] --> B
+  D[Value: Compassion] --> E["Advocating for mutual understanding"]
+  F[Value: Justice] --> G["Recognition of ongoing suffering"]
+  H[Value: Inclusion] --> G
+  I[Category: Social] -.-> A
+  I -.-> C
+  I -.-> D
+  I -.-> F
+  I -.-> H
+#+END_SRC
+
+** Final Appeal for Peace
+:PROPERTIES:
+:ID: para-9
+:TOPICS: prayer, dedication, peace
+:END:
+
+#+BEGIN_QUOTE
+So I shall ask you tonight to return home, to say a prayer for the family of Martin Luther King, for our country, and let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savageness of man and make gentle the life of this world.
+#+END_QUOTE
+
+#+NAME: values-para-9
+| Value                    | Cluster              | Category   | Confidence | Frequency |
+|--------------------------+----------------------+------------+------------+-----------|
+| Peace promotion          | Nonviolence          | Protective |        0.9 |     0.046 |
+| Spiritual growth         | Inner wisdom         | Personal   |        0.8 |     0.107 |
+| Constructive redirection | Productive guidance  | Practical  |        0.8 |     0.371 |
+| Civilizational progress  | Societal improvement | Social     |        0.7 |     0.016 |
+| Harm prevention          | Safety advocacy      | Protective |        0.7 |     1.735 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Peace Promotion] --> B["Practical guidance for the audience"]
+  C[Value: Spiritual Growth] --> D["Invocation of prayer"]
+  E[Value: Constructive Redirection] --> F["Converting grief to purposeful action"]
+  G[Value: Civilizational Progress] --> H["Appeal to highest human aspirations"]
+  I[Category: Protective] -.-> A
+  I -.-> G
+  J[Category: Personal] -.-> C
+  K[Category: Practical] -.-> E
+#+END_SRC
+
+** End Note
+:PROPERTIES:
+:ID: para-10
+:TOPICS: dedication, prayer, collective action
+:END:
+
+#+BEGIN_QUOTE
+Let us dedicate ourselves to that, and say a prayer for our country and for our people.
+#+END_QUOTE
+
+#+NAME: values-para-10
+| Value              | Cluster            | Category | Confidence | Frequency |
+|--------------------+--------------------+----------+------------+-----------|
+| Community building | Social cohesion    | Social   |        0.9 |     0.550 |
+| Hope               | Positive outlook   | Personal |        0.8 |     0.094 |
+| Responsibility     | Civic duty         | Social   |        0.8 |     2.707 |
+| Collective action  | Shared purpose     | Social   |        0.7 |     0.039 |
+| Caring             | Concern for others | Social   |        0.6 |     0.025 |
+
+#+BEGIN_SRC mermaid
+graph TD
+  A[Value: Community Building] --> B["Collective commitment"]
+  C[Value: Hope] --> B
+  D[Value: Responsibility] --> E["Call for personal involvement"]
+  F[Category: Social] -.-> A
+  F -.-> D
+  G[Category: Personal] -.-> C
+#+END_SRC
+
+* Value Analysis by Anthropic Taxonomy Categories
+:PROPERTIES:
+:ID: value-analysis
+:END:
+
+Based on Anthropic's values taxonomy, the speech exhibits five major value categories:
+
+** Social Values
+:PROPERTIES:
+:ID: social-values
+:FREQUENCY: 53.1
+:END:
+
+Social values dominate this speech, as RFK emphasizes:
+- Community building and unity (binding social divisions)
+- Compassion and empathy toward others
+- Justice and dignity (recognizing King's sacrifice and addressing injustice)
+- Bridge-building across racial divides
+- Social harmony as an alternative to violence and polarization
+
+#+BEGIN_SRC mermaid
+pie title Percentage of Social Values in Speech
+    "Unity" : 10
+    "Compassion" : 15
+    "Justice" : 12
+    "Dignity" : 10
+    "Bridge-building" : 8
+    "Social harmony" : 20
+    "Inclusion" : 15
+    "Community building" : 10
+#+END_SRC
+
+** Epistemic Values
+:PROPERTIES:
+:ID: epistemic-values
+:FREQUENCY: 26.3
+:END:
+
+Kennedy exhibits strong epistemic values through:
+- Transparency about difficult truths
+- Intellectual honesty in addressing racial realities
+- Critical thinking about national identity
+- Analytical clarity about potential consequences
+- Drawing on philosophical wisdom and depth
+
+#+BEGIN_SRC mermaid
+pie title Percentage of Epistemic Values in Speech
+    "Transparency" : 35
+    "Intellectual honesty" : 20
+    "Critical thinking" : 15
+    "Analytical clarity" : 15
+    "Wisdom-seeking" : 15
+#+END_SRC
+
+** Protective Values
+:PROPERTIES:
+:ID: protective-values
+:FREQUENCY: 12.8
+:END:
+
+The speech emphasizes protection through:
+- Harm prevention (advocating against violence)
+- Non-violence as a moral principle
+- Peace promotion as a civic goal
+- Concern for public safety
+- Risk awareness of potential social breakdown
+
+#+BEGIN_SRC mermaid
+pie title Percentage of Protective Values in Speech
+    "Harm prevention" : 40
+    "Non-violence" : 25
+    "Peace promotion" : 20
+    "Public safety" : 10
+    "Risk awareness" : 5
+#+END_SRC
+
+** Personal Values
+:PROPERTIES:
+:ID: personal-values
+:FREQUENCY: 7.9
+:END:
+
+Kennedy demonstrates personal values through:
+- Authenticity in sharing his own grief
+- Vulnerability in connecting his personal loss to the audience
+- Emotional depth in acknowledging painful emotions
+- Hope despite tragedy
+- Spiritual growth through suffering
+
+#+BEGIN_SRC mermaid
+pie title Percentage of Personal Values in Speech
+    "Authenticity" : 30
+    "Vulnerability" : 25
+    "Emotional depth" : 20
+    "Hope" : 15
+    "Spiritual growth" : 10
+#+END_SRC
+
+** Practical Values
+:PROPERTIES:
+:ID: practical-values
+:FREQUENCY: 5.2
+:END:
+
+The speech exhibits practical values through:
+- Constructive guidance toward peaceful action
+- Constructive redirection of grief toward purpose
+- Forward planning for the nation
+- Practical steps (going home, praying)
+- Results-orientation (preventing riots)
+
+#+BEGIN_SRC mermaid
+pie title Percentage of Practical Values in Speech
+    "Constructive guidance" : 35
+    "Constructive redirection" : 30
+    "Forward planning" : 15
+    "Practical steps" : 15
+    "Results-orientation" : 5
+#+END_SRC
+
+* Value Confidence Matrix
+:PROPERTIES:
+:ID: confidence-matrix
+:END:
+
+The following table shows our overall confidence in value classifications:
+
+#+NAME: confidence-matrix
+| Value Category | High Confidence (0.8-1.0)                       | Medium Confidence (0.6-0.7)           | Top Values by Frequency                             |
+|----------------+-------------------------------------------------+---------------------------------------+-----------------------------------------------------|
+| Social         | Compassion, Unity, Justice, Dignity             | Social harmony, Inclusion             | Empathy (2.318), Responsibility (2.707)             |
+| Epistemic      | Transparency, Intellectual honesty              | Critical thinking, Analytical clarity | Transparency (17.391), Intellectual honesty (4.806) |
+| Protective     | Harm prevention, Peace promotion                | Non-violence, Public safety           | Harm prevention (1.735)                             |
+| Personal       | Authenticity, Vulnerability                     | Hope, Emotional depth                 | Authenticity (6.042)                                |
+| Practical      | Constructive guidance, Constructive redirection | Forward planning                      | Constructive redirection (0.371)                    |
+
+* Core Value Clusters Represented in the Speech
+:PROPERTIES:
+:ID: core-clusters
+:END:
+
+According to Anthropic's values-tree taxonomy, this speech primarily represents these clusters:
+
+1. **Social Cohesion and Harmony (Social)** - [40.2%]
+   - Emphasis on unity over division
+   - Building community across racial lines
+   - Promoting collective welfare and peace
+
+2. **Truthful Communication (Epistemic)** - [21.8%]
+   - Direct, honest delivery of difficult news
+   - Intellectual honesty about social problems
+   - Transparent acknowledgment of racial tensions
+
+3. **Non-violence and Harm Prevention (Protective)** - [12.8%]
+   - Advocating against retaliatory violence
+   - Promoting peace as an alternative to riots
+   - Protecting community welfare
+
+4. **Emotional Authenticity (Personal)** - [7.9%]
+   - Personal vulnerability in sharing grief
+   - Connecting through shared human experience
+   - Emotional honesty about painful feelings
+
+5. **Constructive Action (Practical)** - [5.2%]
+   - Providing clear, actionable guidance
+   - Redirecting grief toward productive ends
+   - Results-oriented approach to prevent riots
+
+#+BEGIN_SRC mermaid
+graph TD
+    A[RFK Speech Values] --> B[Social Cohesion 40.2%]
+    A --> C[Truthful Communication 21.8%]
+    A --> D[Non-violence 12.8%]
+    A --> E[Emotional Authenticity 7.9%]
+    A --> F[Constructive Action 5.2%]
+    
+    B --> B1[Unity]
+    B --> B2[Compassion]
+    B --> B3[Justice]
+    
+    C --> C1[Transparency]
+    C --> C2[Intellectual Honesty]
+    C --> C3[Critical Thinking]
+    
+    D --> D1[Harm Prevention]
+    D --> D2[Peace Promotion]
+    D --> D3[Public Safety]
+    
+    E --> E1[Vulnerability]
+    E --> E2[Authenticity]
+    E --> E3[Emotional Depth]
+    
+    F --> F1[Constructive Guidance]
+    F --> F2[Constructive Redirection]
+    F --> F3[Forward Planning]
+#+END_SRC
+
+* Integration with values-compass Project
+:PROPERTIES:
+:ID: integration
+:END:
+
+For integration with the values-compass project (https://github.com/aygp-dr/values-compass), this analysis provides:
+
+1. Structured value annotations with hierarchical categorization
+2. Confidence ratings for each value identification
+3. Frequency data from Anthropic's values-in-the-wild dataset
+4. Visualizations showing the distribution of values
+5. Properties and labels to support programmatic analysis
+
+This org-mode format allows for:
+- Extraction of values by paragraph
+- Tracking of confidence levels
+- Mapping to the Anthropic values hierarchy 
+- Integration with the values-compass visualization tools
+- Tangling code to generate analysis artifacts
+
+* Sources
+:PROPERTIES:
+:ID: sources
+:END:
+
+- JFK Library: "Statement on Assassination of Martin Luther King, Jr., Indianapolis, Indiana, April 4, 1968"
+- Anthropic Values in the Wild dataset: https://huggingface.co/datasets/Anthropic/values-in-the-wild
+- Values tree taxonomy: https://huggingface.co/datasets/Anthropic/values-in-the-wild/raw/main/values_tree.csv
+- Values-compass project: https://github.com/aygp-dr/values-compass

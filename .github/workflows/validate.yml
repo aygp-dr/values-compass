@@ -1,0 +1,75 @@
+name: Values-Compass Test and Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allow manual triggers
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      
+    - name: Install xsv
+      run: |
+        curl -LO https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz
+        tar xzf xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz
+        sudo mv xsv /usr/local/bin/
+        xsv --version
+    
+    - name: Install other dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y curl make gawk
+        
+    - name: Run test script
+      run: |
+        chmod +x test_makefile.sh
+        ./test_makefile.sh
+        
+    - name: Check generated files (if tests passed)
+      if: success()
+      run: |
+        echo "Checking generated files..."
+        ls -la data/
+        ls -la output/
+        
+    - name: Validate CSV files
+      if: success()
+      run: |
+        echo "Validating CSV files..."
+        xsv stats data/values_frequencies.csv > output/freq_stats.txt
+        xsv stats data/values_tree.csv > output/tree_stats.txt
+        
+        # Check number of rows in frequency file (should match expected count)
+        ROW_COUNT=$(xsv count data/values_frequencies.csv)
+        if [[ "$ROW_COUNT" -lt 3000 ]]; then
+          echo "Error: values_frequencies.csv has fewer rows than expected ($ROW_COUNT < 3000)"
+          exit 1
+        else
+          echo "✓ values_frequencies.csv row count is valid: $ROW_COUNT"
+        fi
+        
+        # Check that output files contain expected information
+        if grep -q "helpfulness" output/top_values.txt && \
+           grep -q "Values" output/categories.txt && \
+           grep -q "Generated" output/dataset_info.md; then
+          echo "✓ Output files contain expected content"
+        else
+          echo "Error: Output files missing expected content"
+          exit 1
+        fi
+    
+    - name: Upload artifacts
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: values-analysis-outputs
+        path: |
+          output/
+          data/*.csv

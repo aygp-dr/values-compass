@@ -57,18 +57,50 @@ coverage.xml
 
 # Environment
 .env
+.envrc
 .venv
 env/
 venv/
 ENV/
 .direnv/
 .cache/
+.claude/
+node.core
+uv.lock
 
 # Project specific
+data/
 output/
 data/downloads/
 notebooks/images/
 *.pkl
+sql/
+
+# Emacs temp files
+.#*
+*~
+.dir-config.el
+.dir-locals.el
+emacs30-babel-setup.el
+inline-babel-minimal.el
+values-tree-loader.el
 
 # Backup files
 *~
+
+# Generated markdown files
+README.md
+README.txt
+
+# Generated Python scripts
+scripts/db_analysis.py
+scripts/explore_values.py
+scripts/export.sh
+scripts/plot_top_10.py
+scripts/setup_db.sh
+scripts/test_makefile.sh
+scripts/top_20.py
+
+# Generated docs and analyses
+ORG-BABEL-SETUP.org
+

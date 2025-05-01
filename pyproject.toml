@@ -5,23 +5,21 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "values_explorer"
 description = "A toolkit for exploring the Anthropic Values-in-the-Wild dataset"
-readme = "README.org"
-requires-python = ">=3.8"
+readme = "README.md"
+requires-python = ">=3.11"
 authors = [
     {name = "Aidan Pace", email = "apace@defrecord.com"},
 ]
 maintainers = [
     {name = "Jason Walsh", email = "j@wal.sh"},
 ]
+keywords = ["ai", "ethics", "values", "anthropic", "nlp"]
 license = {text = "MIT"}
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
@@ -34,10 +32,9 @@ dependencies = [
     "pandas>=1.3.0",
     "scikit-learn>=1.0.0",
     "seaborn>=0.11.0",
-    "torch>=1.10.0",
     "transformers>=4.15.0",
 ]
-version = "0.1.0"
+version = "0.2.0"
 
 [project.urls]
 Homepage = "https://github.com/aygp-dr/values-compass"
@@ -55,7 +52,6 @@ dev = [
     "ruff",
 ]
 data = [
-    "xsv>=0.13.0",
 ]
 
 [tool.setuptools]
@@ -63,7 +59,7 @@ packages = ["values_explorer"]
 
 [tool.black]
 line-length = 88
-target-version = ["py38", "py39", "py310", "py311"]
+target-version = ["py311"]
 
 [tool.isort]
 profile = "black"

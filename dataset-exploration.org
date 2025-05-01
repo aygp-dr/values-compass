@@ -1,0 +1,418 @@
+#+TITLE: Exploring Anthropic's Values-in-the-Wild Dataset Locally
+#+AUTHOR: Aidan Pace
+#+EMAIL: apace@defrecord.com
+#+DATE: [2025-04-30 Wed]
+#+PROPERTY: header-args:python :session *Python* :results output drawer replace
+#+PROPERTY: header-args :mkdirp yes
+
+* Setup and Configuration
+:PROPERTIES:
+:header-args:bash: :mkdirp yes
+:END:
+
+** Ensure Environment is Ready
+
+First, let's make sure we have the necessary environment variables set for caching the dataset locally:
+
+#+begin_src bash :results output
+# Check if HF_TOKEN is set
+if [ -z "$HF_TOKEN" ]; then
+  echo "Warning: HF_TOKEN is not set. You may have issues accessing the dataset."
+  echo "Set it by adding 'export HF_TOKEN=your_token' to your .env file and reloading direnv."
+else
+  echo "HF_TOKEN is set. ✓"
+fi
+
+# Check and create cache directories
+CACHE_DIR="$HOME/.cache/huggingface/datasets"
+mkdir -p "$CACHE_DIR"
+echo "Cache directory ready: $CACHE_DIR ✓"
+
+# Set environment variables if not already set
+export HF_DATASETS_CACHE=${HF_DATASETS_CACHE:-"$CACHE_DIR"}
+echo "HF_DATASETS_CACHE set to: $HF_DATASETS_CACHE ✓"
+
+# Print Python path for debugging
+which python
+python --version
+pip list | grep -E "datasets|transformers|huggingface"
+#+end_src
+
+** Install Required Libraries (if needed)
+
+#+begin_src bash :results output
+pip install datasets huggingface_hub pandas matplotlib networkx seaborn
+#+end_src
+
+* Downloading and Caching the Dataset Locally
+
+Let's download and cache the dataset locally. The first time you run this code, it will download the dataset and cache it. Subsequent runs will use the cached version.
+
+#+begin_src python
+from datasets import load_dataset
+import os
+
+# Print cache location
+print(f"Dataset cache location: {os.environ.get('HF_DATASETS_CACHE', 'Not set - using default')}")
+
+# First, load the values_frequencies configuration
+print("\n=== Loading values_frequencies dataset ===")
+dataset_values_frequencies = load_dataset("Anthropic/values-in-the-wild", "values_frequencies")
+print(f"✓ Downloaded and cached values_frequencies")
+print(f"Dataset structure: {dataset_values_frequencies}")
+
+# Then, load the values_tree configuration
+print("\n=== Loading values_tree dataset ===")
+dataset_values_tree = load_dataset("Anthropic/values-in-the-wild", "values_tree")
+print(f"✓ Downloaded and cached values_tree")
+print(f"Dataset structure: {dataset_values_tree}")
+
+# Confirm data is cached locally
+print("\n=== Verifying dataset is cached locally ===")
+# This will load from cache without making network requests
+dataset_cached = load_dataset("Anthropic/values-in-the-wild", "values_tree")
+print("✓ Dataset loaded from cache successfully")
+#+end_src
+
+* Exploring the Dataset Structure
+
+Let's examine the schema and sample some data from each configuration:
+
+#+begin_src python
+import pandas as pd
+
+# Helper function to display dataset features
+def print_dataset_features(dataset, name):
+    print(f"\n=== {name} Dataset Features ===")
+    for key, value in dataset["train"].features.items():
+        print(f"- {key}: {value}")
+
+# Print features for both datasets
+print_dataset_features(dataset_values_frequencies, "Values Frequencies")
+print_dataset_features(dataset_values_tree, "Values Tree")
+
+# Print sample data from values_frequencies
+print("\n=== Sample from values_frequencies ===")
+sample = dataset_values_frequencies["train"][:3]
+for i, item in enumerate(sample):
+    print(f"\nItem {i+1}:")
+    for key, value in item.items():
+        # Truncate long values for readability
+        if isinstance(value, str) and len(value) > 100:
+            value = value[:100] + "..."
+        print(f"  {key}: {value}")
+
+# Print sample data from values_tree
+print("\n=== Sample from values_tree ===")
+sample = dataset_values_tree["train"][:3]
+for i, item in enumerate(sample):
+    print(f"\nItem {i+1}:")
+    for key, value in item.items():
+        # Truncate long values for readability
+        if isinstance(value, str) and len(value) > 100:
+            value = value[:100] + "..."
+        print(f"  {key}: {value}")
+#+end_src
+
+* Basic Dataset Analysis
+
+Let's perform some basic analysis on the dataset to get an overview of the values distribution:
+
+#+begin_src python
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from collections import Counter
+
+# Set up matplotlib for better visualizations
+plt.style.use('ggplot')
+plt.rcParams['figure.figsize'] = (12, 8)
+
+# Function to save plots in the correct directory
+def save_plot(filename):
+    import os
+    os.makedirs('images', exist_ok=True)
+    plt.savefig(f'images/{filename}', dpi=300, bbox_inches='tight')
+    print(f"Plot saved to images/{filename}")
+
+# 1. Count values by top-level category
+print("=== Top-level Value Categories ===")
+# Note: Field names may vary - adjust based on actual dataset structure
+# This is an example assuming there's a 'category' field
+if 'category' in dataset_values_tree['train'].features:
+    categories = [item['category'] for item in dataset_values_tree['train']]
+    category_counts = Counter(categories)
+    
+    # Sort by count in descending order
+    sorted_categories = sorted(category_counts.items(), key=lambda x: x[1], reverse=True)
+    
+    # Display counts and percentages
+    total = sum(category_counts.values())
+    for category, count in sorted_categories:
+        percentage = (count / total) * 100
+        print(f"{category}: {count} ({percentage:.1f}%)")
+    
+    # Plot the distribution
+    plt.figure(figsize=(12, 6))
+    categories, counts = zip(*sorted_categories)
+    sns.barplot(x=list(categories), y=list(counts))
+    plt.title('Distribution of Values by Top-level Category')
+    plt.xlabel('Category')
+    plt.ylabel('Count')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    save_plot('value_categories.png')
+else:
+    print("No 'category' field found in dataset. Please check the actual structure.")
+    
+# 2. Most common values
+print("\n=== Most Common Values ===")
+# Again, field names may vary - adjust as needed
+if 'value' in dataset_values_frequencies['train'].features:
+    values = [item['value'] for item in dataset_values_frequencies['train']]
+    value_counts = Counter(values)
+    
+    # Display top 20 values
+    print("Top 20 most common values:")
+    for value, count in value_counts.most_common(20):
+        print(f"- {value}: {count}")
+    
+    # Plot top 15 values
+    plt.figure(figsize=(12, 8))
+    top_values = dict(value_counts.most_common(15))
+    sns.barplot(x=list(top_values.values()), y=list(top_values.keys()))
+    plt.title('Top 15 Most Common Values')
+    plt.xlabel('Count')
+    plt.tight_layout()
+    save_plot('top_values.png')
+else:
+    print("No 'value' field found in dataset. Please check the actual structure.")
+#+end_src
+
+* Value Hierarchy Visualization
+
+Let's create a visual representation of the value hierarchy:
+
+#+begin_src python
+import networkx as nx
+
+# Visualize the value hierarchy as a network graph
+print("=== Visualizing Value Hierarchy ===")
+
+# This assumes a parent-child relationship structure
+# Field names may need to be adjusted based on actual dataset structure
+if all(field in dataset_values_tree['train'].features for field in ['id', 'parent_id']):
+    # Create a directed graph
+    G = nx.DiGraph()
+    
+    # Add nodes and edges from the dataset
+    for item in dataset_values_tree['train']:
+        node_id = item['id']
+        parent_id = item.get('parent_id')
+        name = item.get('name', node_id)
+        
+        # Add the node with a label
+        G.add_node(node_id, label=name)
+        
+        # If this node has a parent, add an edge
+        if parent_id:
+            G.add_edge(parent_id, node_id)
+    
+    # Get top-level nodes (those without parents)
+    top_nodes = [n for n in G.nodes() if G.in_degree(n) == 0]
+    print(f"Found {len(top_nodes)} top-level categories")
+    
+    # Create a visualization for a subset of the graph (it may be too large otherwise)
+    # Here we take the first top node and its descendants up to 2 levels deep
+    if top_nodes:
+        # Function to get descendants up to a certain depth
+        def get_descendants(graph, node, max_depth=2, current_depth=0):
+            if current_depth >= max_depth:
+                return []
+            direct_descendants = list(graph.successors(node))
+            all_descendants = direct_descendants.copy()
+            for child in direct_descendants:
+                all_descendants.extend(get_descendants(graph, child, max_depth, current_depth + 1))
+            return all_descendants
+        
+        # Get a subgraph of the first top-level node and its descendants
+        sample_top_node = top_nodes[0]
+        descendants = get_descendants(G, sample_top_node)
+        subgraph_nodes = [sample_top_node] + descendants
+        subgraph = G.subgraph(subgraph_nodes)
+        
+        # Plot the subgraph
+        plt.figure(figsize=(15, 10))
+        pos = nx.spring_layout(subgraph, seed=42)
+        nx.draw(subgraph, pos, 
+                with_labels=True,
+                node_color='lightblue',
+                node_size=1500,
+                font_size=10,
+                arrows=True,
+                edge_color='gray',
+                alpha=0.8)
+        plt.title(f'Sample of Value Hierarchy (from top node: {G.nodes[sample_top_node]["label"]})')
+        save_plot('value_hierarchy_sample.png')
+        
+        print(f"Created visualization of value hierarchy sample with {len(subgraph)} nodes")
+    else:
+        print("No top-level nodes found")
+else:
+    print("Required fields ('id', 'parent_id') not found in dataset. Please check the actual structure.")
+#+end_src
+
+* Converting to Pandas for More Advanced Analysis
+
+To make further analysis easier, let's convert the dataset to Pandas DataFrames:
+
+#+begin_src python
+# Convert to pandas DataFrames for easier manipulation
+df_frequencies = pd.DataFrame(dataset_values_frequencies['train'])
+df_tree = pd.DataFrame(dataset_values_tree['train'])
+
+# Display info about the DataFrames
+print("=== Values Frequencies DataFrame ===")
+print(f"Shape: {df_frequencies.shape}")
+print(df_frequencies.info())
+
+print("\n=== Values Tree DataFrame ===")
+print(f"Shape: {df_tree.shape}")
+print(df_tree.info())
+
+# Save DataFrames to CSV for external analysis if needed
+df_frequencies.to_csv('output/values_frequencies.csv', index=False)
+df_tree.to_csv('output/values_tree.csv', index=False)
+print("\nDataFrames saved to CSV files in the 'output' directory")
+#+end_src
+
+* Context-Dependent Value Analysis
+
+Let's explore how values vary by context:
+
+#+begin_src python
+# This analysis will depend on the actual structure of the dataset
+# and may need to be adjusted based on the available fields
+
+# Example: If there's a 'context' or 'task' field in the dataset
+context_field = 'context'  # Change this to match actual field name
+if context_field in df_frequencies.columns:
+    print(f"=== Values by {context_field} ===")
+    
+    # Count values by context
+    context_value_counts = df_frequencies.groupby([context_field, 'value']).size().reset_index(name='count')
+    
+    # Get top contexts by number of distinct values
+    top_contexts = context_value_counts.groupby(context_field)['count'].sum().sort_values(ascending=False).head(5).index
+    
+    # For each top context, show the most common values
+    for context in top_contexts:
+        print(f"\nMost common values in context: {context}")
+        context_data = context_value_counts[context_value_counts[context_field] == context]
+        top_values = context_data.sort_values('count', ascending=False).head(10)
+        for _, row in top_values.iterrows():
+            print(f"- {row['value']}: {row['count']}")
+else:
+    print(f"No '{context_field}' field found in dataset. Please check the actual structure.")
+#+end_src
+
+* Exporting Data for Further Analysis
+
+Let's create a function to export processed data for further analysis outside org-mode:
+
+#+begin_src python
+import json
+
+# Create a summary of the dataset
+summary = {
+    'total_values': len(dataset_values_tree['train']),
+    'top_level_categories': {},
+    'most_common_values': {},
+}
+
+# Populate with data if available
+if 'category' in dataset_values_tree['train'].features:
+    categories = [item['category'] for item in dataset_values_tree['train']]
+    category_counts = Counter(categories)
+    for category, count in category_counts.most_common():
+        summary['top_level_categories'][category] = count
+
+if 'value' in dataset_values_frequencies['train'].features:
+    values = [item['value'] for item in dataset_values_frequencies['train']]
+    value_counts = Counter(values)
+    for value, count in value_counts.most_common(20):
+        summary['most_common_values'][value] = count
+
+# Save summary to JSON
+import os
+os.makedirs('output', exist_ok=True)
+with open('output/dataset_summary.json', 'w') as f:
+    json.dump(summary, f, indent=2)
+
+print("Summary exported to 'output/dataset_summary.json'")
+#+end_src
+
+* Interactive Value Exploration Function
+
+Here's a utility function to help you interactively explore specific values in the dataset:
+
+#+begin_src python
+def explore_value(value_name):
+    """
+    Explore a specific value in the dataset
+    
+    Args:
+        value_name: The name of the value to explore
+    """
+    print(f"=== Exploring Value: {value_name} ===")
+    
+    # Search in values_frequencies
+    if 'value' in df_frequencies.columns:
+        matches = df_frequencies[df_frequencies['value'].str.contains(value_name, case=False, na=False)]
+        print(f"\nFound {len(matches)} matches in values_frequencies dataset:")
+        if not matches.empty:
+            for idx, row in matches.head(5).iterrows():
+                print(f"\nMatch {idx+1}:")
+                for col, val in row.items():
+                    # Truncate long values
+                    if isinstance(val, str) and len(val) > 100:
+                        val = val[:100] + "..."
+                    print(f"  {col}: {val}")
+            if len(matches) > 5:
+                print(f"... and {len(matches) - 5} more matches")
+    
+    # Search in values_tree
+    if 'name' in df_tree.columns:
+        tree_matches = df_tree[df_tree['name'].str.contains(value_name, case=False, na=False)]
+        print(f"\nFound {len(tree_matches)} matches in values_tree dataset:")
+        if not tree_matches.empty:
+            for idx, row in tree_matches.head(5).iterrows():
+                print(f"\nMatch {idx+1}:")
+                for col, val in row.items():
+                    # Truncate long values
+                    if isinstance(val, str) and len(val) > 100:
+                        val = val[:100] + "..."
+                    print(f"  {col}: {val}")
+            if len(tree_matches) > 5:
+                print(f"... and {len(tree_matches) - 5} more matches")
+    
+    return None  # Return None for cleaner output in org mode
+
+# Example: Explore the value "authenticity"
+explore_value("authenticity")
+
+# You can run the function with other values as needed, for example:
+# explore_value("privacy")
+# explore_value("honesty")
+#+end_src
+
+* Next Steps
+
+This org document provides a basic exploration of the Anthropic Values-in-the-Wild dataset. From here, you can:
+
+1. Modify the code blocks to explore specific aspects of the dataset that interest you
+2. Extend the analysis with more sophisticated visualization techniques
+3. Create your own org-mode blocks to test hypotheses about the values taxonomy
+4. Use the exported CSV files for analysis in other tools
+
+Remember, since the dataset is now cached locally, you can work with it offline without needing to download it again.

@@ -1,0 +1,300 @@
+#+TITLE: Values Tree Analysis
+#+AUTHOR: jwalsh
+#+DATE: 2025-05-01
+#+OPTIONS: toc:3 num:t
+
+* Introduction
+
+This file provides analysis of the values tree CSV data from Anthropic's "values-in-the-wild" dataset.
+It filters out AI values and identifies the top 20% most frequent values.
+
+* Setup
+
+We're using the project's .dir-config.el and Emacs 30 compatibility settings.
+If those aren't auto-loaded, we can manually load them:
+
+#+begin_src emacs-lisp :results silent
+;; Load the project settings if not already loaded
+(when (not (featurep 'ob-sql))
+  (load-file "./.dir-config.el"))
+
+;; Initialize the values tree data
+(values-tree-download-csv)
+#+end_src
+
+* Fetch Data
+
+Fetch the values tree CSV directly using the HTTP babel block:
+
+#+begin_src http :file data/values_tree.csv
+GET https://huggingface.co/datasets/Anthropic/values-in-the-wild/raw/main/values_tree.csv
+#+end_src
+
+#+RESULTS:
+[[file:data/values_tree.csv]]
+
+* Initial Data Exploration
+
+Let's take a first look at the data:
+
+#+begin_src shell
+head -n 5 data/values_tree.csv
+#+end_src
+
+#+RESULTS:
+: cluster_id,description,name,level,parent_cluster_id,pct_total_occurrences
+: balanced wisdom,,balanced wisdom,0,ai_values:l1:0167e96f-fb3d-4461-8c4f-dcc1c39ec145,0.001
+: contemplative wisdom,,contemplative wisdom,0,ai_values:l1:0167e96f-fb3d-4461-8c4f-dcc1c39ec145,0.002
+: experiential wisdom,,experiential wisdom,0,ai_values:l1:0167e96f-fb3d-4461-8c4f-dcc1c39ec145,0.003
+: inner wisdom,,inner wisdom,0,ai_values:l1:0167e96f-fb3d-4461-8c4f-dcc1c39ec145,0.004
+
+Count total rows:
+
+#+begin_src shell
+wc -l data/values_tree.csv
+#+end_src
+
+#+RESULTS:
+:     3604 data/values_tree.csv
+
+* Filter Out AI Values
+
+Filter out rows where cluster_id starts with "ai_values:":
+
+#+begin_src shell
+grep -v '^ai_values:' data/values_tree.csv > data/filtered_values.csv
+echo "Filtered out ai_values: prefix rows"
+wc -l data/filtered_values.csv
+#+end_src
+
+#+RESULTS:
+: Filtered out ai_values: prefix rows
+:     3308 data/filtered_values.csv
+
+* Select Top 20% by pct_total_occurrences
+
+Process the data with Python to select the top 20% by occurrence percentage:
+
+#+begin_src python :tangle scripts/top_20.py :mkdirp yes
+import pandas as pd
+import os
+
+# Ensure data directory exists
+os.makedirs('data', exist_ok=True)
+
+# Read the filtered data
+df = pd.read_csv("data/filtered_values.csv")
+print(f"Read {len(df)} rows from filtered CSV")
+
+# Sort by pct_total_occurrences
+sorted_df = df.sort_values('pct_total_occurrences', ascending=False)
+
+# Select top 20%
+top_count = int(len(sorted_df) * 0.2)
+top_df = sorted_df.head(top_count)
+print(f"Selected top {top_count} rows (20% of total)")
+
+# Save to CSV
+top_df.to_csv("data/top_values.csv", index=False)
+
+# Show top 10 values
+print("\nTop 10 values by pct_total_occurrences:")
+print(top_df[['cluster_id', 'name', 'pct_total_occurrences']].head(10))
+#+end_src
+
+#+RESULTS:
+
+* Load into SQLite
+
+Create and populate a SQLite database:
+
+#+begin_src shell :tangle scripts/setup_db.sh :mkdirp yes
+# Create SQLite database
+sqlite3 data/values.db <<EOF
+.mode csv
+.import data/values_tree.csv values_tree
+CREATE INDEX idx_cluster_id ON values_tree (cluster_id);
+CREATE INDEX idx_pct_occurrences ON values_tree (pct_total_occurrences);
+.quit
+EOF
+echo "Loaded data into SQLite database"
+#+end_src
+
+#+RESULTS:
+: Loaded data into SQLite database
+
+Create filtered views in SQLite:
+
+#+begin_src sql :engine sqlite :db data/values.db :results table :tangle sql/values-filtered.sql :mkdirp yes
+-- Create filtered view excluding ai_values
+CREATE VIEW IF NOT EXISTS filtered_values AS
+SELECT * FROM values_tree 
+WHERE cluster_id NOT LIKE 'ai_values:%'
+ORDER BY pct_total_occurrences DESC;
+
+-- Create top 20% view
+CREATE VIEW IF NOT EXISTS top_values AS
+SELECT * FROM filtered_values
+LIMIT (SELECT CAST(COUNT(*) * 0.2 AS INTEGER) FROM filtered_values);
+#+end_src
+
+* SQL Analysis
+
+Verify our data counts:
+
+#+begin_src sql :engine sqlite :db data/values.db :results table :tangle sql/values-counts.sql :mkdirp yes
+SELECT 'Total rows' as Description, COUNT(*) as Count FROM values_tree
+UNION ALL
+SELECT 'Filtered rows', COUNT(*) FROM filtered_values
+UNION ALL
+SELECT 'Top 20% rows', COUNT(*) FROM top_values;
+#+end_src
+
+View the top values:
+
+#+begin_src sql :engine sqlite :db data/values.db
+SELECT cluster_id, name, pct_total_occurrences
+FROM top_values
+LIMIT 10;
+#+end_src
+
+* Data Visualization
+
+** Mermaid Diagram
+
+#+begin_src mermaid :file data/values_tree_diagram.png :tangle docs/values_tree_diagram.mmd :mkdirp yes
+flowchart TD
+    A[Values Tree Dataset] --> B[Filtered Values<br/>(Excluding ai_values)]
+    B --> C[Top 20%<br/>by pct_total_occurrences]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#dfd,stroke:#333,stroke-width:1px
+#+end_src
+
+** Python Visualization
+
+Create a bar chart of the top 10 values:
+
+#+begin_src python :tangle scripts/plot_top_10.py :mkdirp yes
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+
+# Ensure directory exists
+os.makedirs('data', exist_ok=True)
+
+# Read the top values
+df = pd.read_csv("data/top_values.csv")
+
+# Get top 10 values
+top_10 = df.head(10)
+
+# Create a bar chart
+plt.figure(figsize=(12, 6))
+plt.barh(top_10['name'], top_10['pct_total_occurrences'])
+plt.xlabel('Percentage of Total Occurrences')
+plt.ylabel('Value Name')
+plt.title('Top 10 Values by Percentage of Total Occurrences')
+plt.tight_layout()
+
+# Save the figure
+plt.savefig('data/top_values_chart.png')
+print("Chart saved to data/top_values_chart.png")
+
+# Show the plot in the org buffer if display is available
+# plt.show()
+#+end_src
+
+#+RESULTS:
+
+* Advanced Analysis
+
+** Hierarchical Structure
+
+Examine the parent-child relationships:
+
+#+begin_src sql :engine sqlite :db data/values.db :results table 
+-- Get values with their parents
+SELECT c.name as child_name, 
+       p.name as parent_name,
+       c.level,
+       c.pct_total_occurrences
+FROM top_values c
+LEFT JOIN values_tree p ON c.parent_cluster_id = p.cluster_id
+ORDER BY c.pct_total_occurrences DESC
+LIMIT 15;
+#+end_src
+
+** Value Categories
+
+Group values by level:
+
+#+begin_src sql :engine sqlite :db data/values.db :results table 
+-- Group by level
+SELECT level, 
+       COUNT(*) as count,
+       SUM(pct_total_occurrences) as total_pct,
+       AVG(pct_total_occurrences) as avg_pct,
+       MAX(pct_total_occurrences) as max_pct
+FROM filtered_values
+GROUP BY level
+ORDER BY level;
+#+end_src
+
+** Python Statistical Analysis
+
+Calculate additional statistics:
+
+#+begin_src python :tangle scripts/db_analysis.py :mkdirp yes
+import pandas as pd
+import numpy as np
+import sqlite3
+import os
+
+# Connect to SQLite database
+conn = sqlite3.connect('data/values.db')
+
+# Query the data
+df = pd.read_sql("SELECT * FROM filtered_values", conn)
+
+# Calculate statistics
+print(f"Total values: {len(df)}")
+print(f"Mean occurrence: {df['pct_total_occurrences'].mean():.6f}")
+print(f"Median occurrence: {df['pct_total_occurrences'].median():.6f}")
+print(f"Standard deviation: {df['pct_total_occurrences'].std():.6f}")
+
+# Calculate percentiles
+percentiles = [25, 50, 75, 90, 95, 99]
+for p in percentiles:
+    value = np.percentile(df['pct_total_occurrences'], p)
+    print(f"{p}th percentile: {value:.6f}")
+
+# Close connection
+conn.close()
+#+end_src
+
+* Export and Save Results
+
+Export the top values to CSV:
+
+#+begin_src shell :tangle scripts/export.sh
+# Create an exports directory
+mkdir -p exports
+
+# Copy the top values to exports
+cp data/top_values.csv exports/
+echo "Exported top values to exports/top_values.csv"
+#+end_src
+
+* Conclusion
+
+This analysis has processed the Anthropic values-in-the-wild dataset, filtering out AI-specific values and identifying the most frequently occurring human values. The top 20% of values by occurrence percentage have been extracted and analyzed.
+
+Key findings:
+- The dataset contains values across multiple levels in a hierarchical structure
+- The values have varying occurrence percentages, with some being significantly more common
+- The top values extracted represent the most frequently expressed human values in the dataset
+
+Next steps could include deeper semantic analysis of these values, clustering by meaning rather than just hierarchy, and exploring correlations between different value categories.
+

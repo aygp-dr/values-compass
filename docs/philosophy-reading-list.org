@@ -40,6 +40,28 @@ Based on the provided dataset, several dominant value clusters emerge that refle
 
 The following texts engage with the value clusters identified above through perspectives of epistemology, ethics, and social philosophy, with particular attention to late-stage capitalism, postmodernism, existentialism, and critical theory.
 
+** Foundational Values Theory
+
+*** Milton Rokeach: *The Nature of Human Values* (1973)
+    - Foundational text establishing 36 core human values and their measurement
+    - Relevant to values: value categorization, prioritization, instrumental vs. terminal values
+
+*** Shalom Schwartz: *Universals in the Content and Structure of Values* (1992)
+    - Builds on Rokeach's work to establish a cross-cultural theory of basic human values
+    - Relevant to values: universalism, benevolence, tradition, self-direction
+
+*** Christian Smith: *Moral, Believing Animals* (2003)
+    - Examines how humans are fundamentally value-driven creatures
+    - Relevant to values: moral orientation, ethical frameworks, value justification
+
+*** Joshua Greene: *Moral Tribes* (2013)
+    - Explores moral psychology and evolution of values across different human groups
+    - Relevant to values: cooperation, in-group loyalty, fairness, harm prevention
+
+*** Martin Nowak: *Supercooperators* (2011)
+    - Explores evolution of cooperation and related values from mathematical perspective
+    - Relevant to values: cooperation, altruism, fairness, reciprocity
+
 ** Epistemology (Truth, Knowledge, Transparency)
 
 *** Thomas Kuhn: *The Structure of Scientific Revolutions* (1962)
@@ -76,7 +98,7 @@ The following texts engage with the value clusters identified above through pers
     - Critiques systematic ethical theories and advocates for a more pluralistic approach
     - Relevant to values: ethical boundaries, responsibility, intellectual honesty
 
-** Social Philosophy & Late-Stage Capitalism
+** Social Philosophy & Communication
 
 *** Max Horkheimer & Theodor Adorno: *Dialectic of Enlightenment* (1944)
     - Critical theory analysis of how Enlightenment rationality leads to domination
@@ -89,6 +111,10 @@ The following texts engage with the value clusters identified above through pers
 *** Jean-François Lyotard: *The Postmodern Condition* (1979)
     - Analysis of knowledge in computerized societies and the end of grand narratives
     - Relevant to values: transparency, clarity, epistemic humility
+
+*** Jürgen Habermas: *Theory of Communicative Action* (1981)
+    - Provides theoretical framework for understanding how values are articulated and negotiated
+    - Relevant to values: clear communication, consensus-building, transparency
 
 *** Fredric Jameson: *Postmodernism, or The Cultural Logic of Late Capitalism* (1991)
     - Examines how late capitalism shapes culture, aesthetics, and knowledge

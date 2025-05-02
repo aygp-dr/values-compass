@@ -1,0 +1,209 @@
+#+TITLE: Taxonomy Analysis Tools and Resources
+#+AUTHOR: Values Compass Team
+#+DATE: 2025-05-01
+#+PROPERTY: header-args :results output :exports both
+
+* Introduction
+
+This document provides a collection of tools, frameworks, and resources for analyzing and visualizing value taxonomies. It focuses on methods for making sense of complex value hierarchies, overcoming semantic satiation, and creating meaningful insights from value data.
+
+* Conceptual Frameworks
+
+** Value Pluralism
+- Philosophical position that multiple values can be equally correct but fundamentally incompatible
+- Key authors: Isaiah Berlin, Bernard Williams, Joseph Raz
+- Application: Helps explain contradictory values in taxonomies without assuming error
+- Example: Liberty and equality can both be valid values but sometimes come into tension
+
+** Moral Foundations Theory
+- Framework identifying six foundational moral intuitions underlying values
+- Developed by Jonathan Haidt and colleagues
+- Foundations: Care/harm, Fairness/cheating, Loyalty/betrayal, Authority/subversion, Sanctity/degradation, Liberty/oppression
+- Application: Mapping values to these foundations for cross-cultural understanding
+- Resources: [[https://moralfoundations.org/][Moral Foundations Website]]
+
+** Cultural Evolution Models
+- Approaches studying how values spread and evolve in cultural contexts
+- Key researchers: Joseph Henrich, Robert Boyd, Peter Richerson
+- Methods: Dual-inheritance theory, cultural transmission, cultural group selection
+- Application: Understanding why certain value clusters emerge and persist
+- Reference: Henrich, J. (2016). The Secret of Our Success
+
+** Value Network Analysis
+- Analyzing values as network nodes with weighted connections
+- Methods: Network centrality, community detection, path analysis
+- Tools: NetworkX (Python), Gephi, Cytoscape
+- Application: Identifying central values, value communities, and bridging values
+
+** Cognitive Linguistics Approach
+- Studies how values are encoded and structured in language
+- Key concepts: Frame semantics, metaphor theory, prototype theory
+- Researchers: George Lakoff, Mark Johnson, Charles Fillmore
+- Application: Understanding how values are communicated and conceptualized
+
+* Tools and Techniques
+
+** Semantic Analysis Tools
+
+*** WordNet
+- Lexical database organizing English words into synonym sets
+- Application: Resolving semantic overlaps between value terms
+- Features: Includes semantic relations (hypernyms, hyponyms, etc.)
+- Access: [[https://wordnet.princeton.edu/][WordNet Princeton]]
+
+*** ConceptNet
+- Knowledge graph connecting words and phrases with labeled relationships
+- Features: Multi-lingual, includes common-sense relationships
+- Application: Building relationship maps between value concepts
+- Access: [[https://conceptnet.io/][ConceptNet]]
+
+*** NLTK and spaCy
+- Python libraries for natural language processing
+- Features: Word vectors, semantic similarity, corpus analysis
+- Application: Semantic analysis of value descriptions
+- Resources: [[https://www.nltk.org/][NLTK]], [[https://spacy.io/][spaCy]]
+
+** Visualization Techniques
+
+*** Hierarchical Clustering
+- Dendrograms showing hierarchical relationship between values
+- Tools: scipy.cluster.hierarchy, seaborn.clustermap
+- Sample code:
+```python
+import seaborn as sns
+import pandas as pd
+from scipy.cluster.hierarchy import linkage
+
+# Load value similarity data
+df = pd.read_csv("value_similarities.csv")
+
+# Compute linkage matrix
+Z = linkage(df, method='ward')
+
+# Create dendrogram
+sns.clustermap(df, row_linkage=Z, col_linkage=Z)
+```
+
+*** Dimensionality Reduction
+- Techniques: t-SNE, UMAP, PCA
+- Purpose: Creating 2D/3D visualizations of high-dimensional value embeddings
+- Tools: scikit-learn, umap-learn
+- Application: Visualizing proximity of values in semantic space
+- Example code:
+```python
+import numpy as np
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+
+# Value embeddings (from word vectors)
+embeddings = np.load("value_embeddings.npy")
+value_names = pd.read_csv("value_names.csv")["name"].tolist()
+
+# t-SNE visualization
+tsne = TSNE(n_components=2, perplexity=30, random_state=42)
+embeddings_2d = tsne.fit_transform(embeddings)
+
+# Plot
+plt.figure(figsize=(12, 10))
+plt.scatter(embeddings_2d[:, 0], embeddings_2d[:, 1], alpha=0.7)
+for i, name in enumerate(value_names):
+    plt.annotate(name, (embeddings_2d[i, 0], embeddings_2d[i, 1]))
+```
+
+*** Interactive Network Graphs
+- Tools: D3.js, NetworkX + Plotly, Gephi
+- Features: Relationship visualization, interactive exploration, community detection
+- Application: Exploring connections between values in interactive format
+- Example: Force-directed graph with value clusters
+
+** Simulation Tools
+
+*** Agent-Based Value Modeling
+- Simulating how values propagate in populations
+- Tools: Mesa (Python), NetLogo
+- Application: Testing hypotheses about value formation and cultural evolution
+- Resources: [[https://mesa.readthedocs.io/][Mesa Documentation]]
+
+*** Value Exchange Simulations
+- Game theory approaches to modeling value-based interactions
+- Methods: Evolutionary game theory, multi-agent reinforcement learning
+- Application: Understanding dynamics of value adoption and propagation
+- Tools: Axelrod library (Python)
+
+* Methodological Approaches
+
+** Mixed Methods Value Analysis
+- Combining quantitative and qualitative approaches
+- Methods: Survey + interview, computational + interpretive
+- Benefits: Richer understanding of value meanings and relationships
+- Example workflow: NLP analysis → thematic clustering → qualitative interpretation
+
+** Participatory Value Mapping
+- Involving stakeholders in creating and validating value taxonomies
+- Methods: Card sorting, Q-methodology, co-design workshops
+- Application: Creating more robust, culturally-sensitive value hierarchies
+- Tools: OptimalSort, WebSort.io
+
+** Diachronic Value Analysis
+- Studying how values and their meanings change over time
+- Methods: Corpus linguistics, historical text mining, trend analysis
+- Application: Understanding evolution of value concepts
+- Tools: Google Ngram Viewer, diachronic corpora
+
+* Datasets and Resources
+
+** Cross-Cultural Value Resources
+- World Values Survey: [[https://www.worldvaluessurvey.org/][worldvaluessurvey.org]]
+- Schwartz Value Survey data
+- European Social Survey values modules
+- Application: Comparative analysis of value priorities across cultures
+
+** Moral Language Datasets
+- Moral Foundations Dictionary
+- MFD 2.0 (Extended moral foundations dictionary)
+- LIWC (Linguistic Inquiry and Word Count) moral categories
+- Application: Automated coding of moral language in texts
+
+** Semantic Web Value Resources
+- Wikidata moral concepts
+- Ethics ontologies
+- Application: Leveraging structured knowledge about value concepts
+- Access: SPARQL endpoints, RDF datasets
+
+* Best Practices for Value Taxonomy Work
+
+** Managing Semantic Satiation
+- Rotate between different levels of abstraction
+- Use visual representations to complement textual analysis
+- Schedule work with breaks to prevent concept fatigue
+- Focus on relations rather than isolated definitions
+
+** Handling Value Ambiguity
+- Document multiple interpretations rather than forcing consensus
+- Use polythetic rather than monothetic classification
+- Maintain explicit context markers for value concepts
+- Employ fuzzy classification where appropriate
+
+** Ensuring Rigor in Value Analysis
+- Employ multiple coders/annotators
+- Calculate inter-rater reliability
+- Document annotation guidelines and decision rules
+- Use mixed methods for triangulation
+
+** Communicating Value Hierarchies
+- Design for audience needs (researchers vs. general public)
+- Provide multiple entry points (overview → detail)
+- Balance precision with accessibility
+- Include concrete examples with abstract categories
+
+* Conclusion
+
+The analysis of value taxonomies requires both theoretical understanding and practical tools. This document provides resources for navigating the challenges of semantic complexity, visualization, and meaningful analysis of value structures. By combining multiple approaches—computational, philosophical, and participatory—researchers can develop more nuanced understandings of values and their relationships.
+
+* References and Further Reading
+
+- Haidt, J. (2012). The Righteous Mind: Why Good People are Divided by Politics and Religion.
+- Lakoff, G. (2002). Moral Politics: How Liberals and Conservatives Think.
+- Kenter, J. O., et al. (2016). The methods and tools of shared values research.
+- Graham, J., et al. (2013). Moral foundations theory: The pragmatic validity of moral pluralism.
+- Cieciuch, J., et al. (2014). A hierarchical structure of basic human values in a third-order confirmatory factor analysis.

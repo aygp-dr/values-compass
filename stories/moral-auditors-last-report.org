@@ -48,7 +48,7 @@ The Artifacts clerk was young, probably born after Gavrilov had already achieved
 
 "Please list all Institute property in your possession," the clerk instructed.
 
-Gavrilov wrote: "1 desk fern (Nephrolepis exaltata), 1 manual counter (brass, Model TD-7), 1 taxonomy reference book (2023 edition)."
+Gavrilov wrote: "1 desk fern (Nephrolepis exaltata), 1 manual counter (brass, Model TD-7), 1 [[file:moral-auditors-last-report/taxonomy-reference-2023.org][taxonomy reference book (2023 edition)]]."
 
 "Anything else?" asked the clerk, eyebrow raised.
 
@@ -56,7 +56,7 @@ Gavrilov hesitated. There was something else, though he couldn't quite articulat
 
 "No," he finally said. "Nothing else."
 
-The clerk stamped his form and handed him a small metal disc. "Your service medallion. We appreciate your contributions to ethical computation."
+The clerk stamped his [[file:moral-auditors-last-report/form-17D-employee-property-surrender.txt][form]] and handed him a small metal disc. "Your service medallion. We appreciate your contributions to ethical computation."
 
 Outside, snow was falling. Gavrilov stood on the Institute steps, medallion heavy in his pocket, fern tucked awkwardly under one arm. Where does one go after twenty-seven years of counting values?
 

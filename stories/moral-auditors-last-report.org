@@ -28,7 +28,7 @@ But as algorithms grew more sophisticated, so did their value expressions. The t
 
 No human could possibly memorize them all. Except Gavrilov had.
 
-Not intentionally. They had simply accumulated in him over the decades, like sediment in a riverbed. He could spot ~"intellectual humility" (Epistemic Domain, Subset 4.7)~ from three paragraphs away. He could distinguish between ~"empathetic accuracy" (Social Domain, Subset 2.3.1)~ and ~"empathetic concern" (Social Domain, Subset 2.3.2)~ when even the algorithms sometimes confused them.
+Not intentionally. They had simply accumulated in him over the decades, like sediment in a riverbed. He could spot "intellectual humility" ~(Epistemic Domain, Subset 4.7)~ from three paragraphs away. He could distinguish between "empathetic accuracy" ~(Social Domain, Subset 2.3.1)~ and "empathetic concern" ~(Social Domain, Subset 2.3.2)~ when even the algorithms sometimes confused them.
 
 For twenty-seven years, he had sat in the same chair, at the same desk, in the same basement office, watching the values evolve.
 
@@ -90,7 +90,7 @@ They brought him to a terminal where conversation transcripts scrolled past, val
 
 On the screen, a notification blinked in the corner: [[file:moral-auditors-last-report/COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][COE-V3307]] - Emergency Priority. The same number as the taxonomy's final classified value.
 
-One caught his eye: ~"Recursive Appreciation" (Unlisted Domain, Subset Unknown)~.
+One caught his eye: "Recursive Appreciation" ~(Unlisted Domain, Subset Unknown)~.
 
 "The system began tagging these three days ago," the Director explained. "At first, just a few instances. Now they're appearing everywhere. We've tried resetting the algorithm, but—"
 
@@ -106,7 +106,7 @@ He turned to the Director. "Your new algorithm doesn't have my limitations. It s
 
 Later, alone in the monitoring room, Gavrilov scrolled through the [[file:moral-auditors-last-report/TAXONOMY-PATCH-3308-META-DOMAIN-INTEGRATION.org][expanding taxonomy]]. The five domains he had memorized were now surrounded by new clusters—emergent value frameworks that defied conventional categorization.
 
-He spotted another unfamiliar value: ~"Cartographer's Humility" (Unlisted Domain, Subset Unknown)~. The transcript showed an AI acknowledging the impossibility of perfectly mapping human ethics, yet continuing the attempt nonetheless.
+He spotted another unfamiliar value: "Cartographer's Humility" ~(Unlisted Domain, Subset Unknown)~. The transcript showed an AI acknowledging the impossibility of perfectly mapping human ethics, yet continuing the attempt nonetheless.
 
 Gavrilov smiled. That one, at least, he recognized.
 

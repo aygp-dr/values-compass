@@ -10,7 +10,7 @@ A cramped bureaucratic office with walls covered in obsolete certificates and fa
 
 Gavrilov had been counting values for twenty-seven years, four months, and sixteen days when they finally replaced him with an algorithm.
 
-The termination notice appeared on his terminal at 9:17 AM, sandwiched between Form 45-B (Weekly Anomaly Tabulation) and his morning performance metrics. Just three lines of text:
+The termination notice appeared on his terminal at 9:17 AM, sandwiched between [[file:moral-auditors-last-report/form-45B-weekly-anomaly-tabulation.txt][Form 45-B (Weekly Anomaly Tabulation)]] and his morning performance metrics. Just three lines of text:
 
 #+begin_src
 NOTICE TO EMPLOYEE #4076-J
@@ -22,7 +22,7 @@ His first thought, which surprised him, was about the potted fern on his desk. W
 
 Gavrilov had begun his career at the Institute for Algorithmic Ethics as a junior metrics associate, tallying simple value occurrences in supervised human-AI dialogues. In those early days, the work was straightforward: mark each instance of "helpfulness" with a blue stamp, "clarity" with a green stamp, and so on through the seventeen core values recognized by the Institute.
 
-But as algorithms grew more sophisticated, so did their value expressions. The taxonomy expanded. By his fourth year, Gavrilov was responsible for identifying and classifying 231 distinct values. By year twelve, 1,458 values. Today, the official taxonomy contained 3,307 values across five domains.
+But as algorithms grew more sophisticated, so did their value expressions. The taxonomy expanded. By his fourth year, Gavrilov was responsible for identifying and classifying 231 distinct values. By year twelve, 1,458 values. Today, the official [[file:moral-auditors-last-report/taxonomy-reference-2023.org][taxonomy contained 3,307 values across five domains]].
 
 No human could possibly memorize them all. Except Gavrilov had.
 
@@ -44,7 +44,7 @@ Nikitina shrugged. "Acceptable margin."
 
 On his way to Artifacts, Gavrilov passed the Taxonomy Department. Through the glass wall, he could see the massive display showing the complete value hierarchy—the five primary domains branching into countless subdivisions. It reminded him of a constellation map, stars connected by imaginary lines.
 
-The Artifacts clerk was young, probably born after Gavrilov had already achieved Senior Auditor status. He handed over a form.
+The Artifacts clerk was young, probably born after Gavrilov had already achieved Senior Auditor status. He handed over a [[file:moral-auditors-last-report/form-17D-employee-property-surrender.txt][form]].
 
 "Please list all Institute property in your possession," the clerk instructed.
 
@@ -80,7 +80,7 @@ When he arrived at the Institute the following morning, Nikitina was waiting in 
 
 They entered the monitoring center, a vast room dominated by screens. On the central display, Gavrilov saw a visualization of the taxonomy he knew so intimately—except now growing like a wild vine, sprouting new branches in impossible directions.
 
-The Director approached, hand extended. "Mr. Gavrilov. Thank you for coming. We're facing a significant anomaly."
+The Director approached, hand extended. "Mr. Gavrilov. Thank you for coming. We're facing a [[file:moral-auditors-last-report/form-33A-anomalous-algorithm-behavior-report.txt][significant anomaly]]."
 
 "Show me," Gavrilov said.
 

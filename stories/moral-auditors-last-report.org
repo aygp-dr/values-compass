@@ -9,7 +9,7 @@ A cramped bureaucratic office with walls covered in obsolete certificates and fa
 [[file:images/moral-auditor.png]]
 
 A claustrophobic perspective of Gavrilov's workstation:
-[[file:images/small/moral-auditor-small.png]]
+[[file:images/small/moral-auditor-medium.png]]
 
 * The Moral Auditor's Last Report
 

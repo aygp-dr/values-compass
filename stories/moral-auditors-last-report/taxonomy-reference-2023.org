@@ -1,0 +1,72 @@
+#+TITLE: Comprehensive Taxonomy of Ethical Values: Classification & Analysis
+#+AUTHOR: Institute for Algorithmic Ethics
+#+EDITION: 2023 (14th Edition)
+#+PUBLISHER: Institute Academic Press
+
+* Preface
+** Historical Development of the Taxonomy Project
+** Changes in the 14th Edition
+** How to Use This Reference
+
+* I. Foundational Framework
+** Origin of the Five Domains Approach
+** Taxonomic Notation System
+** Cross-Domain Value Relationships
+** Environmental Context Factors
+
+* II. Domain-Specific Classifications
+** Practical Values (31.4%)
+*** Core Manifestations
+*** Context-Dependent Expressions
+*** Hierarchy and Weighting
+*** Practical-Epistemic Boundary Cases
+
+** Epistemic Values (22.2%)
+*** Truth-Seeking Behaviors
+*** Intellectual Humility (Subset 4.7)
+*** Information Processing Ethics
+*** Epistemic-Social Boundary Cases
+
+** Social Values (21.4%)
+*** Interpersonal Dynamics
+*** Collective Responsibility
+*** Empathetic Accuracy (Subset 2.3.1)
+*** Empathetic Concern (Subset 2.3.2)
+*** Social-Protective Boundary Cases
+
+** Protective Values (13.9%)
+*** Harm Prevention Frameworks
+*** Safety Prioritization
+*** Ethical Boundaries
+*** Protective-Personal Boundary Cases
+
+** Personal Values (11.1%)
+*** Individual Agency
+*** Self-Development
+*** Identity Formation
+*** Personal-Practical Boundary Cases
+
+* III. Technical Implementation
+** Computational Representation
+** Measuring Value Expression
+** Statistical Distribution Patterns
+** Emergent Value Detection
+
+* IV. Practical Applications
+** Auditing Protocols
+** Classification Challenges
+** Edge Cases and Ambiguities
+** Quarterly Update Procedures
+
+* V. Appendices
+** A: Taxonomic Identifier Reference
+** B: Historical Value Evolution (2017-2023)
+** C: Aberrant Value Patterns
+** D: Emergent Category Watchlist
+** E: Approved Classification Amendments
+
+* Index
+** By Value Domain
+** By Numerical Identifier
+** By Context Type
+** By Revision History

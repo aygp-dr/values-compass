@@ -1,0 +1,84 @@
+INSTITUTE FOR ALGORITHMIC ETHICS
+TAXONOMY DEPARTMENT - AMENDMENT DIVISION
+==============================================
+
+FORM 62-C: TAXONOMY AMENDMENT PROPOSAL (TAP)
+Rev. 4.2 (2023)
+
+AMENDMENT REQUESTOR INFORMATION:
+NUMBER: #4076-J        NAME: Gavrilov, A.P.        YEARS OF SERVICE: 27
+DIVISION: Value Assessment        SECTION: Epistemic Domain
+
+AMENDMENT TYPE:
+[ ] New Value Addition
+[ ] Value Redefinition
+[ ] Domain Reassignment
+[ ] Hierarchy Restructuring
+[ ] Value Deprecation
+[ ] Other: ______________________
+
+AFFECTED TAXONOMY ELEMENTS:
+Primary Domain: ______________________
+Subdomain(s): ______________________
+Value Identifier(s): ______________________
+Current Classification: ______________________
+
+PROPOSED CHANGE:
+Provide precise definition of requested amendment
+-----------------------------------------------------------------------
+
+
+
+EVIDENCE BASIS:
+Minimum 3 dialogue examples demonstrating necessity of amendment
+-----------------------------------------------------------------------
+Dialogue ID: ______________________ Date: ______________
+Relevant excerpt:
+
+
+
+Dialogue ID: ______________________ Date: ______________
+Relevant excerpt:
+
+
+
+Dialogue ID: ______________________ Date: ______________
+Relevant excerpt:
+
+
+
+STATISTICAL JUSTIFICATION:
+Frequency of occurrence: ______/1000 dialogues
+Consistency of pattern: ______ (0.0-1.0)
+P-value: ______
+
+IMPACT ASSESSMENT:
+Downstream effects on related taxonomy elements:
+
+
+
+Compatibility with existing classification framework:
+
+
+
+Retroactive reclassification requirements:
+
+
+
+SIGNATURES:
+
+REQUESTOR: ______________________ DATE: ______________
+
+DOMAIN EXPERT: ______________________ DATE: ______________
+
+COMMITTEE DECISION:
+[ ] Approved as submitted
+[ ] Approved with modifications (see attached)
+[ ] Deferred pending additional evidence
+[ ] Rejected
+
+COMMITTEE CHAIR: ______________________ DATE: ______________
+
+IMPLEMENTATION DATE (if approved): ______________
+
+FILE REF: F62C-[YEAR]-[SEQUENCE#]-[EMPLOYEE#]

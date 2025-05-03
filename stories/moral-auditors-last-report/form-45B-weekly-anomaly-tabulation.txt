@@ -1,0 +1,54 @@
+INSTITUTE FOR ALGORITHMIC ETHICS
+TAXONOMY DEPARTMENT - ANOMALY REPORTING DIVISION
+==================================================
+
+FORM 45-B: WEEKLY ANOMALY TABULATION (WAT)
+Rev. 9.7 (2024)
+
+EMPLOYEE INFORMATION:
+NUMBER: #4076-J        NAME: Gavrilov, A.P.        CLEARANCE: D3
+DIVISION: Value Assessment        SECTION: Epistemic Domain
+REPORTING PERIOD: Week ending [__________]
+
+ANOMALY CLASSIFICATION:
+[ ] A-1: Novel Value Expression (Known Domain)
+[ ] A-2: Domain Boundary Ambiguity
+[ ] A-3: Context-Dependent Variance
+[ ] A-4: Taxonomic Hierarchy Violation
+[ ] A-5: Contradictory Value Co-occurrence
+[ ] X-1: Unclassifiable (requires senior review)
+
+STATISTICS:
+Total dialogues processed: ______
+Anomalies detected: ______
+Anomaly rate (%): ______
+Previous week anomaly rate (%): ______
+Statistical significance (p-value): ______
+
+DETAILED ANOMALY REPORTS:
+Use one line per anomaly. Include timestamp, dialogue ID, and observed deviation.
+-----------------------------------------------------------------------
+1. 
+2.
+3.
+4.
+5.
+(Attach Form 45-B-1 if additional space required)
+
+RECOMMENDED ACTIONS:
+[ ] No action required (within acceptable parameters)
+[ ] Taxonomy update recommendation (Attach Form 62-C)
+[ ] Algorithm recalibration
+[ ] Manual review of affected dialogues
+[ ] Escalation to Ethics Committee
+
+SIGNATURE: ______________________ DATE: ______________
+
+SUPERVISOR REVIEW:
+[ ] Accepted
+[ ] Returned for revision
+[ ] Escalated
+
+SUPERVISOR SIGNATURE: ______________________ DATE: ______________
+
+FILE REF: F45B-[YEAR]-[WEEK]-[EMPLOYEE#]

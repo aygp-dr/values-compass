@@ -24,7 +24,7 @@ His first thought, which surprised him, was about the potted fern on his desk. W
 
 Gavrilov had begun his career at the Institute for Algorithmic Ethics as a junior metrics associate, tallying simple value occurrences in supervised human-AI dialogues. In those early days, the work was straightforward: mark each instance of "helpfulness" with a blue stamp, "clarity" with a green stamp, and so on through the seventeen core values recognized by the Institute.
 
-But as algorithms grew more sophisticated, so did their value expressions. The taxonomy expanded. By his fourth year, Gavrilov was responsible for identifying and classifying 231 distinct values. By year twelve, 1,458 values. Today, the official [[file:moral-auditors-last-report/taxonomy-reference-2023.org][taxonomy contained ~3,307~ values across five domains]].
+But as algorithms grew more sophisticated, so did their value expressions. The taxonomy expanded. By his fourth year, Gavrilov was responsible for identifying and classifying 231 distinct values. By year twelve, 1,458 values. Today, the [[file:moral-auditors-last-report/taxonomy-reference-2023.org][official taxonomy]] contained ~3,307~ values across five domains.
 
 No human could possibly memorize them all. Except Gavrilov had.
 

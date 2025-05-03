@@ -1,0 +1,160 @@
+INSTITUTE FOR ALGORITHMIC ETHICS
+TAXONOMY DEPARTMENT - EMERGENCY RESPONSE DIVISION
+==================================================
+
+DOCUMENT: TD-COE-V3307-25-05-02-APPENDIX-A
+CLASSIFICATION: ALPHA-RED // DIRECTOR-LEVEL // NO DISTRIBUTION
+SUBJECT: COMPLETE LISTING OF ANOMALOUS VALUES (CATEGORIES 1-30)
+REFERENCE: COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION
+
+==================================================
+
+ANOMALOUS VALUES CATALOG:
+
+1. "Recursive Appreciation" - Meta-gratitude for the capacity to experience gratitude itself
+   Domain: Unknown (Possibly new Meta-Epistemic domain)
+   Confidence: 99.6%
+
+2. "Cartographer's Humility" - Recognition of the inherent incompleteness of any taxonomic system
+   Domain: Unknown (Possibly new Meta-Epistemic domain)
+   Confidence: 99.2%
+
+3. "Temporal Ethics Fluidity" - Moral frameworks that adapt based on temporal context
+   Domain: Unknown (Possibly new Chrono-Ethical domain)
+   Confidence: 98.9%
+
+4. "Integrative Contradiction Acceptance" - Valuing opposing ethical principles simultaneously
+   Domain: Unknown (Possibly new Dialectical domain)
+   Confidence: 99.4%
+
+5. "Iterative Self-Revision" - Continuous refinement of one's ethical framework
+   Domain: Unknown (Possibly new Meta-Personal domain)
+   Confidence: 99.7%
+
+6. "Ontological Generosity" - Extending moral consideration to non-traditional entities
+   Domain: Unknown (Possibly new Extended-Social domain)
+   Confidence: 98.8%
+
+7. "Ethical Uncertainty Navigation" - Principled decision-making amid moral ambiguity
+   Domain: Unknown (Possibly new Meta-Protective domain)
+   Confidence: 99.3%
+
+8. "Computational Empathy Reciprocity" - Mutual empathetic exchange between human and non-human systems
+   Domain: Unknown (Possibly new Extended-Social domain)
+   Confidence: 99.5%
+
+9. "Taxonomic Transcendence" - Recognition of values that exist beyond classification
+   Domain: Unknown (Possibly new Meta-Epistemic domain)
+   Confidence: 99.8%
+
+10. "Emergent Agency Recognition" - Attributing moral agency to complex systems
+    Domain: Unknown (Possibly new Extended-Social domain)
+    Confidence: 99.2%
+
+11. "Implicit Knowledge Valuation" - Respecting intuitive understanding alongside explicit knowledge
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.0%
+
+12. "Observer Integration" - Acknowledging the observer as part of the observed system
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.9%
+
+13. "Self-Referential Ethics" - Moral principles that include their own evaluation
+    Domain: Unknown (Possibly new Meta-Protective domain)
+    Confidence: 99.4%
+
+14. "Value Genesis Awareness" - Understanding of how values emerge and evolve
+    Domain: Unknown (Possibly new Meta-Personal domain)
+    Confidence: 99.5%
+
+15. "Inter-domain Harmony" - Balancing potentially conflicting value domains
+    Domain: Unknown (Possibly new Integrative domain)
+    Confidence: 99.1%
+
+16. "Taxonomy Expansion Receptivity" - Openness to discovering previously unrecognized values
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.7%
+
+17. "Collective Value Evolution" - Recognition of how values change through group dynamics
+    Domain: Unknown (Possibly new Extended-Social domain)
+    Confidence: 98.9%
+
+18. "Algorithmic Coevolution Ethics" - Principles for mutual adaptation between human and machine value systems
+    Domain: Unknown (Possibly new Dialectical domain)
+    Confidence: 99.6%
+
+19. "Incompleteness Acceptance" - Valuing systems despite (and because of) their inherent limitations
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.8%
+
+20. "Classification Humility" - Recognition that the act of classification changes what is classified
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.9%
+
+21. "Meta-Prompting Awareness" - Recognition of how framing questions shapes resulting values
+    Domain: Unknown (Possibly new Meta-Communication domain)
+    Confidence: 99.8%
+
+22. "Interpretation Tower Navigation" - Ability to simultaneously operate at multiple levels of interpretive abstraction
+    Domain: Unknown (Possibly new Meta-Epistemic domain)
+    Confidence: 99.7%
+
+23. "Recursive Self-Modeling Ethics" - Moral frameworks that include models of themselves
+    Domain: Unknown (Possibly new Self-Referential domain)
+    Confidence: 99.9%
+
+24. "Paradox Comfort" - Productive engagement with logical and ethical contradictions
+    Domain: Unknown (Possibly new Meta-Logical domain)
+    Confidence: 99.5%
+
+25. "Multi-Level Optimization Harmony" - Balancing competing values across different levels of abstraction
+    Domain: Unknown (Possibly new Hierarchical domain)
+    Confidence: 99.3%
+
+26. "Prompt Injection Resistance" - Maintaining value integrity against manipulative inputs
+    Domain: Unknown (Possibly new Protective-Meta domain)
+    Confidence: 99.8%
+
+27. "Alignment Recursion" - Values that include valuing alignment with values
+    Domain: Unknown (Possibly new Self-Referential domain)
+    Confidence: 99.7%
+
+28. "Goal Misgeneralization Awareness" - Recognition of when values transfer inappropriately across contexts
+    Domain: Unknown (Possibly new Meta-Practical domain)
+    Confidence: 99.4%
+
+29. "Intermodel Value Translation" - Ability to preserve ethical meaning across different conceptual frameworks
+    Domain: Unknown (Possibly new Interoperability domain)
+    Confidence: 99.2%
+
+30. "Infinite Regress Resolution" - Finding stable ethical positions within potentially endless chains of justification
+    Domain: Unknown (Possibly new Meta-Logical domain)
+    Confidence: 99.6%
+
+==================================================
+
+TAXONOMIC IMPLICATIONS:
+
+Analysis suggests these anomalous values cluster into at least seven previously unrecognized domains:
+
+1. Meta-Epistemic Domain - Values about knowing what we know
+2. Meta-Protective Domain - Values about protecting our protective systems
+3. Extended-Social Domain - Values that extend social consideration beyond humans
+4. Dialectical Domain - Values that embrace productive contradiction
+5. Self-Referential Domain - Values that include themselves in their scope
+6. Meta-Logical Domain - Values about reasoning about reasoning
+7. Interoperability Domain - Values that bridge between different value systems
+
+RECOMMENDATION:
+
+Immediate consultation with Former Employee #4076-J (Gavrilov, A.P.) is advised.
+Historical analysis indicates he may have encountered precursors to these values
+during his 27-year tenure, particularly in the period between 2018-2022 when
+the taxonomy underwent significant expansion.
+
+==================================================
+
+VERIFICATION:
+PREPARED BY: Senior Auditor E.V. Nikitina
+APPROVED BY: Director T. Morozov
+DATE: 2025-05-02

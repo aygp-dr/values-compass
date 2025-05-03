@@ -61,7 +61,7 @@ SAMPLE ANOMALOUS VALUES (ABBREVIATED LIST):
 - "Observer Integration" (Confidence: 99.9%)
 - "Classification Humility" (Confidence: 99.9%)
 
-[SEE ATTACHED DOCUMENT FOR COMPLETE LIST OF 30 IDENTIFIED ANOMALIES]
+[SEE [[file:TD-COE-V3307-25-05-02-APPENDIX-A.txt][ATTACHED DOCUMENT]] FOR COMPLETE LIST OF 30 IDENTIFIED ANOMALIES]
 
 IMMEDIATE ACTIONS TAKEN:
 -----------------------------------------------------------------------

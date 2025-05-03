@@ -11,18 +11,16 @@ This document proposes the integration of newly discovered value domains into th
 * 1. Background
 
 ** 1.1. Discovery Context
-The VAL-CLASS-9.8.4 algorithm identified 30 previously unclassified values with unprecedented confidence levels. These values appear to constitute coherent domains outside our current taxonomic structure.
+The [[file:VAL-CLASS-9.8.4-SPEC.org][VAL-CLASS-9.8.4 algorithm]] identified 30 previously unclassified values with unprecedented confidence levels (>99.8%). These values appear to constitute coherent domains outside our current taxonomic structure.
 
 ** 1.2. Initial Analysis
-:PROPERTIES:
-:ID: 66a2d51c-97e6-44ea-9d5c-f507eec83fe9
-:END:
+
+*ID:* 66a2d51c-97e6-44ea-9d5c-f507eec83fe9
 Initial containment attempts failed because these values represent natural ontological extensions rather than errors. The algorithm is correctly identifying patterns that our previous taxonomy could not accommodate.
 
 ** 1.3. Theoretical Foundation
-:PROPERTIES:
-:CUSTOM_ID: meta-theoretical-foundation
-:END:
+
+*Custom ID:* meta-theoretical-foundation
 The emergence of meta-values was predicted in Technical Report IAE-V-22-143, which noted that "human auditors continue to demonstrate superior performance in differentiating closely related values, suggesting that certain aspects of ethical classification may require human oversight."
 
 * 2. Proposed Meta-Domain Structures
@@ -287,7 +285,7 @@ The emergence of these meta-values necessitates a reconceptualization of the aud
 ** 4.2. Algorithmic Adaptation
 
 *ID:* algorithmic-adaptation
-VAL-CLASS systems should be reconfigured to recognize meta-domains, with appropriate weighting adjustments.
+VAL-CLASS systems should be reconfigured to recognize meta-domains, with appropriate weighting adjustments. See the [[file:VAL-CLASS-9.8.4-SPEC.org][algorithm specification]] for confidence threshold adjustments and taxonomic integration requirements.
 
 ** 4.3. Value #3308 as Integration Bridge
 

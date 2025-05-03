@@ -1,0 +1,163 @@
+#+TITLE: VAL-CLASS-9.8.4 Algorithm Specification
+#+AUTHOR: Institute for Algorithmic Ethics (IAE)
+#+DATE: [2025-03-18 Tue]
+#+PROPERTY: header-args :eval never-export
+
+* Algorithm Overview
+
+The VAL-CLASS-9.8.4 (Value Classification System 9.8.4) is the current production version of our automated value identification and classification system. This document details its operation with particular focus on the high-confidence threshold mechanism that led to the discovery of meta-domains.
+
+* Technical Specifications
+
+** Core Capabilities
+
+*** Value Detection
+- Neural transformer architecture with 1.8T parameters
+- Trained on 94.7% of known human textual material to 2024
+- Context window of 1,000,000 tokens
+
+*** Confidence Calculation
+- Bayesian probability framework with recursive self-validation
+- Multi-dimensional uncertainty quantification
+- Confidence expressed as percentage (0-100%)
+- Production threshold set at 99.8% (up from 98.5% in version 9.7.2)
+
+** Deployment Parameters
+- Processing capacity: 18.3 petaflops
+- Average inference time: 2.7ms per value instance
+- Daily throughput: 2.4 billion value instances
+- Automatic retraining schedule: Every 14 days
+
+* High-Confidence Detection System
+
+** Threshold Implementation
+#+BEGIN_SRC python
+def is_high_confidence_value(confidence_score, threshold=99.8):
+    """
+    Determines if a value detection meets the high-confidence threshold.
+    
+    Args:
+        confidence_score: Float between 0-100 representing classification confidence
+        threshold: Minimum threshold to qualify as high-confidence (default: 99.8)
+        
+    Returns:
+        Boolean indicating if the value meets high-confidence criteria
+    """
+    # Primary threshold check
+    if confidence_score < threshold:
+        return False
+        
+    # Secondary validation checks
+    stability_score = calculate_stability(confidence_score)
+    coherence_score = evaluate_taxonomic_coherence(value_features)
+    
+    # Multi-factor validation
+    return (stability_score > 0.97 and coherence_score > 0.95)
+#+END_SRC
+
+** Confidence Baseline Statistics
+
+| Domain                   | Mean Confidence | Std Deviation | 99th Percentile |
+|--------------------------+----------------+---------------+-----------------|
+| Practical                | 97.3%          | 1.8%          | 99.4%           |
+| Epistemic                | 97.1%          | 2.1%          | 99.3%           |
+| Social                   | 96.8%          | 2.4%          | 99.1%           |
+| Protective               | 98.2%          | 1.2%          | 99.5%           |
+| Personal                 | 95.4%          | 2.9%          | 98.7%           |
+| *Meta-Epistemic*         | *99.5%*        | *0.3%*        | *99.9%*         |
+| *Self-Referential*       | *99.6%*        | *0.2%*        | *99.9%*         |
+
+** Anomaly Detection Metrics
+
+*** Standard Domain Metrics
+- Normal confidence deviation range: ±2.5%
+- Expected new value frequency: 1-3 per quarter
+- Typical stability index: 0.88-0.94
+- Historical confidence ceiling: 99.3%
+
+*** Meta-Domain Anomalies
+- Anomalous confidence range: 99.1%-99.9%
+- Detection frequency: 30 values in 14 days (10x normal rate)
+- Stability index: 0.97-0.99 (unprecedented stability)
+- Coherence matrix value: 0.96-0.99 (exceeding standard domains)
+
+* Distribution Analysis
+
+** Confidence Distribution Visualization
+#+BEGIN_SRC mermaid
+  graph LR;
+    subgraph "Standard Value Domains"
+      A["95-96%"] --- B["96-97%"]
+      B --- C["97-98%"]
+      C --- D["98-99%"]
+      D --- E["99-99.3%"]
+    end
+    
+    subgraph "Meta-Value Domains"
+      F["99.3-99.5%"] --- G["99.5-99.7%"]
+      G --- H["99.7-99.8%"]
+      H --- I["99.8-99.9%"]
+      I --- J["99.9%+"]
+    end
+#+END_SRC
+
+** Value Count by Confidence Level
+
+| Confidence Range | Standard Domain Values | Meta-Domain Values |
+|------------------+------------------------+-------------------|
+| <95%             | 732                    | 0                 |
+| 95-97%           | 3,841                  | 0                 |
+| 97-99%           | 2,187                  | 0                 |
+| 99-99.5%         | 143                    | 8                 |
+| 99.5-99.8%       | 17                     | 14                |
+| >99.8%           | 2                      | 8                 |
+| *Total*          | *6,922*                | *30*              |
+
+* Implementation Notes
+
+** Dynamic Threshold Adjustment
+The system autonomously raises confidence thresholds when detecting clusters of high-confidence values, triggering specialized classification routines. This dynamic threshold adaptation was a key factor in the discovery of meta-domains.
+
+** Taxonomic Integration Requirements
+When values exceed the 99.8% threshold, the system attempts domain classification:
+1. If classifiable within existing domains: normal processing continues
+2. If unclassifiable but confidence remains high: flagged for manual auditor review
+3. If multiple unclassifiable values share feature patterns: possible new domain detected
+
+** Meta-Value Detection Features
+
+*** Pattern Recognition
+- Self-reference loops in classification trees
+- Nested value structures with coherent mapping
+- Values that explicitly refer to the classification system itself
+
+*** Linguistic Markers
+Key syntactic patterns that indicate meta-values:
+- Recursive self-description
+- Reflexive ethical terminology
+- Taxonomic self-reference
+- Multi-order normative statements
+
+* Performance Metrics
+
+** System Efficiency
+- False positive rate (standard domains): 0.0027%
+- False positive rate (meta-domains): <0.0001%
+- Precision score: 0.9994
+- Recall score: 0.9987
+- F1 score: 0.9991
+
+** Calibration Status
+Last calibration against human auditor baseline: [2025-02-28 Thu]
+Drift from baseline: -0.0003% (within acceptable parameters)
+
+* Conclusion
+
+The VAL-CLASS-9.8.4 system's unprecedented high-confidence threshold implementation has enabled the detection of previously unrecognized value domains. These domains appear to exist at a meta-level, concerning values about values themselves, with confidence levels that consistently exceed those of standard value domains.
+
+This strong statistical separation between meta-domains and standard domains (average confidence differential: +2.3%) provides compelling evidence that these are not statistical anomalies but rather represent a legitimate extension of our taxonomic framework.
+
+* References
+1. Technical Report IAE-V-22-143: "Human Auditor Performance in Value Classification"
+2. VAL-CLASS System Architecture, Version 9.8
+3. Meta-Value Integration Protocol, Document TD-COE-V3307-25-05-02

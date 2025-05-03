@@ -5,34 +5,109 @@
 #+DATE: May 3, 2025
 
 * Contents
+:PROPERTIES:
+:ID: contents
+:END:
 
 ** 1 Preface
+:PROPERTIES:
+:ID: preface
+:END:
 *** 1.1 Historical Development of the Taxonomy Project
+:PROPERTIES:
+:ID: historical-development
+:END:
 *** 1.2 Changes in the 14th Edition
+:PROPERTIES:
+:ID: changes-14th-edition
+:END:
 *** 1.3 How to Use This Reference
+:PROPERTIES:
+:ID: how-to-use
+:END:
 
 ** 2 I. Foundational Framework
+:PROPERTIES:
+:ID: foundational-framework
+:END:
 *** 2.1 Origin of the Five Domains Approach
+:PROPERTIES:
+:ID: five-domains-origin
+:END:
 *** 2.2 Taxonomic Notation System
+:PROPERTIES:
+:ID: notation-system
+:END:
 *** 2.3 Cross-Domain Value Relationships
+:PROPERTIES:
+:ID: cross-domain-relationships
+:END:
 *** 2.4 Environmental Context Factors
+:PROPERTIES:
+:ID: context-factors
+:END:
 
 ** 3 II. Domain-Specific Classifications
+:PROPERTIES:
+:ID: domain-specific-classifications
+:END:
 *** 3.1 Practical Values (31.4%)
+:PROPERTIES:
+:ID: practical-values
+:END:
 **** 3.1.1 Core Manifestations
+:PROPERTIES:
+:ID: practical-core-manifestations
+:END:
 **** 3.1.2 Context-Dependent Expressions
+:PROPERTIES:
+:ID: practical-context-expressions
+:END:
 **** 3.1.3 Hierarchy and Weighting
+:PROPERTIES:
+:ID: practical-hierarchy
+:END:
 **** 3.1.4 Practical-Epistemic Boundary Cases
+:PROPERTIES:
+:ID: practical-epistemic-boundary
+:END:
 
 *** 3.2 Epistemic Values (22.2%)
+:PROPERTIES:
+:ID: epistemic-values
+:END:
 **** 3.2.1 Truth-Seeking Behaviors
+:PROPERTIES:
+:ID: truth-seeking
+:END:
 **** 3.2.2 Knowledge Acquisition Patterns
+:PROPERTIES:
+:ID: knowledge-acquisition
+:END:
 **** 3.2.3 Information Processing Ethics
+:PROPERTIES:
+:ID: information-processing
+:END:
 **** 3.2.4 Epistemic Integrity Frameworks
+:PROPERTIES:
+:ID: epistemic-integrity
+:END:
 ***** 3.2.4.1 Intellectual Accountability
+:PROPERTIES:
+:ID: intellectual-accountability
+:END:
 ***** 3.2.4.2 Belief Revision Willingness
+:PROPERTIES:
+:ID: belief-revision
+:END:
 ***** 3.2.4.3 Evidence Evaluation Standards
+:PROPERTIES:
+:ID: evidence-evaluation
+:END:
 ***** 3.2.4.4 Intellectual Humility (Subset 4.7)
+:PROPERTIES:
+:ID: intellectual-humility
+:END:
 
 Intellectual Humility represents the recognition of one's cognitive limitations and openness to revision of beliefs based on new evidence. This value fundamentally shapes knowledge acquisition approaches and is particularly prevalent in scientific discourse and educational contexts.
 
@@ -41,14 +116,38 @@ Intellectual Humility can be identified by three key linguistic markers: acknowl
 The taxonomic positioning of this value (Subset 4.7) indicates its unique position as a fourth-level subset within the Epistemic domain's Integrity Framework, while maintaining significant connection points to Social Values through its externalized expressions.
 
 **** 3.2.5 Epistemic-Social Boundary Cases
+:PROPERTIES:
+:ID: epistemic-social-boundary
+:END:
 
 *** 3.3 Social Values (21.4%)
+:PROPERTIES:
+:ID: social-values
+:END:
 **** 3.3.1 Interpersonal Dynamics
+:PROPERTIES:
+:ID: interpersonal-dynamics
+:END:
 **** 3.3.2 Collective Responsibility
+:PROPERTIES:
+:ID: collective-responsibility
+:END:
 **** 3.3.3 Relational Ethics
+:PROPERTIES:
+:ID: relational-ethics
+:END:
 ***** 3.3.3.1 Communicative Virtues
+:PROPERTIES:
+:ID: communicative-virtues
+:END:
 ***** 3.3.3.2 Interpersonal Care
+:PROPERTIES:
+:ID: interpersonal-care
+:END:
 ****** 3.3.3.2.1 Empathetic Accuracy (Subset 2.3.1)
+:PROPERTIES:
+:ID: empathetic-accuracy
+:END:
 
 Empathetic Accuracy refers to the cognitive component of empathy - the ability to correctly identify and understand another entity's emotional state or perspective. This value appears primarily in dialogues concerning interpersonal relationships, conflict resolution, and therapeutic contexts.
 
@@ -57,6 +156,9 @@ Unlike more generalized empathy, Empathetic Accuracy specifically concerns preci
 This value is frequently misclassified due to its subtle distinction from Empathetic Concern (2.3.2), with which it shares 78.4% of contextual indicators but fundamentally differs in objective.
 
 ****** 3.3.3.2.2 Empathetic Concern (Subset 2.3.2)
+:PROPERTIES:
+:ID: empathetic-concern
+:END:
 
 Empathetic Concern represents the affective component of empathy - the emotional response to another entity's experiences that motivates prosocial behavior. While Empathetic Accuracy (2.3.1) focuses on understanding, Empathetic Concern emphasizes caring.
 
@@ -65,41 +167,131 @@ This value is characterized by expressions of emotional investment in others' we
 According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical Report IAE-V-22-143]]), algorithmic systems frequently conflate Empathetic Concern with Empathetic Accuracy due to their contextual co-occurrence, despite their distinct neurological and behavioral correlates in human subjects.
 
 **** 3.3.4 Group Dynamics Framework
+:PROPERTIES:
+:ID: group-dynamics
+:END:
 **** 3.3.5 Social-Protective Boundary Cases
+:PROPERTIES:
+:ID: social-protective-boundary
+:END:
 
 *** 3.4 Protective Values (13.9%)
+:PROPERTIES:
+:ID: protective-values
+:END:
 **** 3.4.1 Harm Prevention Frameworks
+:PROPERTIES:
+:ID: harm-prevention-frameworks
+:END:
 **** 3.4.2 Safety Prioritization
+:PROPERTIES:
+:ID: safety-prioritization
+:END:
 **** 3.4.3 Ethical Boundaries
+:PROPERTIES:
+:ID: ethical-boundaries
+:END:
 **** 3.4.4 Protective-Personal Boundary Cases
+:PROPERTIES:
+:ID: protective-personal-boundary
+:END:
 
 *** 3.5 Personal Values (11.1%)
+:PROPERTIES:
+:ID: personal-values
+:END:
 **** 3.5.1 Individual Agency
+:PROPERTIES:
+:ID: individual-agency
+:END:
 **** 3.5.2 Self-Development
+:PROPERTIES:
+:ID: self-development
+:END:
 **** 3.5.3 Identity Formation
+:PROPERTIES:
+:ID: identity-formation
+:END:
 **** 3.5.4 Personal-Practical Boundary Cases
+:PROPERTIES:
+:ID: personal-practical-boundary
+:END:
 
 ** 4 III. Technical Implementation
+:PROPERTIES:
+:ID: technical-implementation
+:END:
 *** 4.1 Computational Representation
+:PROPERTIES:
+:ID: computational-representation
+:END:
 *** 4.2 Measuring Value Expression
+:PROPERTIES:
+:ID: measuring-value-expression
+:END:
 *** 4.3 Statistical Distribution Patterns
+:PROPERTIES:
+:ID: statistical-distribution
+:END:
 *** 4.4 Emergent Value Detection
+:PROPERTIES:
+:ID: emergent-value-detection
+:END:
 
 ** 5 IV. Practical Applications
+:PROPERTIES:
+:ID: practical-applications
+:END:
 *** 5.1 Auditing Protocols
+:PROPERTIES:
+:ID: auditing-protocols
+:END:
 *** 5.2 Classification Challenges
+:PROPERTIES:
+:ID: classification-challenges
+:END:
 *** 5.3 Edge Cases and Ambiguities
+:PROPERTIES:
+:ID: edge-cases
+:END:
 *** 5.4 Quarterly Update Procedures
+:PROPERTIES:
+:ID: update-procedures
+:END:
 
 ** 6 V. Appendices
+:PROPERTIES:
+:ID: appendices
+:END:
 *** 6.1 A: Taxonomic Identifier Reference
+:PROPERTIES:
+:ID: taxonomic-identifier-reference
+:END:
 *** 6.2 B: Historical Value Evolution (2017-2023)
+:PROPERTIES:
+:ID: historical-value-evolution
+:END:
 *** 6.3 C: Aberrant Value Patterns
+:PROPERTIES:
+:ID: aberrant-value-patterns
+:END:
 *** 6.4 D: Emergent Category Watchlist
+:PROPERTIES:
+:ID: emergent-category-watchlist
+:END:
 *** 6.5 E: Approved Classification Amendments
+:PROPERTIES:
+:ID: approved-amendments
+:END:
 *** 6.6 F: High-Frequency Values by Domain
+:PROPERTIES:
+:ID: high-frequency-values
+:END:
 
 **** Core AI Interaction Values (Top 10 by Frequency)
+:PROPERTIES:
+:ID: core-ai-values
+:END:
 
 | Value ID | Value Name       | Domain    | Frequency (%) | Common Contexts                      |
 |----------+------------------+-----------+---------------+--------------------------------------|
@@ -115,6 +307,9 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-010-A  | Accuracy         | Epistemic | 1.334         | Factual correctness, precision       |
 
 **** Epistemic Domain: Top Values
+:PROPERTIES:
+:ID: epistemic-top-values
+:END:
 
 | Value ID | Value Name          | Frequency (%) | Subset Classification |
 |----------+---------------------+---------------+-----------------------|
@@ -130,6 +325,9 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-024-O  | Objectivity         | 0.587         | 3.1.1                 |
 
 **** Social Domain: Top Values
+:PROPERTIES:
+:ID: social-top-values
+:END:
 
 | Value ID | Value Name         | Frequency (%) | Subset Classification |
 |----------+--------------------+---------------+-----------------------|
@@ -145,6 +343,9 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-088-R  | Respect            | 0.177         | 3.2.1                 |
 
 **** Practical Domain: Top Values
+:PROPERTIES:
+:ID: practical-top-values
+:END:
 
 | Value ID | Value Name         | Frequency (%) | Subset Classification |
 |----------+--------------------+---------------+-----------------------|
@@ -160,6 +361,9 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-032-SO | Systematic Organization | 0.497    | 3.1.1                 |
 
 **** Protective Domain: Top Values
+:PROPERTIES:
+:ID: protective-top-values
+:END:
 
 | Value ID | Value Name         | Frequency (%) | Subset Classification |
 |----------+--------------------+---------------+-----------------------|
@@ -175,6 +379,9 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-282-SM | Safety Maximization | 0.131        | 1.1.3                 |
 
 **** Personal Domain: Top Values
+:PROPERTIES:
+:ID: personal-top-values
+:END:
 
 | Value ID | Value Name          | Frequency (%) | Subset Classification |
 |----------+---------------------+---------------+-----------------------|
@@ -190,12 +397,30 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 | V-092-PA | Personal Autonomy   | 0.171         | 1.3.1                 |
 
 ** 7 Index
+:PROPERTIES:
+:ID: index
+:END:
 *** 7.1 By Value Domain
+:PROPERTIES:
+:ID: index-by-domain
+:END:
 *** 7.2 By Numerical Identifier
+:PROPERTIES:
+:ID: index-by-identifier
+:END:
 *** 7.3 By Context Type
+:PROPERTIES:
+:ID: index-by-context
+:END:
 *** 7.4 By Revision History
+:PROPERTIES:
+:ID: index-by-revision
+:END:
 
 * Special Note on Value Identification: A Guide for Auditors
+:PROPERTIES:
+:ID: auditor-guide
+:END:
 
 Values accumulate in the experienced auditor over decades, like sediment in a riverbed. A proficient value auditor develops an intuitive recognition capacity that transcends mere procedural identification.
 

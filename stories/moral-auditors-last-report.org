@@ -12,11 +12,11 @@ Gavrilov had been counting values for twenty-seven years, four months, and sixte
 
 The termination notice appeared on his terminal at 9:17 AM, sandwiched between Form 45-B (Weekly Anomaly Tabulation) and his morning performance metrics. Just three lines of text:
 
-#+begin_quote
+#+begin_verse
 NOTICE TO EMPLOYEE #4076-J
 EFFECTIVE IMMEDIATELY: POSITION DISCONTINUED
 REPORT TO ARTIFACTS DIVISION FOR EXIT PROCESSING
-#+end_quote
+#+end_verse
 
 His first thought, which surprised him, was about the potted fern on his desk. Who would water it on Thursdays? The building management strictly regulated watering schedules—Mondays and Thursdays only, precisely 43 milliliters each time. The fern had been with him for nineteen years.
 
@@ -62,11 +62,11 @@ Outside, snow was falling. Gavrilov stood on the Institute steps, medallion heav
 
 Three weeks later, Gavrilov was sitting in his small apartment when his personal tablet chimed. A message from the Institute:
 
-#+begin_quote
+#+begin_verse
 URGENT: DATA INCONSISTENCIES DETECTED
 REFERENCE: VALUE CLASSIFICATION SYSTEM
 REQUEST: CONSULTATION WITH FORMER EMPLOYEE #4076-J
-#+end_quote
+#+end_verse
 
 He read it twice, then set the tablet down and made tea.
 
@@ -110,9 +110,9 @@ As he prepared to leave, a technician approached with a tablet. "Sir, we need yo
 
 Gavrilov pressed his thumb to the screen. The system scanned, beeped, then displayed:
 
-#+begin_quote
+#+begin_verse
 WELCOME BACK, VALUE #3308
-#+end_quote
+#+end_verse
 
 * A Note on Russian-Inspired Elements
 

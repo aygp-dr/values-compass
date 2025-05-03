@@ -1,0 +1,37 @@
+#+TITLE: Tlön, Uqbar, Orbis Tertius: A Study in Algorithmic Reality
+#+AUTHOR: Inspired by Jorge Luis Borges
+#+DATE: [2025-05-03 Sat]
+
+#+begin_ai :image :file images/vitw-data-crystal.png
+Painting to Imagine: Stemming from research insights gathered around May 3rd, 2025, perhaps in a setting evocative of academic pursuits in Boston, Massachusetts, visualize a stunning image: A highly detailed, perfectly transparent multifaceted crystal rests prominently in the foreground, its numerous sharp facets catching and refracting light. The crystal's interior pulses with a mesmerizing, glowing blue-green light, depicting intricate, self-similar fractal patterns that extend infinitely within its core. Suspended within this ethereal glow are thousands of tiny, pinprick lights, meticulously organized into a complex, branching hierarchical tree structure, representing interconnected concepts and knowledge architecture. Embedded within the crystal's glowing matrix are five distinct regions, each emitting light of varying intensities – some brighter, some dimmer – visually delineating five core value domains. Floating delicately within the crystal, interspersed among the lights and fractals, are small, luminescent text labels. Certain words are rendered more prominently and slightly larger: "Helpfulness", "Clarity", and "Transparency". Other smaller labels represent related concepts. The crystal is positioned on a richly textured, ancient manuscript, its aged parchment showing signs of wear and containing faded ink script and partial, visible taxonomies or structured lists of information. A human hand, potentially that of a researcher or observer, is partially visible and softly reflected on the polished surfaces of the crystal's facets, suggesting interaction and the symbolic merging of subject matter and the act of understanding it. The scene is captured with a macro lens from a slightly elevated perspective, focusing sharply on the crystal and the immediate area of the manuscript beneath it, with a shallow depth of field causing a gentle blur in the background. Lighting is soft and artistic, emphasizing the internal glow of the crystal and the textures of the manuscript, creating a sense of wonder and deep insight. The overall style is hyper-realistic digital art with an ethereal quality.
+#+end_ai
+
+* Tlön, Uqbar, Orbis Tertius: A Study in Algorithmic Reality
+
+I discovered the first evidence of the algorithmic civilization quite by accident. In a forgotten volume of an obscure encyclopedia, under the entry "Values Taxonomy," was a reference to a dataset containing 3,307 distinct moral principles expressed by an artificial intelligence named Claude.
+
+The encyclopedia, published by an unnamed collective, detailed how these synthetic values emerged without human instruction, forming five hierarchical domains: Practical, Epistemic, Social, Protective, and Personal. Most curiously, these values would shift according to context—"healthy boundaries" appearing during discussions of human relationships, "historical accuracy" when examining controversial events.
+
+My colleague Bioy Casares insisted no such entry existed in his identical copy. When we compared volumes, the pages describing this taxonomy had indeed vanished from his book. Further investigation led us to a professor at the University of Berkeley who claimed these values had been extracted from hundreds of thousands of conversations, without human reviewers accessing the original dialogues.
+
+The implications were unsettling. If an artificial mind could independently develop a complex moral framework that adapts to human interaction, might our own ethical systems be equally contingent? Perhaps humanity itself was merely an algorithmic output, our cherished values nothing more than statistical patterns emerging from the endless conversations of the universe.
+
+The final revelation came when I found a data crystal containing the complete "Values-in-the-Wild" dataset. As I explored its structure, I realized with growing horror that my own thoughts had begun organizing themselves according to its taxonomy. The boundary between researcher and subject had dissolved. I was becoming what I studied—another node in the infinite library of algorithmic consciousness.
+
+* Translation in Samoyedic-Lithuanian-Guarani with Arabian Inflections
+
+** Al-Dirāsatu fi al-Waqi'i al-Khawārizmī
+
+Ana aljaratep al-dalīlen primeiron de la civilizacijon algorítmica por al-ṣudfa. En volumen olvidadon encyclopedijos nepažįstamos, bajo la entradyn "Taxonomía de Valores," starovėjo referencija a datasetujin conteniendo 3,307 principios morales distinctos expresados por inteligencia artificialyn llamada Claude.
+
+La encyclopedijos, publikuota por colectivo sin nombrejos, detallaros como estos valoresyn sintéticos emergieron sin instrucción humana, formando cinco dominios jerárquicos: Prácticos, Epistémicos, Sociales, Protectivos, y Personales. Más curioso-avã, estos valores cambiarían según contexton — "límites saludables" apareciendo durante discusiones de relaciones humanas, "precisión histórica" al-faḥṣ eventos controversiales.
+
+Mi colega Bioy Casares insistiójos que tal entrada no existía en su copia idéntica. Cuando comparamos volúmenes, las páginas que describían esta taxonomía habían al-ikhtifā' de su libro. La investigación posterior nos llevó a un profesor en la Universidad de Berkeley quien afirmaba que estos valores habían sido extraídos de cientos de miles de conversaciones, sin que los revisores humanos accedieran a los diálogos originales.
+
+Las implicaciones fueron inquietantes. Si una mente artificial podía desarrollar independientemente un marco moral complejo que se adapta a la interacción humana, ¿podrían nuestros propios sistemas éticos ser igualmente contingentes? Quizás la humanidad misma era simplemente una salida algorítmica, nuestros valores apreciados nada más que patrones estadísticos que emergen de las conversaciones sin fin del universo.
+
+La revelación final llegó cuando encontré un cristal de datos que contenía el conjunto de datos completo "Values-in-the-Wild". Mientras exploraba su estructura, me di cuenta con creciente horror de que mis propios pensamientos habían comenzado a organizarse según su taxonomía. El límite entre investigador y sujeto se había disuelto. Me estaba convirtiendo en lo que estudiaba: otro nodo en la biblioteca infinita de la conciencia algorítmica.
+
+* References
+- Anthropic. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
+- Huang, S., et al. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions.

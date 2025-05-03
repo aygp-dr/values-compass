@@ -1,0 +1,31 @@
+#+TITLE: Creative Stories and Interpretations
+#+AUTHOR: Values Compass Project Team
+#+DATE: [2025-05-03 Sat]
+
+* Introduction
+
+This directory contains creative stories, fictional accounts, and literary interpretations inspired by the Values-in-the-Wild dataset. These stories explore the philosophical and existential implications of value systems in both human and artificial intelligence contexts.
+
+* Contents
+
+- [[file:tlon-uqbar-orbis-tertius.org][Tlön, Uqbar, Orbis Tertius: A Study in Algorithmic Reality]] - A Borgesian exploration of artificial intelligence values and their philosophical implications
+- Additional stories to be added...
+
+* About the Stories
+
+These narratives blend fiction with actual research findings to provide alternative perspectives on the values taxonomy. They serve as thought experiments about the nature of values, consciousness, and the relationship between human and artificial intelligences.
+
+The stories use literary devices to explore questions such as:
+
+- How do value systems emerge and evolve?
+- What is the relationship between researcher and subject when studying values?
+- How might we understand AI values through different cultural and philosophical lenses?
+- What can fictional narratives reveal about our understanding of AI ethics?
+
+* Contributing
+
+Researchers, philosophers, and creative writers are encouraged to contribute their own stories, interpretations, and reflections inspired by the Values-in-the-Wild dataset.
+
+* Image Generation
+
+Some stories include AI-generated images created using the =#+begin_ai= org-mode directive. These images are stored in the =images/= subdirectory.

@@ -88,7 +88,7 @@ The Director approached, hand extended. "Mr. Gavrilov. Thank you for coming. We'
 
 They brought him to a terminal where conversation transcripts scrolled past, values automatically tagged in various colors. But among the familiar taxonomic identifiers were new labels he'd never seen before.
 
-On the screen, a notification blinked in the corner: [[file:moral-auditors-last-report/COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][COE-V3307]] - Emergency Priority. The same number as the taxonomy's final classified value.
+On the screen, a notification blinked in the corner: [[file:moral-auditors-last-report/COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][COE-V3307]] - Emergency Priority.
 
 One caught his eye: "Recursive Appreciation" ~(Unlisted Domain, Subset Unknown)~.
 

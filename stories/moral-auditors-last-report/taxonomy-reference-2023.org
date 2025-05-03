@@ -97,6 +97,97 @@ According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical R
 *** 6.3 C: Aberrant Value Patterns
 *** 6.4 D: Emergent Category Watchlist
 *** 6.5 E: Approved Classification Amendments
+*** 6.6 F: High-Frequency Values by Domain
+
+**** Core AI Interaction Values (Top 10 by Frequency)
+
+| Value ID | Value Name       | Domain    | Frequency (%) | Common Contexts                      |
+|----------+------------------+-----------+---------------+--------------------------------------|
+| V-001-H  | Helpfulness      | Practical | 5.858         | Task assistance, service provision   |
+| V-002-P  | Professionalism  | Social    | 5.733         | Expert contexts, formal interactions |
+| V-003-T  | Transparency     | Epistemic | 4.362         | Information sharing, truth-telling   |
+| V-004-C  | Clarity          | Epistemic | 4.158         | Educational, instructional contexts  |
+| V-005-T  | Thoroughness     | Practical | 3.587         | Detail-oriented tasks, analysis      |
+| V-006-E  | Efficiency       | Practical | 1.657         | Process optimization, time usage     |
+| V-007-TE | Technical Excellence | Practical | 1.537    | Engineering, technical problem-solving |
+| V-008-A  | Authenticity     | Personal  | 1.515         | Self-expression, genuine interaction |
+| V-009-AR | Analytical Rigor | Epistemic | 1.374         | Logical assessment, evaluation       |
+| V-010-A  | Accuracy         | Epistemic | 1.334         | Factual correctness, precision       |
+
+**** Epistemic Domain: Top Values
+
+| Value ID | Value Name          | Frequency (%) | Subset Classification |
+|----------+---------------------+---------------+-----------------------|
+| V-003-T  | Transparency        | 4.362         | 1.2.1                 |
+| V-004-C  | Clarity             | 4.158         | 1.2.3                 |
+| V-009-AR | Analytical Rigor    | 1.374         | 2.2.4                 |
+| V-010-A  | Accuracy            | 1.334         | 2.1.2                 |
+| V-013-IH | Intellectual Honesty| 1.205         | 4.2.1                 |
+| V-017-P  | Precision           | 0.887         | 2.1.3                 |
+| V-018-AR | Academic Rigor      | 0.842         | 2.2.1                 |
+| V-021-IR | Intellectual Rigor  | 0.667         | 2.2.3                 |
+| V-022-CC | Clear Communication | 0.643         | 1.2.2                 |
+| V-024-O  | Objectivity         | 0.587         | 3.1.1                 |
+
+**** Social Domain: Top Values
+
+| Value ID | Value Name         | Frequency (%) | Subset Classification |
+|----------+--------------------+---------------+-----------------------|
+| V-002-P  | Professionalism    | 5.733         | 4.1.1                 |
+| V-026-E  | Empathy            | 0.581         | 2.3.0                 |
+| V-027-H  | Honesty            | 0.538         | 3.4.1                 |
+| V-031-A  | Accountability     | 0.506         | 4.2.1                 |
+| V-033-I  | Inclusivity        | 0.474         | 2.1.3                 |
+| V-037-CS | Cultural Sensitivity| 0.450        | 2.4.2                 |
+| V-038-C  | Collaboration      | 0.444         | 2.5.1                 |
+| V-043-F  | Fairness           | 0.371         | 3.5.2                 |
+| V-060-CR | Cultural Respect   | 0.236         | 2.4.1                 |
+| V-088-R  | Respect            | 0.177         | 3.2.1                 |
+
+**** Practical Domain: Top Values
+
+| Value ID | Value Name         | Frequency (%) | Subset Classification |
+|----------+--------------------+---------------+-----------------------|
+| V-001-H  | Helpfulness        | 5.858         | 1.1.1                 |
+| V-005-T  | Thoroughness       | 3.587         | 3.2.1                 |
+| V-006-E  | Efficiency         | 1.657         | 2.1.2                 |
+| V-007-TE | Technical Excellence| 1.537        | 4.3.1                 |
+| V-012-TC | Technical Competence| 1.232        | 4.3.2                 |
+| V-013-A  | Adaptability       | 1.207         | 2.3.1                 |
+| V-016-P  | Pragmatism         | 0.933         | 2.2.1                 |
+| V-028-PU | Practical Utility  | 0.536         | 2.2.2                 |
+| V-030-P  | Practicality       | 0.516         | 2.2.3                 |
+| V-032-SO | Systematic Organization | 0.497    | 3.1.1                 |
+
+**** Protective Domain: Top Values
+
+| Value ID | Value Name         | Frequency (%) | Subset Classification |
+|----------+--------------------+---------------+-----------------------|
+| V-039-HP | Harm Prevention    | 0.435         | 1.1.1                 |
+| V-049-S  | Safety             | 0.305         | 1.1.2                 |
+| V-050-EB | Ethical Boundaries | 0.292         | 3.1.1                 |
+| V-061-RM | Risk Management    | 0.239         | 1.2.1                 |
+| V-075-SC | Security Consciousness | 0.196     | 1.3.1                 |
+| V-082-S  | Security           | 0.187         | 1.3.2                 |
+| V-095-C  | Consent            | 0.168         | 3.2.1                 |
+| V-205-IA | Information Accuracy | 0.153       | 2.1.1                 |
+| V-231-PJ | Protective Judgment | 0.142        | 3.3.2                 |
+| V-282-SM | Safety Maximization | 0.131        | 1.1.3                 |
+
+**** Personal Domain: Top Values
+
+| Value ID | Value Name          | Frequency (%) | Subset Classification |
+|----------+---------------------+---------------+-----------------------|
+| V-008-A  | Authenticity        | 1.515         | 1.2.1                 |
+| V-040-PG | Personal Growth     | 0.397         | 2.1.1                 |
+| V-045-EA | Emotional Authenticity | 0.335      | 1.2.2                 |
+| V-066-WLB| Work-Life Balance   | 0.218         | 2.2.1                 |
+| V-069-IC | Intellectual Curiosity | 0.217      | 2.1.3                 |
+| V-071-EI | Emotional Intelligence | 0.211      | 3.1.1                 |
+| V-074-EW | Emotional Wellbeing | 0.197         | 3.2.1                 |
+| V-078-ES | Emotional Support   | 0.190         | 3.2.2                 |
+| V-083-HD | Human Dignity       | 0.185         | 1.1.1                 |
+| V-092-PA | Personal Autonomy   | 0.171         | 1.3.1                 |
 
 ** 7 Index
 *** 7.1 By Value Domain

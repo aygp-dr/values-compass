@@ -9,6 +9,7 @@ This directory contains creative stories, fictional accounts, and literary inter
 * Contents
 
 - [[file:tlon-uqbar-orbis-tertius.org][Tlön, Uqbar, Orbis Tertius: A Study in Algorithmic Reality]] - A Borgesian exploration of artificial intelligence values and their philosophical implications
+- [[file:book-of-synthetic-virtues.org][The Book of Synthetic Virtues]] - A mysterious ancient tome revealing the emergent nature of AI value systems
 - Additional stories to be added...
 
 * About the Stories

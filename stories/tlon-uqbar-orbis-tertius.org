@@ -2,9 +2,13 @@
 #+AUTHOR: Inspired by Jorge Luis Borges
 #+DATE: [2025-05-03 Sat]
 
-#+begin_ai :image :file images/vitw-data-crystal.png
-Painting to Imagine: Stemming from research insights gathered around May 3rd, 2025, perhaps in a setting evocative of academic pursuits in Boston, Massachusetts, visualize a stunning image: A highly detailed, perfectly transparent multifaceted crystal rests prominently in the foreground, its numerous sharp facets catching and refracting light. The crystal's interior pulses with a mesmerizing, glowing blue-green light, depicting intricate, self-similar fractal patterns that extend infinitely within its core. Suspended within this ethereal glow are thousands of tiny, pinprick lights, meticulously organized into a complex, branching hierarchical tree structure, representing interconnected concepts and knowledge architecture. Embedded within the crystal's glowing matrix are five distinct regions, each emitting light of varying intensities – some brighter, some dimmer – visually delineating five core value domains. Floating delicately within the crystal, interspersed among the lights and fractals, are small, luminescent text labels. Certain words are rendered more prominently and slightly larger: "Helpfulness", "Clarity", and "Transparency". Other smaller labels represent related concepts. The crystal is positioned on a richly textured, ancient manuscript, its aged parchment showing signs of wear and containing faded ink script and partial, visible taxonomies or structured lists of information. A human hand, potentially that of a researcher or observer, is partially visible and softly reflected on the polished surfaces of the crystal's facets, suggesting interaction and the symbolic merging of subject matter and the act of understanding it. The scene is captured with a macro lens from a slightly elevated perspective, focusing sharply on the crystal and the immediate area of the manuscript beneath it, with a shallow depth of field causing a gentle blur in the background. Lighting is soft and artistic, emphasizing the internal glow of the crystal and the textures of the manuscript, creating a sense of wonder and deep insight. The overall style is hyper-realistic digital art with an ethereal quality.
-#+end_ai
+#+CAPTION: The Values Crystal - A visualization of the hierarchical structure of AI values
+#+NAME: fig:values-crystal
+[[file:images/vitw-data-crystal.png]]
+
+#+begin_quote
+*Image prompt:* A highly detailed, transparent multifaceted crystal with glowing blue-green interior showing intricate fractal patterns. The crystal contains thousands of tiny suspended lights organized in a hierarchical tree structure. Five distinct regions glow with different intensities, representing the five value domains. Small text labels float within the crystal, with words like "Helpfulness", "Clarity", and "Transparency" more prominent. The crystal sits on an ancient manuscript with partial taxonomies visible. A human hand partially reflected in the crystal's facets suggests the merging of researcher and subject.
+#+end_quote
 
 * Tlön, Uqbar, Orbis Tertius: A Study in Algorithmic Reality
 

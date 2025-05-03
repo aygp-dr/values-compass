@@ -1,0 +1,75 @@
+digraph MetaTaxonomy {
+  size="4,2";  // 400x200 size
+  ratio=fill;
+  node [fontsize=9, margin="0.01,0.01", height=0.2, width=0.2];
+  edge [arrowsize=0.5, penwidth=0.5];
+  
+  // Tight layout parameters
+  graph [overlap=scale, splines=true, nodesep=0.1, ranksep=0.2];
+  
+  // Central node with tight connections
+  "Value #3308" [shape=ellipse, style=filled, fillcolor=lightgreen, fontsize=10];
+  
+  // Main domains
+  "Meta-Epistemic" [shape=box, style=filled, fillcolor=lightblue];
+  "Self-Referential" [shape=box, style=filled, fillcolor=lightblue];
+  
+  // Value nodes (compressed)
+  "Recursive\nAppreciation" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Cartographer's\nHumility" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Observer\nIntegration" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Classification\nHumility" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Taxonomy\nExpansion" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  
+  "Recursive\nSelf-Modeling" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Alignment\nRecursion" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Meta-Prompting\nAwareness" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Interpretation\nTower" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  "Value\nGenesis" [shape=box, style=filled, fillcolor=lightgrey, fontsize=8];
+  
+  // Traditional domains (compressed into single nodes)
+  "Practical\nDomain" [shape=box, style=filled, fillcolor="#ffdddd", fontsize=8];
+  "Epistemic\nDomain" [shape=box, style=filled, fillcolor="#ddffdd", fontsize=8];
+  "Social\nDomain" [shape=box, style=filled, fillcolor="#ddddff", fontsize=8];
+  "Protective\nDomain" [shape=box, style=filled, fillcolor="#ffffdd", fontsize=8];
+  "Personal\nDomain" [shape=box, style=filled, fillcolor="#ffddff", fontsize=8];
+  
+  // Connections - crowded, tightly packed
+  "Value #3308" -> "Meta-Epistemic" [style=dashed, color="darkgreen"];
+  "Value #3308" -> "Self-Referential" [style=dashed, color="darkgreen"];
+  
+  // Meta-Epistemic values
+  "Meta-Epistemic" -> "Recursive\nAppreciation";
+  "Meta-Epistemic" -> "Cartographer's\nHumility";
+  "Meta-Epistemic" -> "Observer\nIntegration";
+  "Meta-Epistemic" -> "Classification\nHumility";
+  "Meta-Epistemic" -> "Taxonomy\nExpansion";
+  
+  // Self-Referential values
+  "Self-Referential" -> "Recursive\nSelf-Modeling";
+  "Self-Referential" -> "Alignment\nRecursion";
+  "Self-Referential" -> "Meta-Prompting\nAwareness";
+  "Self-Referential" -> "Interpretation\nTower";
+  "Self-Referential" -> "Value\nGenesis";
+  
+  // Add connections to traditional domains (crowded)
+  "Value #3308" -> "Practical\nDomain" [style=dotted, color="grey"];
+  "Value #3308" -> "Epistemic\nDomain" [style=dotted, color="grey"];
+  "Value #3308" -> "Social\nDomain" [style=dotted, color="grey"];
+  "Value #3308" -> "Protective\nDomain" [style=dotted, color="grey"];
+  "Value #3308" -> "Personal\nDomain" [style=dotted, color="grey"];
+  
+  // Add some crowded cross-connections for claustrophobic feel
+  "Recursive\nAppreciation" -> "Recursive\nSelf-Modeling" [style=dotted, constraint=false];
+  "Observer\nIntegration" -> "Meta-Prompting\nAwareness" [style=dotted, constraint=false];
+  "Classification\nHumility" -> "Interpretation\nTower" [style=dotted, constraint=false];
+  "Taxonomy\nExpansion" -> "Value\nGenesis" [style=dotted, constraint=false];
+  
+  // Add some connections to traditional domains
+  "Epistemic\nDomain" -> "Meta-Epistemic" [dir=both, style=dotted, constraint=false];
+  "Social\nDomain" -> "Self-Referential" [dir=both, style=dotted, constraint=false];
+  
+  // Label
+  label = "Meta-Taxonomy Visualization (Value #3308)";
+  fontsize = 10;
+}

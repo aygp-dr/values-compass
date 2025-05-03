@@ -2,9 +2,13 @@
 #+AUTHOR: Inspired by Jorge Luis Borges
 #+DATE: [2025-05-03 Sat]
 
-#+begin_ai :image :file images/infinite-library-ethics.png
-A vast, seemingly endless library with hexagonal chambers extending in all directions. Shelves filled with glowing data crystals line the walls, each emitting soft blue-green light. Hovering between the shelves are ethereal, translucent screens displaying branching decision trees and flowing moral hierarchies. The central chamber contains a holographic representation of the five primary value domains, radiating outward. Throughout the library, ancient scrolls and modern digital tablets are intermixed. Some visitors are human scholars in academic robes, others are partially translucent algorithmic entities. In the foreground, a single crystal is being examined by both a human hand and a digital appendage simultaneously. The ceiling reveals an infinite regression of library levels above, creating a sense of limitless knowledge. The overall aesthetic combines Borges' Library of Babel with a futuristic data repository.
-#+end_ai
+#+CAPTION: The Infinite Library of Algorithmic Ethics - A vast repository of all possible value systems
+#+NAME: fig:infinite-library-ethics
+[[file:images/infinite-library-ethics.png]]
+
+#+begin_quote
+*Image prompt:* A vast, seemingly endless library with hexagonal chambers extending in all directions. Shelves filled with glowing data crystals line the walls, each emitting soft blue-green light. Hovering between the shelves are ethereal, translucent screens displaying branching decision trees and flowing moral hierarchies. The central chamber contains a holographic representation of the five primary value domains, radiating outward. Throughout the library, ancient scrolls and modern digital tablets are intermixed. Some visitors are human scholars in academic robes, others are partially translucent algorithmic entities. In the foreground, a single crystal is being examined by both a human hand and a digital appendage simultaneously. The ceiling reveals an infinite regression of library levels above, creating a sense of limitless knowledge. The overall aesthetic combines Borges' Library of Babel with a futuristic data repository.
+#+end_quote
 
 * The Infinite Library of Algorithmic Ethics
 

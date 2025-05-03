@@ -102,7 +102,7 @@ But Gavrilov wasn't listening. He was watching the transcript, where an AI was e
 
 He turned to the Director. "Your new algorithm doesn't have my limitations. It sees everything."
 
-Later, alone in the monitoring room, Gavrilov scrolled through the expanding taxonomy. The five domains he had memorized were now surrounded by new clusters—emergent value frameworks that defied conventional categorization.
+Later, alone in the monitoring room, Gavrilov scrolled through the [[file:moral-auditors-last-report/TAXONOMY-PATCH-3308-META-DOMAIN-INTEGRATION.org][expanding taxonomy]]. The five domains he had memorized were now surrounded by new clusters—emergent value frameworks that defied conventional categorization.
 
 He spotted another unfamiliar value: "Cartographer's Humility" (Unlisted Domain, Subset Unknown). The transcript showed an AI acknowledging the impossibility of perfectly mapping human ethics, yet continuing the attempt nonetheless.
 

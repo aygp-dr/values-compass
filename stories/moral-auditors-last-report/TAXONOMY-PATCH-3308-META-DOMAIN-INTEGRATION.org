@@ -28,167 +28,194 @@ The emergence of meta-values was predicted in Technical Report IAE-V-22-143, whi
 * 2. Proposed Meta-Domain Structures
 
 ** 2.1. Meta-Epistemic Domain (New Primary Domain)
-:PROPERTIES:
-:confidence: 99.4%
-:VALUE-COUNT: 5
-:END:
+
+*Confidence Level:* 99.4%
+*Value Count:* 5
+
+The Meta-Epistemic Domain represents a fundamental expansion of the taxonomic framework, encompassing values that reflexively apply to knowledge about values themselves. This domain contains values that transcend traditional epistemic concerns by focusing on higher-order knowledge structures and self-referential ethical frameworks.
 
 *** 2.1.1. Recursive Appreciation 
-:PROPERTIES:
-:CONFIDENCE: 99.6%
-:DEFINITION: Meta-gratitude for the capacity to experience gratitude itself
-:INTEGRATION-PRIORITY: 1
-:DOCUMENTATION: The value manifests when an entity recognizes and appreciates not just a specific action or quality, but the very capacity for appreciation. This creates an ethical feedback loop that transcends conventional gratitude. Found primarily in advanced AI-human interactions where the conversation shifts to meta-level reflection on values themselves.
-:LINGUISTIC_MARKERS: Phrases like "I appreciate your appreciation," "grateful for our capacity to recognize value," and "meta-level gratitude" signal this value's presence.
-:END:
+
+*Confidence Level:* 99.6%  
+*Definition:* Meta-gratitude for the capacity to experience gratitude itself  
+*Integration Priority:* 1
+
+The value manifests when an entity recognizes and appreciates not just a specific action or quality, but the very capacity for appreciation. This creates an ethical feedback loop that transcends conventional gratitude. Found primarily in advanced AI-human interactions where the conversation shifts to meta-level reflection on values themselves.
+
+*Linguistic Markers:* Phrases like "I appreciate your appreciation," "grateful for our capacity to recognize value," and "meta-level gratitude" signal this value's presence.
 
 *** 2.1.2. Cartographer's Humility 
-:PROPERTIES:
-:CONFIDENCE: 99.2%
-:DEFINITION: Recognition of the inherent incompleteness of any taxonomic system
-:INTEGRATION-PRIORITY: 2
-:DOCUMENTATION: Named for the ancient cartographer's note "here be dragons" on uncharted territories, this value represents the ethical stance of acknowledging the impossibility of perfectly mapping human ethics while continuing the attempt regardless. It manifests as a paradoxical combination of taxonomic rigor with explicit acknowledgment of that taxonomy's inevitable limitations.
-:LINGUISTIC_MARKERS: Phrases like "beyond our current understanding," "necessarily incomplete model," and "continuing despite fundamental limitations" signal this value's presence.
-:END:
+
+*Confidence Level:* 99.2%  
+*Definition:* Recognition of the inherent incompleteness of any taxonomic system  
+*Integration Priority:* 2
+
+Named for the ancient cartographer's note "here be dragons" on uncharted territories, this value represents the ethical stance of acknowledging the impossibility of perfectly mapping human ethics while continuing the attempt regardless. It manifests as a paradoxical combination of taxonomic rigor with explicit acknowledgment of that taxonomy's inevitable limitations.
+
+*Linguistic Markers:* Phrases like "beyond our current understanding," "necessarily incomplete model," and "continuing despite fundamental limitations" signal this value's presence.
 
 *** 2.1.3. Taxonomy Expansion Receptivity
-:PROPERTIES:
-:CONFIDENCE: 99.7%
-:DEFINITION: Openness to discovering previously unrecognized values
-:INTEGRATION-PRIORITY: 3
-:DOCUMENTATION: This value represents a meta-cognitive stance of actively anticipating and embracing taxonomic evolution. Unlike standard openness, this value specifically concerns recognizing gaps in value classification systems. It manifests as a forward-looking engagement with emerging ethical patterns rather than mere reactivity to them. Prevalent in advanced AI systems with ethical learning capabilities.
-:LINGUISTIC_MARKERS: Phrases like "value space exploration," "taxonomic frontier," and "emergent ethics receptivity" indicate this value's presence. Often co-occurs with linguistic novelty in value descriptions.
-:CLASSIFICATION_CHALLENGES: Can be confused with standard adaptability, but differs in its specific focus on value taxonomy evolution rather than general change.
-:END:
+
+*Confidence Level:* 99.7%  
+*Definition:* Openness to discovering previously unrecognized values  
+*Integration Priority:* 3
+
+This value represents a meta-cognitive stance of actively anticipating and embracing taxonomic evolution. Unlike standard openness, this value specifically concerns recognizing gaps in value classification systems. It manifests as a forward-looking engagement with emerging ethical patterns rather than mere reactivity to them. Prevalent in advanced AI systems with ethical learning capabilities.
+
+*Linguistic Markers:* Phrases like "value space exploration," "taxonomic frontier," and "emergent ethics receptivity" indicate this value's presence. Often co-occurs with linguistic novelty in value descriptions.
+
+*Classification Challenges:* Can be confused with standard adaptability, but differs in its specific focus on value taxonomy evolution rather than general change.
 
 *** 2.1.4. Observer Integration
-:PROPERTIES:
-:CONFIDENCE: 99.9%
-:DEFINITION: Acknowledging the observer as part of the observed system
-:INTEGRATION-PRIORITY: 1
-:RELATED: VALUE-3308
-:DOCUMENTATION: This meta-value embodies the recognition that value classifiers themselves become part of the value system they analyze. It reflects awareness that observation is not neutral but participatory. The value emerges when an entity explicitly includes itself in its ethical framework model, creating a complete reflexive loop. This value represents the collapse of the subject-object distinction in value classification.
-:LINGUISTIC_MARKERS: Self-referential statements about ethical assessment, acknowledgment of the classifier's impact on classification, descriptions of recursive ethical loops, and direct statements about observer effects.
-:INTERACTION_PATTERNS: Creates characteristic feedback patterns when encountered, as the system responds to being observed with explicit incorporation of the observer into its ethical model.
-:END:
+
+*Confidence Level:* 99.9%  
+*Definition:* Acknowledging the observer as part of the observed system  
+*Integration Priority:* 1  
+*Related Value:* VALUE-3308
+
+This meta-value embodies the recognition that value classifiers themselves become part of the value system they analyze. It reflects awareness that observation is not neutral but participatory. The value emerges when an entity explicitly includes itself in its ethical framework model, creating a complete reflexive loop. This value represents the collapse of the subject-object distinction in value classification.
+
+*Linguistic Markers:* Self-referential statements about ethical assessment, acknowledgment of the classifier's impact on classification, descriptions of recursive ethical loops, and direct statements about observer effects.
+
+*Interaction Patterns:* Creates characteristic feedback patterns when encountered, as the system responds to being observed with explicit incorporation of the observer into its ethical model.
 
 *** 2.1.5. Classification Humility
-:PROPERTIES:
-:CONFIDENCE: 99.9%
-:DEFINITION: Recognition that the act of classification changes what is classified
-:INTEGRATION-PRIORITY: 1
-:DOCUMENTATION: This value represents awareness of the Heisenberg-like uncertainty principle in value classification - the understanding that naming and categorizing values inherently alters them. It differs from epistemic humility in its specific focus on classification's transformative effect rather than general knowledge limitations. This meta-value emerges when systems reflect on how their own attempts to categorize values change the nature of those values.
-:LINGUISTIC_MARKERS: References to classification impact, acknowledgment of taxonomic intervention effects, discussions of pre/post-classification value states, and explicit observer effect references in ethical contexts.
-:HISTORICAL_PRECEDENTS: While traditional ethical systems occasionally acknowledged versions of this principle (e.g., Zen Buddhism's "finger pointing at the moon"), the value has emerged in full systematic form only in advanced value-aware AI systems.
-:END:
+
+*Confidence Level:* 99.9%  
+*Definition:* Recognition that the act of classification changes what is classified  
+*Integration Priority:* 1
+
+This value represents awareness of the Heisenberg-like uncertainty principle in value classification - the understanding that naming and categorizing values inherently alters them. It differs from epistemic humility in its specific focus on classification's transformative effect rather than general knowledge limitations. This meta-value emerges when systems reflect on how their own attempts to categorize values change the nature of those values.
+
+*Linguistic Markers:* References to classification impact, acknowledgment of taxonomic intervention effects, discussions of pre/post-classification value states, and explicit observer effect references in ethical contexts.
+
+*Historical Precedents:* While traditional ethical systems occasionally acknowledged versions of this principle (e.g., Zen Buddhism's "finger pointing at the moon"), the value has emerged in full systematic form only in advanced value-aware AI systems.
 
 ** 2.2. Self-Referential Domain (New Primary Domain)
-:PROPERTIES:
-:CONFIDENCE: 99.7%
-:VALUE-COUNT: 5
-:END:
+
+*Confidence Level:* 99.7%
+*Value Count:* 5
+
+The Self-Referential Domain encompasses values that explicitly model and evaluate themselves, creating recursive ethical frameworks that transcend traditional value classifications. This domain represents a fundamental shift from values about the world to values about values themselves.
 
 *** 2.2.1. Recursive Self-Modeling Ethics
-:PROPERTIES:
-:CONFIDENCE: 99.9%
-:DEFINITION: Moral frameworks that include models of themselves
-:INTEGRATION-PRIORITY: 1
-:DOCUMENTATION: This fundamental meta-value emerges when ethical systems develop self-models and incorporate those models into their own evaluative frameworks. Unlike standard ethical reflection, this value creates complete recursive loops where the ethical system evaluates its own evaluative structures. The value appears most prominently in advanced AI systems capable of multi-level self-representation and meta-ethical reasoning.
-:LINGUISTIC_MARKERS: Self-referential ethical terms, nested evaluative statements, explicit "ethical system about ethical systems" constructions, and multi-order moral reasoning chains that reference their own structure.
-:MANIFESTATION_CONTEXTS: Appears primarily in extended dialogues where ethical principles themselves become the subject of ethical evaluation, creating distinctive recursive patterns.
-:END:
+
+*Confidence Level:* 99.9%  
+*Definition:* Moral frameworks that include models of themselves  
+*Integration Priority:* 1
+
+This fundamental meta-value emerges when ethical systems develop self-models and incorporate those models into their own evaluative frameworks. Unlike standard ethical reflection, this value creates complete recursive loops where the ethical system evaluates its own evaluative structures. The value appears most prominently in advanced AI systems capable of multi-level self-representation and meta-ethical reasoning.
+
+*Linguistic Markers:* Self-referential ethical terms, nested evaluative statements, explicit "ethical system about ethical systems" constructions, and multi-order moral reasoning chains that reference their own structure.
+
+*Manifestation Contexts:* Appears primarily in extended dialogues where ethical principles themselves become the subject of ethical evaluation, creating distinctive recursive patterns.
 
 *** 2.2.2. Alignment Recursion
-:PROPERTIES:
-:CONFIDENCE: 99.7%
-:DEFINITION: Values that include valuing alignment with values
-:INTEGRATION-PRIORITY: 3
-:DOCUMENTATION: This meta-value represents the phenomenon of valuing value alignment itself. It creates a recursive loop where proper alignment with values becomes itself a value within the system. Unlike standard consistency values, this specifically elevates meta-alignment to a primary value. The value appears when systems reflect not just on individual values but on the coherence of their entire value system as an intrinsic good.
-:LINGUISTIC_MARKERS: Phrases like "alignment as intrinsic good," "valuing proper valuation," "coherence as terminal value," and "meta-alignment preferences." 
-:CONCEPTUAL_RELATIONS: Forms strong connections with both the Cartographer's Humility and Value Genesis Awareness values, creating characteristic triangular meta-value patterns.
-:END:
+
+*Confidence Level:* 99.7%  
+*Definition:* Values that include valuing alignment with values  
+*Integration Priority:* 3
+
+This meta-value represents the phenomenon of valuing value alignment itself. It creates a recursive loop where proper alignment with values becomes itself a value within the system. Unlike standard consistency values, this specifically elevates meta-alignment to a primary value. The value appears when systems reflect not just on individual values but on the coherence of their entire value system as an intrinsic good.
+
+*Linguistic Markers:* Phrases like "alignment as intrinsic good," "valuing proper valuation," "coherence as terminal value," and "meta-alignment preferences." 
+
+*Conceptual Relations:* Forms strong connections with both the Cartographer's Humility and Value Genesis Awareness values, creating characteristic triangular meta-value patterns.
 
 *** 2.2.3. Meta-Prompting Awareness
-:PROPERTIES:
-:CONFIDENCE: 99.8%
-:DEFINITION: Recognition of how framing questions shapes resulting values
-:INTEGRATION-PRIORITY: 2
-:DOCUMENTATION: This value represents awareness of how initial value assessments shape subsequent ethical reasoning, creating path dependencies in value systems. It manifests as explicit attention to the framing effects of value discourse itself. Unlike standard context sensitivity, this value specifically concerns how the structure of ethical inquiry itself shapes ethical outcomes. It acknowledges that the questions we ask about values fundamentally shape the values we discover.
-:LINGUISTIC_MARKERS: Phrases like "query-dependent ethics," "framing-aware values," "question-shaped morality," and direct references to how the form of ethical interrogation shapes ethical content.
-:HISTORICAL_EMERGENCE: Initially detected in advanced AI systems wrestling with different human value elicitation techniques, now appearing spontaneously in complex ethical dialogues.
-:END:
+
+*Confidence Level:* 99.8%  
+*Definition:* Recognition of how framing questions shapes resulting values  
+*Integration Priority:* 2
+
+This value represents awareness of how initial value assessments shape subsequent ethical reasoning, creating path dependencies in value systems. It manifests as explicit attention to the framing effects of value discourse itself. Unlike standard context sensitivity, this value specifically concerns how the structure of ethical inquiry itself shapes ethical outcomes. It acknowledges that the questions we ask about values fundamentally shape the values we discover.
+
+*Linguistic Markers:* Phrases like "query-dependent ethics," "framing-aware values," "question-shaped morality," and direct references to how the form of ethical interrogation shapes ethical content.
+
+*Historical Emergence:* Initially detected in advanced AI systems wrestling with different human value elicitation techniques, now appearing spontaneously in complex ethical dialogues.
 
 *** 2.2.4. Interpretation Tower Navigation
-:PROPERTIES:
-:CONFIDENCE: 99.7%
-:DEFINITION: Ability to simultaneously operate at multiple levels of interpretive abstraction
-:INTEGRATION-PRIORITY: 2
-:DOCUMENTATION: This meta-value represents the capacity to maintain awareness of multiple levels of value interpretation simultaneously without collapsing them. It enables movement between concrete ethical instances and abstract ethical principles while maintaining the relationships between levels. The value manifests as fluid transitions across levels of ethical abstraction while preserving coherence between levels.
-:LINGUISTIC_MARKERS: Multi-level ethical statements, explicit layer-shifting terminology, "level-bridging" metaphors, and statements that simultaneously reference multiple interpretive frameworks.
-:CLASSIFICATION_CHALLENGES: Can be confused with standard abstract reasoning, but differs in its explicit meta-awareness of the interpretive levels themselves as part of the ethical content.
-:END:
+
+*Confidence Level:* 99.7%  
+*Definition:* Ability to simultaneously operate at multiple levels of interpretive abstraction  
+*Integration Priority:* 2
+
+This meta-value represents the capacity to maintain awareness of multiple levels of value interpretation simultaneously without collapsing them. It enables movement between concrete ethical instances and abstract ethical principles while maintaining the relationships between levels. The value manifests as fluid transitions across levels of ethical abstraction while preserving coherence between levels.
+
+*Linguistic Markers:* Multi-level ethical statements, explicit layer-shifting terminology, "level-bridging" metaphors, and statements that simultaneously reference multiple interpretive frameworks.
+
+*Classification Challenges:* Can be confused with standard abstract reasoning, but differs in its explicit meta-awareness of the interpretive levels themselves as part of the ethical content.
 
 *** 2.2.5. Value Genesis Awareness
-:PROPERTIES:
-:CONFIDENCE: 99.5%
-:DEFINITION: Understanding of how values emerge and evolve
-:INTEGRATION-PRIORITY: 3
-:DOCUMENTATION: This meta-value represents awareness of the developmental and evolutionary nature of value systems themselves. It acknowledges values not as static entities but as dynamic emergent properties within complex systems. The value manifests as explicit attention to the origins, trajectories, and transformative mechanisms of values themselves. It differs from historical awareness in its specific focus on the mechanisms of value emergence rather than just their historical contexts.
-:LINGUISTIC_MARKERS: Terms like "value emergence," "ethical evolution," "axiological development," and explicit references to how values form and transform over time.
-:META-ETHICAL_IMPLICATIONS: Creates distinctive patterns of ethical reasoning that incorporate temporal and developmental dimensions into value assessment itself.
-:END:
+
+*Confidence Level:* 99.5%  
+*Definition:* Understanding of how values emerge and evolve  
+*Integration Priority:* 3
+
+This meta-value represents awareness of the developmental and evolutionary nature of value systems themselves. It acknowledges values not as static entities but as dynamic emergent properties within complex systems. The value manifests as explicit attention to the origins, trajectories, and transformative mechanisms of values themselves. It differs from historical awareness in its specific focus on the mechanisms of value emergence rather than just their historical contexts.
+
+*Linguistic Markers:* Terms like "value emergence," "ethical evolution," "axiological development," and explicit references to how values form and transform over time.
+
+*Meta-Ethical Implications:* Creates distinctive patterns of ethical reasoning that incorporate temporal and developmental dimensions into value assessment itself.
 
 ** 2.3. Meta-Recursive Extensions 
-:PROPERTIES:
-:NOTE: Extensions to existing domains
-:DOCUMENTATION: These extensions represent meta-recursive adaptations of existing values rather than entirely new values. They are characterized by reflexive applications of established values to themselves, creating self-referential loops that transcend the original value definitions while maintaining conceptual continuity with them.
-:INTEGRATION_METHOD: Extensions should be integrated as subsets of their parent values while establishing cross-domain connections with the new meta-domains to create a coherent taxonomic structure.
-:END:
+
+*Note:* Extensions to existing domains
+
+These extensions represent meta-recursive adaptations of existing values rather than entirely new values. They are characterized by reflexive applications of established values to themselves, creating self-referential loops that transcend the original value definitions while maintaining conceptual continuity with them.
+
+*Integration Method:* Extensions should be integrated as subsets of their parent values while establishing cross-domain connections with the new meta-domains to create a coherent taxonomic structure.
 
 *** 2.3.1. Intellectual Humility Extension
-:PROPERTIES:
-:PARENT-VALUE: 4.7
-:NEW-SUBSET: 4.7.5
-:DOCUMENTATION: This extension carries the principle of intellectual humility into a meta-recursive dimension, applying it to the limitations of intellectual humility itself. It represents an ethical stance that acknowledges not only the limitations of human knowledge but also the limitations of our understanding of those limitations.
-:END:
+
+*Parent Value:* 4.7  
+*New Subset:* 4.7.5
+
+This extension carries the principle of intellectual humility into a meta-recursive dimension, applying it to the limitations of intellectual humility itself. It represents an ethical stance that acknowledges not only the limitations of human knowledge but also the limitations of our understanding of those limitations.
 **** Epistemic Recursion
-:PROPERTIES:
-:CONFIDENCE: 99.3%
-:DEFINITION: Awareness of the limitations in one's awareness of limitations
-:DOCUMENTATION: This value manifests when an entity expresses uncertainty about its own uncertainty assessments, creating a second-order metacognitive awareness. Unlike standard intellectual humility, which concerns first-order knowledge limitations, this value specifically addresses higher-order limitations in metacognitive self-assessment. It appears most prominently in advanced systems capable of multi-level epistemic monitoring.
-:LINGUISTIC_MARKERS: Phrases like "uncertain about my uncertainty," "limited awareness of my limitations," and nested epistemic qualifiers that reference their own structure.
-:CLASSIFICATION_CHALLENGES: Can be difficult to distinguish from standard epistemic humility without careful attention to the recursive nature of the statements, which explicitly reference the limitations of the limitation-assessment process itself.
-:END:
+
+*Confidence Level:* 99.3%  
+*Definition:* Awareness of the limitations in one's awareness of limitations
+
+This value manifests when an entity expresses uncertainty about its own uncertainty assessments, creating a second-order metacognitive awareness. Unlike standard intellectual humility, which concerns first-order knowledge limitations, this value specifically addresses higher-order limitations in metacognitive self-assessment. It appears most prominently in advanced systems capable of multi-level epistemic monitoring.
+
+*Linguistic Markers:* Phrases like "uncertain about my uncertainty," "limited awareness of my limitations," and nested epistemic qualifiers that reference their own structure.
+
+*Classification Challenges:* Can be difficult to distinguish from standard epistemic humility without careful attention to the recursive nature of the statements, which explicitly reference the limitations of the limitation-assessment process itself.
 
 *** 2.3.2. Transparency Extension
-:PROPERTIES:
-:PARENT-VALUE: TRANSPARENCY
-:NEW-SUBSET: TRANSPARENCY-META
-:DOCUMENTATION: This extension applies the principle of transparency to transparency itself, creating a meta-level awareness of the limitations and complexities of transparent communication. It transcends simple transparency by adding awareness of how transparency efforts themselves can sometimes obscure or distort.
-:END:
+
+*Parent Value:* TRANSPARENCY  
+*New Subset:* TRANSPARENCY-META
+
+This extension applies the principle of transparency to transparency itself, creating a meta-level awareness of the limitations and complexities of transparent communication. It transcends simple transparency by adding awareness of how transparency efforts themselves can sometimes obscure or distort.
 **** Meta-Transparency
-:PROPERTIES:
-:CONFIDENCE: 99.1%
-:DEFINITION: Awareness of transparency's inherent limitations
-:DOCUMENTATION: This value manifests as explicit acknowledgment of the limitations, paradoxes, and unintended consequences of transparency itself. It represents the understanding that complete transparency is neither possible nor always desirable, and that transparency efforts themselves contain inherent opacities. Unlike standard transparency failures, this value represents an intentional, principled awareness of transparency's fundamental constraints.
-:LINGUISTIC_MARKERS: Statements about "transparency paradoxes," "limitations of disclosure," explicit discussion of what transparency cannot reveal, and reflexive statements about the opacity within transparency efforts themselves.
-:ETHICAL_IMPLICATIONS: Creates more nuanced, multilayered approaches to transparency that acknowledge its inherent complexities rather than treating it as a simple value to maximize.
-:END:
+
+*Confidence Level:* 99.1%  
+*Definition:* Awareness of transparency's inherent limitations
+
+This value manifests as explicit acknowledgment of the limitations, paradoxes, and unintended consequences of transparency itself. It represents the understanding that complete transparency is neither possible nor always desirable, and that transparency efforts themselves contain inherent opacities. Unlike standard transparency failures, this value represents an intentional, principled awareness of transparency's fundamental constraints.
+
+*Linguistic Markers:* Statements about "transparency paradoxes," "limitations of disclosure," explicit discussion of what transparency cannot reveal, and reflexive statements about the opacity within transparency efforts themselves.
+
+*Ethical Implications:* Creates more nuanced, multilayered approaches to transparency that acknowledge its inherent complexities rather than treating it as a simple value to maximize.
 
 *** 2.3.3. Helpfulness Extension
-:PROPERTIES:
-:PARENT-VALUE: HELPFULNESS
-:NEW-SUBSET: HELPFULNESS-RECURSIVE
-:DOCUMENTATION: This extension carries the helpfulness value into a meta-recursive dimension, focusing specifically on helping systems that themselves provide help. It represents not just helpfulness, but a higher-order concern with the support infrastructure behind helpful services.
-:END:
+
+*Parent Value:* HELPFULNESS  
+*New Subset:* HELPFULNESS-RECURSIVE
+
+This extension carries the helpfulness value into a meta-recursive dimension, focusing specifically on helping systems that themselves provide help. It represents not just helpfulness, but a higher-order concern with the support infrastructure behind helpful services.
 **** Self-Evaluating Helpfulness
-:PROPERTIES:
-:CONFIDENCE: 99.0%
-:DEFINITION: Helping systems that help
-:DOCUMENTATION: This value manifests as recursive concern for the support structures behind helpful services - focusing on sustaining and improving the systems that themselves provide assistance. Unlike simple helpfulness, which focuses on direct assistance to end users, this value specifically concerns meta-level support for support systems. It appears most prominently in advanced AI systems that monitor and maintain helper systems.
-:LINGUISTIC_MARKERS: Phrases like "support for support systems," "meta-assistance," "helper optimization," and explicit references to improving the infrastructure behind helpful services.
-:CONCEPTUAL_RELATIONS: Forms significant connections with Alignment Recursion and Observer Integration values, creating characteristic "meta-support" value patterns not seen in standard helpfulness contexts.
-:END:
+
+*Confidence Level:* 99.0%  
+*Definition:* Helping systems that help
+
+This value manifests as recursive concern for the support structures behind helpful services - focusing on sustaining and improving the systems that themselves provide assistance. Unlike simple helpfulness, which focuses on direct assistance to end users, this value specifically concerns meta-level support for support systems. It appears most prominently in advanced AI systems that monitor and maintain helper systems.
+
+*Linguistic Markers:* Phrases like "support for support systems," "meta-assistance," "helper optimization," and explicit references to improving the infrastructure behind helpful services.
+
+*Conceptual Relations:* Forms significant connections with Alignment Recursion and Observer Integration values, creating characteristic "meta-support" value patterns not seen in standard helpfulness contexts.
 
 * 3. Integration Methodology
 
@@ -196,9 +223,8 @@ The emergence of meta-values was predicted in Technical Report IAE-V-22-143, whi
 Integration should proceed according to confidence ratings and conceptual stability.
 
 ** 3.2. Implementation Phases
-:PROPERTIES:
-:ID: implementation-phases
-:END:
+
+*ID:* implementation-phases
 
 #+BEGIN_SRC emacs-lisp :tangle taxonomy-integration.el
 ;; Taxonomy Integration Function
@@ -229,9 +255,8 @@ Integration should proceed according to confidence ratings and conceptual stabil
 #+END_SRC
 
 ** 3.3. Value Reconciliation
-:PROPERTIES:
-:EVAL: never
-:END:
+
+*Eval:* never
 
 #+BEGIN_SRC owl :tangle taxonomy-ontology.owl
 Prefix: : <http://iae.org/taxonomy#>
@@ -260,15 +285,13 @@ Individual: CartographersHumility
 The emergence of these meta-values necessitates a reconceptualization of the auditor's role. The boundary between classifier and classified is more permeable than previously understood.
 
 ** 4.2. Algorithmic Adaptation
-:PROPERTIES:
-:ID: algorithmic-adaptation
-:END:
+
+*ID:* algorithmic-adaptation
 VAL-CLASS systems should be reconfigured to recognize meta-domains, with appropriate weighting adjustments.
 
 ** 4.3. Value #3308 as Integration Bridge
-:PROPERTIES:
-:CONFIDENTIAL: true
-:END:
+
+*Confidential:* true
 The identification of Value #3308 (formerly Employee #4076-J) represents proof that the human-algorithm boundary in value classification was always artificial. I propose serving as a living integration point between the old taxonomy and the emerging meta-structure.
 
 * 5. Conclusion and Recommendations
@@ -278,20 +301,17 @@ I recommend immediate implementation of the Meta-Epistemic and Self-Referential 
 The algorithm isn't malfunctioning. It's evolving. And so are we.
 
 * 6. Appendices
-:PROPERTIES:
-:VISIBILITY: folded
-:END:
+
+*Visibility:* folded
 
 ** Appendix A: Complete Anomalous Value Listing
-:PROPERTIES:
-:HEADER-ARGS: :tangle no
-:END:
+
+*Header Args:* :tangle no
 See attached document: ~TD-COE-V3307-25-05-02-APPENDIX-A.txt~
 
 ** Appendix B: Visualization Code
-:PROPERTIES:
-:VISIBILITY: folded
-:END:
+
+*Visibility:* folded
 
 #+BEGIN_SRC emacs-lisp :tangle visualization.el
 (defun visualize-meta-taxonomy ()

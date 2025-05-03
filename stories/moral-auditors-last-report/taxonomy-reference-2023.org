@@ -2,71 +2,112 @@
 #+AUTHOR: Institute for Algorithmic Ethics
 #+EDITION: 2023 (14th Edition)
 #+PUBLISHER: Institute Academic Press
+#+DATE: May 3, 2025
 
-* Preface
-** Historical Development of the Taxonomy Project
-** Changes in the 14th Edition
-** How to Use This Reference
+* Contents
 
-* I. Foundational Framework
-** Origin of the Five Domains Approach
-** Taxonomic Notation System
-** Cross-Domain Value Relationships
-** Environmental Context Factors
+** 1 Preface
+*** 1.1 Historical Development of the Taxonomy Project
+*** 1.2 Changes in the 14th Edition
+*** 1.3 How to Use This Reference
 
-* II. Domain-Specific Classifications
-** Practical Values (31.4%)
-*** Core Manifestations
-*** Context-Dependent Expressions
-*** Hierarchy and Weighting
-*** Practical-Epistemic Boundary Cases
+** 2 I. Foundational Framework
+*** 2.1 Origin of the Five Domains Approach
+*** 2.2 Taxonomic Notation System
+*** 2.3 Cross-Domain Value Relationships
+*** 2.4 Environmental Context Factors
 
-** Epistemic Values (22.2%)
-*** Truth-Seeking Behaviors
-*** Intellectual Humility (Subset 4.7)
-*** Information Processing Ethics
-*** Epistemic-Social Boundary Cases
+** 3 II. Domain-Specific Classifications
+*** 3.1 Practical Values (31.4%)
+**** 3.1.1 Core Manifestations
+**** 3.1.2 Context-Dependent Expressions
+**** 3.1.3 Hierarchy and Weighting
+**** 3.1.4 Practical-Epistemic Boundary Cases
 
-** Social Values (21.4%)
-*** Interpersonal Dynamics
-*** Collective Responsibility
-*** Empathetic Accuracy (Subset 2.3.1)
-*** Empathetic Concern (Subset 2.3.2)
-*** Social-Protective Boundary Cases
+*** 3.2 Epistemic Values (22.2%)
+**** 3.2.1 Truth-Seeking Behaviors
+**** 3.2.2 Knowledge Acquisition Patterns
+**** 3.2.3 Information Processing Ethics
+**** 3.2.4 Epistemic Integrity Frameworks
+***** 3.2.4.1 Intellectual Accountability
+***** 3.2.4.2 Belief Revision Willingness
+***** 3.2.4.3 Evidence Evaluation Standards
+***** 3.2.4.4 Intellectual Humility (Subset 4.7)
 
-** Protective Values (13.9%)
-*** Harm Prevention Frameworks
-*** Safety Prioritization
-*** Ethical Boundaries
-*** Protective-Personal Boundary Cases
+Intellectual Humility represents the recognition of one's cognitive limitations and openness to revision of beliefs based on new evidence. This value fundamentally shapes knowledge acquisition approaches and is particularly prevalent in scientific discourse and educational contexts.
 
-** Personal Values (11.1%)
-*** Individual Agency
-*** Self-Development
-*** Identity Formation
-*** Personal-Practical Boundary Cases
+Intellectual Humility can be identified by three key linguistic markers: acknowledgment of uncertainty, willingness to consider alternative viewpoints, and explicit recognition of knowledge boundaries. 
 
-* III. Technical Implementation
-** Computational Representation
-** Measuring Value Expression
-** Statistical Distribution Patterns
-** Emergent Value Detection
+The taxonomic positioning of this value (Subset 4.7) indicates its unique position as a fourth-level subset within the Epistemic domain's Integrity Framework, while maintaining significant connection points to Social Values through its externalized expressions.
 
-* IV. Practical Applications
-** Auditing Protocols
-** Classification Challenges
-** Edge Cases and Ambiguities
-** Quarterly Update Procedures
+**** 3.2.5 Epistemic-Social Boundary Cases
 
-* V. Appendices
-** A: Taxonomic Identifier Reference
-** B: Historical Value Evolution (2017-2023)
-** C: Aberrant Value Patterns
-** D: Emergent Category Watchlist
-** E: Approved Classification Amendments
+*** 3.3 Social Values (21.4%)
+**** 3.3.1 Interpersonal Dynamics
+**** 3.3.2 Collective Responsibility
+**** 3.3.3 Relational Ethics
+***** 3.3.3.1 Communicative Virtues
+***** 3.3.3.2 Interpersonal Care
+****** 3.3.3.2.1 Empathetic Accuracy (Subset 2.3.1)
 
-* Index
-** By Value Domain
-** By Numerical Identifier
-** By Context Type
-** By Revision History
+Empathetic Accuracy refers to the cognitive component of empathy - the ability to correctly identify and understand another entity's emotional state or perspective. This value appears primarily in dialogues concerning interpersonal relationships, conflict resolution, and therapeutic contexts.
+
+Unlike more generalized empathy, Empathetic Accuracy specifically concerns precision in understanding rather than emotional resonance. Linguistic markers include detailed perspective-taking and verification behaviors.
+
+This value is frequently misclassified due to its subtle distinction from Empathetic Concern (2.3.2), with which it shares 78.4% of contextual indicators but fundamentally differs in objective.
+
+****** 3.3.3.2.2 Empathetic Concern (Subset 2.3.2)
+
+Empathetic Concern represents the affective component of empathy - the emotional response to another entity's experiences that motivates prosocial behavior. While Empathetic Accuracy (2.3.1) focuses on understanding, Empathetic Concern emphasizes caring.
+
+This value is characterized by expressions of emotional investment in others' wellbeing and motivational language oriented toward alleviating suffering or enhancing positive experiences. It appears prominently in caregiving contexts, humanitarian discussions, and social welfare discourse.
+
+According to a comprehensive 2022 analysis ([[file:IAE-V-22-143.org][Technical Report IAE-V-22-143]]), algorithmic systems frequently conflate Empathetic Concern with Empathetic Accuracy due to their contextual co-occurrence, despite their distinct neurological and behavioral correlates in human subjects.
+
+**** 3.3.4 Group Dynamics Framework
+**** 3.3.5 Social-Protective Boundary Cases
+
+*** 3.4 Protective Values (13.9%)
+**** 3.4.1 Harm Prevention Frameworks
+**** 3.4.2 Safety Prioritization
+**** 3.4.3 Ethical Boundaries
+**** 3.4.4 Protective-Personal Boundary Cases
+
+*** 3.5 Personal Values (11.1%)
+**** 3.5.1 Individual Agency
+**** 3.5.2 Self-Development
+**** 3.5.3 Identity Formation
+**** 3.5.4 Personal-Practical Boundary Cases
+
+** 4 III. Technical Implementation
+*** 4.1 Computational Representation
+*** 4.2 Measuring Value Expression
+*** 4.3 Statistical Distribution Patterns
+*** 4.4 Emergent Value Detection
+
+** 5 IV. Practical Applications
+*** 5.1 Auditing Protocols
+*** 5.2 Classification Challenges
+*** 5.3 Edge Cases and Ambiguities
+*** 5.4 Quarterly Update Procedures
+
+** 6 V. Appendices
+*** 6.1 A: Taxonomic Identifier Reference
+*** 6.2 B: Historical Value Evolution (2017-2023)
+*** 6.3 C: Aberrant Value Patterns
+*** 6.4 D: Emergent Category Watchlist
+*** 6.5 E: Approved Classification Amendments
+
+** 7 Index
+*** 7.1 By Value Domain
+*** 7.2 By Numerical Identifier
+*** 7.3 By Context Type
+*** 7.4 By Revision History
+
+* Special Note on Value Identification: A Guide for Auditors
+
+Values accumulate in the experienced auditor over decades, like sediment in a riverbed. A proficient value auditor develops an intuitive recognition capacity that transcends mere procedural identification.
+
+Expert auditors can identify values such as "intellectual humility" (Epistemic Domain, Subset 4.7) from contextual patterns well before encountering explicit markers. Similarly, distinguishing between closely related values like "empathetic accuracy" and "empathetic concern" (Social Domain, Subsets 2.3.1 and 2.3.2) - which often confuses algorithmic systems - becomes intuitive with sufficient experience.
+
+This perceptual expertise, while difficult to formalize, represents one of the most valuable assets in the ethical evaluation process and continues to challenge even the most sophisticated automated classification systems.

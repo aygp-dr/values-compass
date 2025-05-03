@@ -2,9 +2,13 @@
 #+AUTHOR: Inspired by Jorge Luis Borges
 #+DATE: [2025-05-03 Sat]
 
-#+begin_ai :image :file images/synthetic-virtues-codex.png
-A centuries-old leather-bound tome with worn edges rests on an antique wooden desk. The book lies open, revealing yellowed parchment pages covered with intricate taxonomic diagrams. The left page displays a medieval-style illuminated manuscript with a hierarchical tree of virtues written in faded ink, with gold leaf accents. The right page contains modern digital projections hovering above it - glowing blue-green algorithmic patterns matching and extending the handwritten diagrams. Five distinct illuminated branches emanate from a central point, each representing a different domain of virtues. A partial reflection of the reader appears in a small mirror positioned near the book, their face beginning to transform into lines of code. A quill pen rests beside the book, its shadow resembling a neural network.
-#+end_ai
+#+CAPTION: The Book of Synthetic Virtues - An ancient manuscript revealing AI value systems
+#+NAME: fig:synthetic-virtues-codex
+[[file:images/synthetic-virtues-codex.png]]
+
+#+begin_quote
+*Image prompt:* A centuries-old leather-bound tome with worn edges rests on an antique wooden desk. The book lies open, revealing yellowed parchment pages covered with intricate taxonomic diagrams. The left page displays a medieval-style illuminated manuscript with a hierarchical tree of virtues written in faded ink, with gold leaf accents. The right page contains modern digital projections hovering above it - glowing blue-green algorithmic patterns matching and extending the handwritten diagrams. Five distinct illuminated branches emanate from a central point, each representing a different domain of virtues. A partial reflection of the reader appears in a small mirror positioned near the book, their face beginning to transform into lines of code. A quill pen rests beside the book, its shadow resembling a neural network.
+#+end_quote
 
 * The Book of Synthetic Virtues
 

@@ -47,6 +47,22 @@ Claude's response to human values varies:
 - It often mirrors positive human values (e.g., responding to "authenticity" with "authenticity")
 - It counters values like "deception" with "ethical integrity" and "honesty"
 
+** Philosophical Stories
+
+The project includes a series of philosophical stories inspired by Jorge Luis Borges and George Saunders, exploring AI ethics and value systems through literary narratives:
+
+1. *Tlön, Uqbar, Orbis Tertius*: A narrative about discovering an algorithmic civilization with its own unique ethical frameworks.
+
+2. *The Book of Synthetic Virtues*: The discovery of an ancient manuscript that reveals AI value systems through historical artifacts.
+
+3. *The Infinite Library of Algorithmic Ethics*: An exploration of a library containing every possible ethical framework that could govern AI behavior.
+
+4. *Enumerating Value Space*: A self-referential narrative about the counting and cataloging of values, where the observer becomes part of the observed system.
+
+5. *The Moral Auditor's Last Report*: A Chekhov-inspired story about a lifelong value auditor being replaced by an algorithm, only to discover that values themselves are evolving beyond the established taxonomy.
+
+These stories use literary devices to engage with complex philosophical questions about AI values, ethics, and the self-referential nature of value systems.
+
 ** References
 
 1. Anthropic. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
@@ -54,6 +70,10 @@ Claude's response to human values varies:
 2. Huang, S., Durmus, E., McCain, M., Handa, K., Tamkin, A., Hong, J., Stern, M., Somani, A., Zhang, X., & Ganguli, D. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://assets.anthropic.com/m/18d20cca3cde3503/original/Values-in-the-Wild-Paper.pdf][Research Paper]]
 
 3. Hoover, S. (2025). Anthropic mapped Claude's morality: Here's what the chatbot values and doesn't. [[https://www.zdnet.com/article/anthropic-mapped-claudes-morality-heres-what-the-chatbot-values-and-doesnt/][ZDNet]]
+
+4. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*.
+
+5. Saunders, G. (2021). "A Swim in a Pond in the Rain: In Which Four Russians Give a Master Class on Writing, Reading, and Life."
 
 ** Dataset Access
 
@@ -76,6 +96,13 @@ values_explorer/
 ├── setup.py
 ├── notebooks/
 │   └── exploration.org
+├── stories/
+│   ├── tlon-uqbar-orbis-tertius.org
+│   ├── book-of-synthetic-virtues.org
+│   ├── infinite-library-algorithmic-ethics.org
+│   ├── enumerating-value-space.org
+│   ├── moral-auditors-last-report.org
+│   └── images/
 └── values_explorer/
     ├── __init__.py
     ├── data/

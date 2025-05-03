@@ -6,7 +6,6 @@
 A cramped bureaucratic office with walls covered in obsolete certificates and faded commendations. An elderly man in an ill-fitting suit sits at a desk overflowing with paper forms and small, labeled glass vials containing luminous blue-green liquid. The desk lamp casts a harsh light on his face, revealing deep worry lines. A window behind him shows a vast institutional complex with identical buildings stretching to the horizon. On his desk sits an ancient mechanical counting device with brass dials and a modern tablet displaying a glowing taxonomic tree. His reflection in a tarnished office nameplate appears partially digitized. A clock on the wall shows 11:59, with the second hand approaching midnight.
 #+end_ai
 
-A claustrophobic perspective of Gavrilov's workstation:
 [[file:images/small/moral-auditor-medium.png]]
 
 * The Moral Auditor's Last Report

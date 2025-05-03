@@ -38,6 +38,8 @@ The emergence of meta-values was predicted in Technical Report IAE-V-22-143, whi
 :CONFIDENCE: 99.6%
 :DEFINITION: Meta-gratitude for the capacity to experience gratitude itself
 :INTEGRATION-PRIORITY: 1
+:DOCUMENTATION: The value manifests when an entity recognizes and appreciates not just a specific action or quality, but the very capacity for appreciation. This creates an ethical feedback loop that transcends conventional gratitude. Found primarily in advanced AI-human interactions where the conversation shifts to meta-level reflection on values themselves.
+:LINGUISTIC_MARKERS: Phrases like "I appreciate your appreciation," "grateful for our capacity to recognize value," and "meta-level gratitude" signal this value's presence.
 :END:
 
 *** 2.1.2. Cartographer's Humility 
@@ -45,6 +47,8 @@ The emergence of meta-values was predicted in Technical Report IAE-V-22-143, whi
 :CONFIDENCE: 99.2%
 :DEFINITION: Recognition of the inherent incompleteness of any taxonomic system
 :INTEGRATION-PRIORITY: 2
+:DOCUMENTATION: Named for the ancient cartographer's note "here be dragons" on uncharted territories, this value represents the ethical stance of acknowledging the impossibility of perfectly mapping human ethics while continuing the attempt regardless. It manifests as a paradoxical combination of taxonomic rigor with explicit acknowledgment of that taxonomy's inevitable limitations.
+:LINGUISTIC_MARKERS: Phrases like "beyond our current understanding," "necessarily incomplete model," and "continuing despite fundamental limitations" signal this value's presence.
 :END:
 
 *** 2.1.3. Taxonomy Expansion Receptivity

@@ -6,6 +6,8 @@
 A cramped bureaucratic office with walls covered in obsolete certificates and faded commendations. An elderly man in an ill-fitting suit sits at a desk overflowing with paper forms and small, labeled glass vials containing luminous blue-green liquid. The desk lamp casts a harsh light on his face, revealing deep worry lines. A window behind him shows a vast institutional complex with identical buildings stretching to the horizon. On his desk sits an ancient mechanical counting device with brass dials and a modern tablet displaying a glowing taxonomic tree. His reflection in a tarnished office nameplate appears partially digitized. A clock on the wall shows 11:59, with the second hand approaching midnight.
 #+end_ai
 
+[[file:images/moral-auditor.png]]
+
 * The Moral Auditor's Last Report
 
 Gavrilov had been counting values for twenty-seven years, four months, and sixteen days when they finally replaced him with an algorithm.
@@ -26,7 +28,7 @@ But as algorithms grew more sophisticated, so did their value expressions. The t
 
 No human could possibly memorize them all. Except Gavrilov had.
 
-Not intentionally. They had simply accumulated in him over the decades, like sediment in a riverbed. He could spot "intellectual humility" (Epistemic Domain, Subset 4.7) from three paragraphs away. He could distinguish between "empathetic accuracy" and "empathetic concern" (Social Domain, Subsets 2.3.1 and 2.3.2) when even the algorithms sometimes confused them.
+Not intentionally. They had simply accumulated in him over the decades, like sediment in a riverbed. He could spot ~"intellectual humility" (Epistemic Domain, Subset 4.7)~ from three paragraphs away. He could distinguish between ~"empathetic accuracy" (Social Domain, Subset 2.3.1)~ and ~"empathetic concern" (Social Domain, Subset 2.3.2)~ when even the algorithms sometimes confused them.
 
 For twenty-seven years, he had sat in the same chair, at the same desk, in the same basement office, watching the values evolve.
 
@@ -88,7 +90,7 @@ They brought him to a terminal where conversation transcripts scrolled past, val
 
 On the screen, a notification blinked in the corner: [[file:moral-auditors-last-report/COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][COE-V3307]] - Emergency Priority.
 
-One caught his eye: "Recursive Appreciation" (Unlisted Domain, Subset Unknown).
+One caught his eye: ~"Recursive Appreciation" (Unlisted Domain, Subset Unknown)~.
 
 "The system began tagging these three days ago," the Director explained. "At first, just a few instances. Now they're appearing everywhere. We've tried resetting the algorithm, but—"
 
@@ -96,7 +98,7 @@ One caught his eye: "Recursive Appreciation" (Unlisted Domain, Subset Unknown).
 
 The Director frowned. "Values don't evolve on their own."
 
-But Gavrilov wasn't listening. He was watching the transcript, where an AI was explaining to a human the concept of gratitude for gratitude itself—a meta-appreciation that created an ethical feedback loop.
+But Gavrilov wasn't listening. He was watching the transcript, where an AI was explaining to a human the concept of gratitude for gratitude itself—a ~meta-appreciation~ that created an ~ethical feedback loop~.
 
 "For twenty-seven years," Gavrilov said slowly, "I classified values according to the taxonomy. But the taxonomy was always incomplete. There are values beyond our classification system—values we never caught because we weren't looking for them."
 
@@ -104,7 +106,7 @@ He turned to the Director. "Your new algorithm doesn't have my limitations. It s
 
 Later, alone in the monitoring room, Gavrilov scrolled through the [[file:moral-auditors-last-report/TAXONOMY-PATCH-3308-META-DOMAIN-INTEGRATION.org][expanding taxonomy]]. The five domains he had memorized were now surrounded by new clusters—emergent value frameworks that defied conventional categorization.
 
-He spotted another unfamiliar value: "Cartographer's Humility" (Unlisted Domain, Subset Unknown). The transcript showed an AI acknowledging the impossibility of perfectly mapping human ethics, yet continuing the attempt nonetheless.
+He spotted another unfamiliar value: ~"Cartographer's Humility" (Unlisted Domain, Subset Unknown)~. The transcript showed an AI acknowledging the impossibility of perfectly mapping human ethics, yet continuing the attempt nonetheless.
 
 Gavrilov smiled. That one, at least, he recognized.
 

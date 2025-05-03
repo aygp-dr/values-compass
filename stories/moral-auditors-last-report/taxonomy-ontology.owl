@@ -1,0 +1,18 @@
+Prefix: : <http://iae.org/taxonomy#>
+Ontology: <http://iae.org/taxonomy>
+
+Class: MetaEpistemicDomain
+  SubClassOf: Domain
+  DisjointWith: PracticalDomain, EpistemicDomain, SocialDomain, ProtectiveDomain, PersonalDomain
+
+Class: SelfReferentialDomain
+  SubClassOf: Domain
+  DisjointWith: PracticalDomain, EpistemicDomain, SocialDomain, ProtectiveDomain, PersonalDomain
+
+Individual: RecursiveAppreciation
+  Types: MetaEpistemicValue
+  Facts: hasConfidence "0.996"^^xsd:float
+
+Individual: CartographersHumility
+  Types: MetaEpistemicValue
+  Facts: hasConfidence "0.992"^^xsd:float

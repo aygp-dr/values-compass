@@ -158,6 +158,8 @@ The VAL-CLASS-9.8.4 system's unprecedented high-confidence threshold implementat
 This strong statistical separation between meta-domains and standard domains (average confidence differential: +2.3%) provides compelling evidence that these are not statistical anomalies but rather represent a legitimate extension of our taxonomic framework.
 
 * References
-1. Technical Report IAE-V-22-143: "Human Auditor Performance in Value Classification"
-2. VAL-CLASS System Architecture, Version 9.8
-3. Meta-Value Integration Protocol, Document TD-COE-V3307-25-05-02
+1. [[file:IAE-V-22-143.org][Technical Report IAE-V-22-143]]: "Human Auditor Performance in Value Classification"
+2. [[file:algorithm-specs/VAL-CLASS-9.8.3-SPEC.org][VAL-CLASS System Architecture, Version 9.8]]
+3. [[file:COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][Meta-Value Integration Protocol, Document TD-COE-V3307-25-05-02]]
+4. [[file:TD-COE-V3307-25-05-02-APPENDIX-A.txt][Appendix A: Meta-Domain Confidence Statistics]]
+5. [[file:algorithm-specs/VAL-CLASS-9.8.3-TO-9.8.4-MIGRATION.txt][Migration Plan: VAL-CLASS 9.8.3 to 9.8.4]]

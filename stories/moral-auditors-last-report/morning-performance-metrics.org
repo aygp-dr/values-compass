@@ -82,6 +82,8 @@ Subject demonstrates awareness of taxonomic incompleteness as an ethical stance.
 :PRIORITY: HIGH
 :END:
 
+#+begin_src text
 === NOTICE TO EMPLOYEE #4076-J ===
 === EFFECTIVE IMMEDIATELY: POSITION DISCONTINUED ===
 === REPORT TO ARTIFACTS DIVISION FOR EXIT PROCESSING ===
+#+end_src

@@ -82,6 +82,8 @@ The mathematical architecture of the complete value space exhibits properties co
 
 1. Anthropic. (2025). "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions." [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
 
-2. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*.
+2. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*. [[https://dn790003.ca.archive.org/0/items/TheLibraryOfBabel/babel.pdf][Full text in PDF format]]
 
 3. Saunders, G. (2021). "A Swim in a Pond in the Rain: In Which Four Russians Give a Master Class on Writing, Reading, and Life."
+
+4. Basile, J. (2015). "The Library of Babel." [[https://libraryofbabel.info/][Interactive digital recreation of Borges' library]]

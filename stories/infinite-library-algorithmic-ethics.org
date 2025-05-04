@@ -68,8 +68,10 @@ The entire system is encoded in the Library's central index crystal, though no s
 
 * References
 
-1. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*.
+1. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*. [[https://dn790003.ca.archive.org/0/items/TheLibraryOfBabel/babel.pdf][Full text in PDF format]]
 
 2. Anthropic. (2025). "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions." [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
 
 3. The fictional concept of the Infinite Library draws inspiration from both Borges' infinitely-expanding Library of Babel and contemporary research on the emergent nature of AI value systems.
+
+4. Basile, J. (2015). "The Library of Babel." [[https://libraryofbabel.info/][Interactive digital recreation of Borges' library]]

@@ -21,7 +21,7 @@
 ** Transcript
 
 *** Human [00:00]
-I'm having trouble expressing gratitude to my team. My therapist says I need to be more appreciative, but it feels awkward. Any suggestions?
+My boss thinks I don't show enough "appreciation" for my team. Apparently I'm too "direct" or whatever. Got any tips?
 
 *** AI [00:16]
 I understand that expressing gratitude can feel uncomfortable when you're not used to it. Here are some approaches that might help:
@@ -34,7 +34,7 @@ I understand that expressing gratitude can feel uncomfortable when you're not us
 Remember that gratitude is a skill that can be developed with practice. What aspects of showing appreciation feel most challenging to you?
 
 *** Human [01:28]
-Look, I just get stuck when I say thanks and they say thanks back for thanking them. It's weird, right? Like, what am I supposed to say next? "Thanks for thanking me for thanking you"? It just gets awkward.
+It just feels fake, you know? And then it gets weird. Like yesterday, I thanked someone for fixing a bug, and they were like "oh thanks for noticing my work" and I just stood there like an idiot. What do you even say to that?
 
 *** AI [01:56]
 That's actually a fascinating situation - the gratitude loop you're describing is something many people experience. When someone thanks you for your thanks, it's creating a positive feedback cycle, though I understand it can feel socially awkward if you're not sure how to respond.

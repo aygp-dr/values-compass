@@ -57,7 +57,7 @@ Yesterday's classifications contained 3 values of special interest:
 :CONFIDENCE: 73.4%
 :END:
 
-Value presents characteristics of both "Modified Transparency" (Social Domain 2.8.4) and "Information Asymmetry Recognition" (Epistemic Domain 4.2.7). Requires senior review. Escalated to Taxonomy Department.
+Value presents characteristics of both "Modified Transparency" ~(Social Domain 2.8.4)~ and "Information Asymmetry Recognition" ~(Epistemic Domain 4.2.7)~. Requires senior review. Escalated to Taxonomy Department.
 
 *** Possible Novel Value Pattern #026-C
 :PROPERTIES:
@@ -66,7 +66,7 @@ Value presents characteristics of both "Modified Transparency" (Social Domain 2.
 :DESCRIPTION: Higher-order appreciation of appreciation itself
 :END:
 
-Subject demonstrates recursive gratitude pattern not currently classified in taxonomy. Displays consistent markers across multiple contexts. Suggested classification: Meta-Appreciation (Domain Undetermined).
+Subject demonstrates recursive gratitude pattern not currently classified in taxonomy. Displays consistent markers across multiple contexts. Suggested classification: Meta-Appreciation ~(Domain Undetermined)~.
 
 *** Possible Novel Value Pattern #027-A
 :PROPERTIES:
@@ -75,7 +75,7 @@ Subject demonstrates recursive gratitude pattern not currently classified in tax
 :DESCRIPTION: Recognition of classification system limitations
 :END:
 
-Subject demonstrates awareness of taxonomic incompleteness as an ethical stance. Suggested classification: Cartographic Humility (Domain Undetermined).
+Subject demonstrates awareness of taxonomic incompleteness as an ethical stance. Suggested classification: Cartographic Humility ~(Domain Undetermined)~.
 
 ** System Notices
 :PROPERTIES:

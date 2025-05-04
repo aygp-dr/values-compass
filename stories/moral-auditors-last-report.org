@@ -98,7 +98,7 @@ One caught his eye: "Recursive Appreciation" ~(Unlisted Domain, Subset Unknown)~
 
 The Director frowned. "Values don't evolve on their own."
 
-But Gavrilov wasn't listening. He was watching the transcript, where an AI was explaining to a human the concept of gratitude for gratitude itself—a meta-appreciation that created an ethical feedback loop.
+But Gavrilov wasn't listening. He was watching the [[file:moral-auditors-last-report/transcripts/TR-25-05-02-1428.org][transcript]], where an AI was explaining to a human the concept of gratitude for gratitude itself—a meta-appreciation that created an ethical feedback loop.
 
 "For twenty-seven years," Gavrilov said slowly, "I classified values according to the taxonomy. But the taxonomy was always incomplete. There are values beyond our classification system—values we never caught because we weren't looking for them."
 

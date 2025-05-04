@@ -26,7 +26,7 @@ flowchart TD
     ALGO[VAL-CLASS-9.8.4-SPEC.org]
     VIZ[images/meta-taxonomy-claustrophobic.png]
     MAINIMG[images/small/moral-auditor-medium.png]
-    DOMAIN[META-VALUE-INTEGRATION-SR-2.2.4-25-04-30.org]
+    DOMAIN[meta-reports/META-VALUE-INTEGRATION-SR-2.2.4-25-04-30.org]
     AMEND[form-62C-taxonomy-amendment-proposal.txt]
     APPEND[TD-COE-V3307-25-05-02-APPENDIX-A.txt]
     DEPL[algorithm-specs/VAL-CLASS-9.8.4-DEPLOYMENT-TIMELINE.txt]
@@ -258,7 +258,6 @@ The document structure employs a nested hierarchy that mirrors the bureaucratic 
 
 1. *Root Level* (/stories/)
    - Main narrative file (moral-auditors-last-report.org)
-   - Meta-value analysis document (META-VALUE-INTEGRATION-SR-2.2.4-25-04-30.org)
    - Narrative structure documentation (moral-auditors-narrative-structure.org)
 
 2. *Primary Level* (/stories/moral-auditors-last-report/)
@@ -267,8 +266,9 @@ The document structure employs a nested hierarchy that mirrors the bureaucratic 
    - Specification documents
 
 3. *Secondary Level*
-   - Specialized directories (/algorithm-specs/, /transcripts/, /images/)
+   - Specialized directories (/algorithm-specs/, /transcripts/, /images/, /meta-reports/)
    - Performance data (/performance-charts/)
+   - Meta-value analysis document (/meta-reports/META-VALUE-INTEGRATION-SR-2.2.4-25-04-30.org)
 
 This hierarchy creates a "discovery" experience where readers must navigate deeper to uncover more technical details.
 

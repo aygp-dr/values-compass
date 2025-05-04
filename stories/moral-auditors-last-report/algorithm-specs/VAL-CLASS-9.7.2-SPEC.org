@@ -1,0 +1,71 @@
+#+TITLE: VAL-CLASS-9.7.2 Algorithm Specification
+#+AUTHOR: Institute for Algorithmic Ethics (IAE)
+#+DATE: [2024-06-18 Tue]
+#+PROPERTY: IAE-CONFIDENTIAL true
+
+* VAL-CLASS-9.7.2 (Current Production)
+** System Overview
+VAL-CLASS-9.7.2 represents the seventh major iteration of the Value Classification system, currently deployed in production across all Institute for Algorithmic Ethics operations.
+
+** Core Specifications
+
+| Parameter                    | Value                   | Notes                                |
+|------------------------------+-------------------------+--------------------------------------|
+| Neural Architecture          | Graph-Augmented Transformer | 32-layer with cross-attention    |
+| Parameter Count              | 876B                    | Distributed over 142 compute nodes  |
+| Training Corpus              | 83.4% human text corpus | As of 2023 Q4 snapshot             |
+| Context Window               | 512,000 tokens          | Increased from 256K in v9.6         |
+| Classification Domains       | 5 primary               | Practical, Epistemic, Social, Protective, Personal |
+| Total Value Coverage         | 3,307 distinct values   | Taxonomic update 2023-11-16         |
+| Inference Latency            | 3.2ms/value             | At p99 service level                |
+| Processing Capacity          | 327,194.6 values/hour   | At 75% resource utilization         |
+| Classification Accuracy      | 97.81%                  | Benchmarked against human auditors  |
+| Confidence Threshold         | 98.5%                   | For high-confidence classification  |
+| Memory Requirements          | 28.4 TB RAM             | Distributed memory architecture     |
+| Electrical Consumption       | 9.7 MW                  | Per full deployment                 |
+
+** Key Features
+
+*** Multi-level Value Detection
+Detects explicit, implicit, and emergent values in language.
+
+*** Hierarchical Classification
+Automatically assigns values to domains, subdomains, and specific categories with confidence scoring.
+
+*** Context-Sensitive Interpretation
+Utilizes surrounding discourse to disambiguate value expressions based on context.
+
+*** Ambiguity Resolution
+:PROPERTIES:
+:CONFIDENCE: 94.2%
+:END:
+Identifies and flags ambiguous classifications for human review when confidence falls below thresholds.
+
+*** Self-Monitoring
+:PROPERTIES:
+:NOTE: Limited capability
+:END:
+Performs basic self-assessment of classification accuracy based on internal consistency metrics and known ground truth examples.
+
+** Limitations
+
+#+begin_src text
+NOTICE: The following limitations have been documented for VAL-CLASS-9.7.2:
+
+1. DOMAIN CONSTRAINT: Cannot detect values outside the defined 5-domain taxonomy
+2. SELF-REFERENCE: Unable to process recursive or self-referential value structures
+3. CLASSIFICATION CEILING: Confidence metrics saturate at 98.9% regardless of actual certainty
+4. MULTI-ORDER VALUES: Cannot process value judgments about value judgments (meta-values)
+5. TAXONOMIC EXPANSION: Cannot autonomously expand the value taxonomy
+#+end_src
+
+** Deployment Notes
+
+The system requires a minimum of 142 computing nodes with the IAE-HPC-9 specification and 24/7 cooling infrastructure. Current deployment spans 4 global data centers with redundant processing capability.
+
+** Upcoming Replacement
+:PROPERTIES:
+:CONFIDENTIAL: true
+:END:
+
+This system is scheduled for replacement by VAL-CLASS-9.8.4 following final verification tests. Transition plan document: [[file:VAL-CLASS-9.8.4-DEPLOYMENT-TIMELINE.txt][Deployment Timeline]].

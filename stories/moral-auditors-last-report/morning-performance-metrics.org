@@ -42,9 +42,9 @@ Current Rating: 4.76/5.00 (Senior Auditor - Level III)
 *** Algorithm Performance Comparison
 | System Version | Classification Accuracy | Processing Speed (v/hr) | Notes |
 |----------------+-------------------------+------------------------+-------|
-| VAL-CLASS-9.8.4 | 98.40%                | 348,271.4             | *PRODUCTION DEPLOYMENT SCHEDULED* |
-| VAL-CLASS-9.8.3 | 98.12%                | 341,628.2             | In testing |
-| VAL-CLASS-9.7.2 | 97.81%                | 327,194.6             | Current production |
+| [[file:../moral-auditors-last-report/VAL-CLASS-9.8.4-SPEC.org][VAL-CLASS-9.8.4]] | 98.40%                | 348,271.4             | *PRODUCTION DEPLOYMENT SCHEDULED* |
+| [[file:algorithm-specs/VAL-CLASS-9.8.3-SPEC.org][VAL-CLASS-9.8.3]] | 98.12%                | 341,628.2             | In testing |
+| [[file:algorithm-specs/VAL-CLASS-9.7.2-SPEC.org][VAL-CLASS-9.7.2]] | 97.81%                | 327,194.6             | Current production |
 | Human Average  | 98.93%                 | 389.7                 | All active auditors |
 | Gavrilov (#4076-J) | 99.31%             | 427.6                 | Benchmark reference |
 

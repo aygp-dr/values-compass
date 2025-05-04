@@ -1,0 +1,82 @@
+#+TITLE: VAL-CLASS-9.8.3 Algorithm Specification
+#+AUTHOR: Institute for Algorithmic Ethics (IAE)
+#+DATE: [2025-03-01 Sat]
+#+PROPERTY: IAE-CONFIDENTIAL true
+
+* VAL-CLASS-9.8.3 (Testing Phase)
+** System Overview
+VAL-CLASS-9.8.3 represents the interim testing build of the 9.8 series Value Classification system, incorporating major architectural improvements over the 9.7 series.
+
+** Core Specifications
+
+| Parameter                    | Value                   | Notes                                |
+|------------------------------+-------------------------+--------------------------------------|
+| Neural Architecture          | Recursive Graph Transformer | With context-sensitive pruning |
+| Parameter Count              | 1.4T                    | Distributed over 157 compute nodes  |
+| Training Corpus              | 91.2% human text corpus | As of 2024 Q4 snapshot             |
+| Context Window               | 850,000 tokens          | Significant increase from 9.7 series |
+| Classification Domains       | 5 primary               | Practical, Epistemic, Social, Protective, Personal |
+| Total Value Coverage         | 3,307 distinct values   | Same as 9.7.2 taxonomy              |
+| Inference Latency            | 2.9ms/value             | 9.3% improvement over 9.7.2          |
+| Processing Capacity          | 341,628.2 values/hour   | At 75% resource utilization         |
+| Classification Accuracy      | 98.12%                  | Benchmarked against human auditors  |
+| Confidence Threshold         | 99.0%                   | Increased from 9.7 series           |
+| Memory Requirements          | 32.1 TB RAM             | Distributed memory architecture     |
+| Electrical Consumption       | 10.2 MW                 | Per full deployment                 |
+
+** Enhanced Capabilities
+
+*** Improved Contextual Reasoning
+Achieves 14% better disambiguation of closely related values in complex contexts.
+
+*** Faster Value Processing
+:PROPERTIES:
+:IMPROVEMENT: 4.4%
+:END:
+Optimized token processing pipeline with reduced computational graph traversal.
+
+*** Higher Accuracy Classification
+:PROPERTIES:
+:IMPROVEMENT: 0.31%
+:END:
+More precise boundary detection between similar values within the same domain.
+
+*** Enhanced Ambiguity Flagging
+:PROPERTIES:
+:ACCURACY: 97.6%
+:END:
+More sensitive detection of edge cases requiring human verification.
+
+** Testing Status
+:PROPERTIES:
+:STATUS: In validation
+:END:
+
+Currently in phase 3 (final) testing with the following results:
+
+#+begin_src text
+TEST SUITE RESULTS (as of 2025-04-30):
+- Core regression tests: PASSED (100%)
+- Edge case detection: PASSED (99.7%)
+- Load distribution: PASSED (100%)
+- Failure recovery: PASSED (100%)
+- Value boundary tests: PASSED (98.8%)
+- Adversarial input tests: PARTIAL PASS (96.2%)
+- Human-blind comparison: PASSED (98.1%)
+- Long-tail classification: PARTIAL PASS (94.3%)
+- Resource utilization: PASSED (99.5%)
+#+end_src
+
+** Known Issues
+
+1. Occasional classification instability when processing highly ambiguous value expressions (P99 occurrence: 0.0023%)
+2. Resource spikes during simultaneous high-volume processing (mitigated by load balancing)
+3. Continued inability to process self-referential value structures
+4. Classification performance degradation for values with fewer than 10,000 training examples
+
+** Supersession Note
+:PROPERTIES:
+:CONFIDENTIAL: true
+:END:
+
+This testing version has been superseded by VAL-CLASS-9.8.4, which includes critical improvements to the confidence scoring mechanism and self-reference processing. Migration path: [[file:VAL-CLASS-9.8.3-TO-9.8.4-MIGRATION.txt][Migration Documentation]]

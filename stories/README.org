@@ -13,7 +13,7 @@ This directory contains creative stories, fictional accounts, and literary inter
 - [[file:infinite-library-algorithmic-ethics.org][The Infinite Library of Algorithmic Ethics]] - A labyrinth of hexagonal chambers containing all possible ethical frameworks in crystalline form
 - [[file:enumerating-value-space.org][Enumerating Value Space]] - A self-referential narrative where the observer counting values becomes part of the observed system
 - [[file:moral-auditors-last-report.org][The Moral Auditor's Last Report]] - A Chekhov-inspired story of a lifelong value auditor who discovers values evolving beyond established taxonomies
-- [[file:moral-auditors-last-report-narrative-structure.org][Narrative Structure: The Moral Auditor's Last Report]] - Technical documentation on the narrative architecture and document interconnections
+  - [[file:moral-auditors-last-report-narrative-structure.org][Narrative Structure]] - Technical documentation on the narrative architecture and document interconnections
 
 * About the Stories
 

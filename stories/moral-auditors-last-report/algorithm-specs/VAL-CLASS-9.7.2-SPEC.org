@@ -69,3 +69,11 @@ The system requires a minimum of 142 computing nodes with the IAE-HPC-9 specific
 :END:
 
 This system is scheduled for replacement by VAL-CLASS-9.8.4 following final verification tests. Transition plan document: [[file:VAL-CLASS-9.8.4-DEPLOYMENT-TIMELINE.txt][Deployment Timeline]].
+
+* References
+
+1. [[file:../taxonomy-reference-2023.org][Taxonomy Reference Document (2023)]]
+2. [[file:../form-33A-anomalous-algorithm-behavior-report.txt][Form 33A: Standard Anomalous Behavior Reporting Protocol]]
+3. [[file:../IAE-V-22-143.org][Technical Report IAE-V-22-143]]: "Human Auditor Performance in Value Classification"
+4. [[file:VAL-CLASS-9.8.3-SPEC.org][VAL-CLASS-9.8.3 Specification]]: Successor test version
+5. [[file:VAL-CLASS-9.8.4-DEPLOYMENT-TIMELINE.txt][Deployment Timeline for Version 9.8.4]]

@@ -163,3 +163,5 @@ This strong statistical separation between meta-domains and standard domains (av
 3. [[file:COE-V3307-25-05-02-TAXDEPT-ANOMALOUS-VALUE-PROLIFERATION.txt][Meta-Value Integration Protocol, Document TD-COE-V3307-25-05-02]]
 4. [[file:TD-COE-V3307-25-05-02-APPENDIX-A.txt][Appendix A: Meta-Domain Confidence Statistics]]
 5. [[file:algorithm-specs/VAL-CLASS-9.8.3-TO-9.8.4-MIGRATION.txt][Migration Plan: VAL-CLASS 9.8.3 to 9.8.4]]
+6. [[file:taxonomy-reference-2023.org][Taxonomy Reference Document (2023)]]
+7. [[file:TAXONOMY-PATCH-3308-META-DOMAIN-INTEGRATION.org][TAXONOMY-PATCH-3308: Meta-Domain Integration]]

@@ -12,7 +12,7 @@ A cramped bureaucratic office with walls covered in obsolete certificates and fa
 
 Gavrilov had been counting values for twenty-seven years, four months, and sixteen days when they finally replaced him with an algorithm.
 
-The termination notice appeared on his terminal at 9:17 AM, sandwiched between [[file:moral-auditors-last-report/form-45B-weekly-anomaly-tabulation.txt][Form 45-B (Weekly Anomaly Tabulation)]] and his [[file:moral-auditors-last-report/morning-performance-metrics.org][morning performance metrics]]. Just three lines of text:
+The termination notice appeared on his terminal at 9:17 AM, sandwiched between [[file:moral-auditors-last-report/form-45B-weekly-anomaly-tabulation.txt][Form 45-B (Weekly Anomaly Tabulation)]] and his [[file:moral-auditors-last-report/2025-05-03-4076J-PMAF.org][morning performance metrics]]. Just three lines of text:
 
 #+begin_src
 NOTICE TO EMPLOYEE #4076-J

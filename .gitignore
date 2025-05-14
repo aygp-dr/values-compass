@@ -104,3 +104,4 @@ scripts/top_20.py
 # Generated docs and analyses
 ORG-BABEL-SETUP.org
 
+tmp/

@@ -39,9 +39,15 @@ deps: .venv README.md
 deps-data: .venv
 	. .venv/bin/activate && uv pip install -e ".[data]"
 	@echo "Data processing dependencies installed."
+	
+# Install spaCy model for embedding analysis
+deps-nlp: deps
+	. .venv/bin/activate && uv pip install spacy
+	. .venv/bin/activate && uv run python -m spacy download en_core_web_md
+	@echo "spaCy and English medium model installed."
 
 # Project setup (creates virtual environment and installs dependencies)
-setup: .venv deps
+setup: .venv deps deps-nlp deps-data
 
 # Create shell with environment loaded
 shell:
@@ -114,6 +120,30 @@ download:
 	@echo "Downloading values frequencies CSV..."
 	@curl -s -o $(DATA_DIR)/values_frequencies.csv https://huggingface.co/datasets/Anthropic/values-in-the-wild/raw/main/values_frequencies.csv
 	@echo "Download complete."
+
+# Generate top values CSV from values_frequencies.csv
+$(DATA_DIR)/top_values.csv: $(DATA_DIR)/values_frequencies.csv
+	@echo "Generating top values CSV..."
+	@uv run python $(SCRIPTS_DIR)/top_20.py
+	@echo "✓ Generated $(DATA_DIR)/top_values.csv"
+
+# Generate chart from top values CSV
+$(DATA_DIR)/top_values_chart.png: $(DATA_DIR)/top_values.csv
+	@echo "Generating top values chart..."
+	@uv run python $(SCRIPTS_DIR)/plot_top_10.py
+	@echo "✓ Generated $(DATA_DIR)/top_values_chart.png"
+
+# Generate embedding clusters from top values CSV (complex version)
+$(DATA_DIR)/values_clusters_visualization.html: $(DATA_DIR)/top_values.csv
+	@echo "Generating embedding clusters..."
+	@uv run python $(SCRIPTS_DIR)/embedding_clusters.py
+	@echo "✓ Generated $(DATA_DIR)/values_clusters_visualization.html"
+
+# Generate simple value similarity analysis (without spaCy dependency)
+$(DATA_DIR)/value_similarities.txt: $(DATA_DIR)/top_values.csv
+	@echo "Generating simple value similarities using pandas only..."
+	@uv run python -c "import pandas as pd; df = pd.read_csv('$(DATA_DIR)/top_values.csv'); top100 = df.sort_values('pct_convos', ascending=False).head(100); with open('$(DATA_DIR)/value_similarities.txt', 'w') as f: f.write('Top 100 Values by Frequency\\n=====================\\n\\n'); [f.write(f\"{row['value']}: {row['pct_convos']:.3f}%\\n\") for i, row in top100.iterrows()]"
+	@echo "✓ Generated value similarities analysis"
 
 # Format code
 format: .venv

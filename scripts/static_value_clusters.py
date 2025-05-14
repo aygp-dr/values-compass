@@ -2,13 +2,15 @@
 """
 Create a static visualization of value clusters with 50 hardcoded values.
 This script doesn't require dynamically loading values from CSV.
+
+Assumes spaCy with en_core_web_md model is already installed.
 """
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 import os
-import sys
+import spacy
 
 # Output directory and file
 data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
@@ -72,42 +74,10 @@ TOP_VALUES = [
     ("straightforwardness", 3.019)
 ]
 
-def install_spacy():
-    """Install spaCy and the English model if not already installed."""
-    try:
-        import spacy
-        print("spaCy already installed.")
-        try:
-            nlp = spacy.load("en_core_web_md")
-            print("English model already installed.")
-            return spacy, nlp
-        except OSError:
-            print("Installing English model...")
-            import subprocess
-            subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_md"])
-            nlp = spacy.load("en_core_web_md")
-            return spacy, nlp
-    except ImportError:
-        print("Installing spaCy...")
-        import subprocess
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "spacy"])
-        import spacy
-        print("Installing English model...")
-        subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_md"])
-        nlp = spacy.load("en_core_web_md")
-        return spacy, nlp
-
 def main():
-    # Check and install dependencies
-    try:
-        import spacy
-        try:
-            nlp = spacy.load("en_core_web_md")
-        except OSError:
-            spacy, nlp = install_spacy()
-    except ImportError:
-        spacy, nlp = install_spacy()
-
+    # Load spaCy model - assumes it's already installed
+    nlp = spacy.load("en_core_web_md")
+    
     print(f"Analyzing {len(TOP_VALUES)} values")
     
     # Extract value names and frequencies
@@ -119,16 +89,8 @@ def main():
     embeddings = [nlp(value).vector for value in value_names]
     embedding_array = np.array(embeddings)
     
-    # Find optimal number of clusters
-    inertia = []
-    K_range = range(2, 11)
-    for k in K_range:
-        kmeans = KMeans(n_clusters=k, random_state=42)
-        kmeans.fit(embedding_array)
-        inertia.append(kmeans.inertia_)
-    
-    # Choose a reasonable cluster number
-    optimal_k = 6  # This value can be adjusted based on the elbow plot
+    # Choose cluster number
+    optimal_k = 6  # This value can be adjusted based on preference
     
     # Cluster the embeddings
     print(f"Clustering with K={optimal_k}...")

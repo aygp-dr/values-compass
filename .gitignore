@@ -69,7 +69,8 @@ node.core
 uv.lock
 
 # Project specific
-data/
+data/*
+!data/anti_values.csv
 output/
 data/downloads/
 notebooks/images/

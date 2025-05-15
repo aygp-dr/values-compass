@@ -1,0 +1,149 @@
+#+TITLE: Mathematical Foundation for Values Taxonomy
+#+AUTHOR: Aidan Pace
+#+DATE: [2025-05-15 Wed]
+#+PROPERTY: header-args :mkdirp yes
+
+* Mathematical Foundation for Values Taxonomy
+
+This guide explains the mathematical foundation for the values-compass ontology, detailing its algebraic properties, relationship types, and verification mechanisms.
+
+** Core Mathematical Structure
+
+The values ontology is formalized as a partially ordered set (poset) $(V, \leq)$ with the following properties:
+
+- $V$ is the set of all values in our taxonomy
+- The relation $\leq$ represents "is more fundamental than" relationship
+- For any $a, b \in V$, if $a \leq b$ and $b \leq a$, then $a = b$ (antisymmetry)
+- For any $a, b, c \in V$, if $a \leq b$ and $b \leq c$, then $a \leq c$ (transitivity)
+- Not all values are comparable (partial, not total order)
+
+** Lattice Structure
+
+A lattice is a partially ordered set where every pair of elements has a unique supremum (join) and infimum (meet).
+
+In the context of values taxonomy:
+- The join of two values represents their common generalization
+- The meet of two values represents their common specialization
+
+The =ValueLattice= class in our implementation provides:
+
+#+begin_src python
+class ValueLattice:
+    """Implements a lattice structure for the values taxonomy."""
+    
+    def meet(self, value1, value2):
+        """Returns the greatest lower bound of two values (common denominator)."""
+        # Implementation using the partial order relationships
+        
+    def join(self, value1, value2):
+        """Returns the least upper bound of two values (common abstraction)."""
+        # Implementation using the partial order relationships
+        
+    def complementary_pair(self, value):
+        """Returns the anti-value (complement) of a given value."""
+        # Implementation leveraging WordNet and embedding relationships
+#+end_src
+
+** Anti-Value Mapping: Galois Connection
+
+The relationship between values and anti-values is formalized as a Galois connection:
+
+Let $V$ be our set of values and $A$ be our set of anti-values. Define functions:
+
+- $\alpha: V \rightarrow A$ (mapping values to anti-values)
+- $\gamma: A \rightarrow V$ (mapping anti-values to values)
+
+Such that for all $v \in V$ and $a \in A$:
+- $v \leq \gamma(\alpha(v))$ (applying α then γ gives a more general value)
+- $\alpha(\gamma(a)) \leq a$ (applying γ then α gives a more specific anti-value)
+
+This structure ensures logical consistency in value/anti-value relationships.
+
+** Implementation Components
+
+Our implementation includes four main components:
+
+*** 1. Formal Partial Order (=formalize_relations.py=)
+
+This script defines specific partial order relationships based on the existing taxonomy,
+generating a JSON representation of the formal taxonomy:
+
+#+begin_src bash
+python -m values_compass.formalize_relations --output=data/formal_taxonomy.json
+#+end_src
+
+The script:
+- Loads values data from the expanded values CSV
+- Constructs a directed graph representing the taxonomy
+- Identifies relationships (partial order, equivalence classes, antonym pairs)
+- Creates a formal taxonomy structure in JSON format
+
+*** 2. Lattice Structure (=structures/lattice.py=)
+
+This module implements the algebraic lattice structure with meet and join operations:
+
+#+begin_src python
+# Key functions in the ValueLattice class:
+lattice.join(a, b)  # Computes least upper bound
+lattice.meet(a, b)  # Computes greatest lower bound
+lattice.is_less_than_or_equal(a, b)  # Checks partial order
+lattice.complementary_pair(a)  # Finds the complementary value
+#+end_src
+
+*** 3. Galois Connection Validation (=validate_pairs.py=)
+
+This script verifies that existing value/anti-value pairs satisfy the Galois connection properties:
+
+#+begin_src bash
+python -m values_compass.validate_pairs --input=data/expanded_values.csv --output=data/validation_report.json
+#+end_src
+
+It generates a comprehensive validation report showing:
+- Total values analyzed
+- Valid vs. invalid Galois connections
+- Lattice structure properties
+
+*** 4. Visualization Tools (=visualize.py=)
+
+These tools visualize the lattice structure and value relationships:
+
+#+begin_src bash
+# Lattice structure visualization
+python -m values_compass.visualize --structure=lattice --output=data/lattice_visualization.png
+
+# Hasse diagram (transitive reduction)
+python -m values_compass.visualize --structure=hasse --output=data/hasse_visualization.png
+
+# Value clusters
+python -m values_compass.visualize --structure=clusters --output=data/clusters_visualization.png
+#+end_src
+
+** Visualization Examples
+
+Here are some examples of the visualizations produced by our tools:
+
+#+CAPTION: Values Lattice Structure
+[[file:../../data/lattice_visualization.png]]
+
+#+CAPTION: Values Hasse Diagram
+[[file:../../data/hasse_visualization.png]]
+
+#+CAPTION: Value Clusters and Relationships
+[[file:../../data/clusters_visualization.png]]
+
+** Benefits of Mathematical Foundation
+
+By implementing this mathematical foundation, the values-compass project gains:
+
+1. Rigorous verification of ontological consistency
+2. Predictable properties of value/anti-value relationships
+3. Integration capability with formal reasoning systems
+4. Connection to category-theoretic frameworks
+5. Discovery of deeper structures within the value space
+
+** References
+
+1. Davey, B.A. & Priestley, H.A. (2002). Introduction to Lattices and Order (2nd ed.). Cambridge University Press.
+2. Mac Lane, S. (1978). Categories for the Working Mathematician. Springer-Verlag.
+3. Galatos, N., Jipsen, P., Kowalski, T., & Ono, H. (2007). Residuated Lattices: An Algebraic Glimpse at Substructural Logics. Elsevier.
+4. Scott, D.S. (1976). Data Types as Lattices. SIAM Journal on Computing.

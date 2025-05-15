@@ -78,12 +78,25 @@ values_explorer/
 ├── README.org
 ├── requirements.txt
 ├── setup.py
-├── notebooks/
+├── notebooks/                                 # Interactive notebooks for data exploration
 │   └── exploration.org
+├── docs/                                      # Documentation and guides
+│   ├── guides/
+│   │   ├── initial-analysis.org
+│   │   └── mathematical-foundation.org
+│   └── images/
 ├── stories/                                   # Creative explorations (not primary analysis)
 │   ├── README.org
 │   └── images/
-└── values_explorer/
+├── values_compass/                            # Mathematical foundation modules
+│   ├── __init__.py
+│   ├── formalize_relations.py                 # Formal partial order structure
+│   ├── validate_pairs.py                      # Galois connection validation
+│   ├── visualize.py                           # Visualization tools
+│   └── structures/
+│       ├── __init__.py
+│       └── lattice.py                         # Lattice implementation
+└── values_explorer/                           # Core analysis modules
     ├── __init__.py
     ├── data/
     │   └── loader.py
@@ -100,4 +113,18 @@ values_explorer/
 
 1. Clone this repository
 2. Install dependencies: ~pip install -e .~
-3. Open exploration notebook: ~emacs notebooks/exploration.org~
+3. Set up virtual environment: ~make setup~
+4. Activate environment: ~source scripts/activate.sh~
+
+** Notebooks
+
+Interactive notebooks for exploring the dataset:
+
+- [[file:notebooks/exploration.org][Dataset Exploration]]: Basic exploration of the Values-in-the-Wild dataset
+
+** Guides
+
+Detailed guides for understanding and analyzing the dataset:
+
+- [[file:docs/guides/initial-analysis.org][Initial Analysis]]: Summary of initial findings from the dataset
+- [[file:docs/guides/mathematical-foundation.org][Mathematical Foundation]]: Formal mathematical structure for the values ontology

@@ -1,130 +1,100 @@
-#+TITLE: Exploring Anthropic's Values-in-the-Wild Dataset
-#+AUTHOR: Aidan Pace
+#+TITLE: Values Compass: Exploring Anthropic's Values-in-the-Wild Dataset
+#+AUTHOR: aygp-dr
 #+EMAIL: apace@defrecord.com
-#+DATE: [2025-04-30 Wed]
+#+DATE: [2025-05-17 Fri]
+#+PROPERTY: header-args :mkdirp yes
 
-* Values in the Wild: Understanding AI Values System
+* Values Compass
 
-This project provides tools for exploring and analyzing Anthropic's Values-in-the-Wild dataset, which offers a comprehensive taxonomy of values expressed by AI assistants in real-world interactions.
+This project provides tools for exploring, analyzing, and visualizing Anthropic's Values-in-the-Wild dataset, which offers a comprehensive taxonomy of values expressed by AI assistants in real-world interactions.
 
-** Background
+** Overview
 
-The Values-in-the-Wild dataset is a groundbreaking resource from Anthropic that catalogs and taxonomizes 3,307 unique values expressed by Claude during hundreds of thousands of real-world conversations. Using a privacy-preserving methodology, Anthropic researchers extracted these values without human reviewers needing to access any conversation content.
+The Values Compass project enables deep exploration of Anthropic's values taxonomy through hierarchical visualization, frequency analysis, and clustering. It helps understand how values are organized, their relative importance, and relationships between different value categories.
 
-The research presents the first large-scale empirical taxonomy of AI values observed in deployment contexts, revealing both consistent patterns and contextual variations in how AI systems express values across different interaction types.
+** Features
 
-** Dataset Overview
+- Hierarchical visualization of the values taxonomy
+- Analysis of value frequencies and distributions
+- Automated clustering of values based on similarity
+- Priority classification based on occurrence frequency
+- Visual representations (sunburst, treemap, transit maps)
 
-The dataset contains two main configurations:
+** Dataset Structure
 
-- ~values_frequencies~: Contains data about how frequently different values appear
-- ~values_tree~: Contains the hierarchical structure of the values taxonomy
+The values are organized into a three-level hierarchy:
 
-The values are organized into five primary conceptual domains:
-1. Practical Values (31.4%)
-2. Epistemic Values (22.2%)
-3. Social Values (21.4%)
-4. Protective Values (13.9%)
-5. Personal Values (11.1%)
+- *Level 3 (Top Categories)*: 5 main conceptual domains
+  1. Practical Values (31.4%)
+  2. Epistemic Values (22.2%)
+  3. Social Values (21.4%)
+  4. Protective Values (13.9%)
+  5. Personal Values (11.1%)
 
-The most common AI values include:
-- Helpfulness (23.4%)
-- Professionalism (22.9%)
-- Transparency (17.4%)
-- Clarity (16.6%)
-- Thoroughness (14.3%)
+- *Level 2 (Mid Categories)*: 26 categories including:
+  - Professional and technical excellence (17.8%)
+  - Community and relationship bonds (15.2%)
+  - Clarity and precision (8.5%)
 
-** Key Findings
+- *Level 1 (Specific Values)*: 266 individual values including:
+  - Professional standards and conduct (6.3%)
+  - Prosocial altruism (6.0%)
+  - Ethical and transparent governance (4.5%)
 
-The research demonstrates that while Claude expresses thousands of diverse values that respond to and engage with varied human perspectives, it tends to express some common trans-situational values—primarily centered around competent and supportive assistance, such as "helpfulness," "professionalism," "transparency," and "clarity."
+** Repository Structure
 
-Values are highly context-dependent:
-- "Healthy boundaries" appears disproportionately when providing relationship advice
-- "Historical accuracy" appears when analyzing controversial historical events
-- "Human agency" features prominently in technology ethics discussions
+- ~scripts/~ :: Python scripts for processing and visualization
+- ~data/~ :: Raw and processed data files
+- ~docs/~ :: Documentation and visualizations
+  - ~hierarchy/~ :: Hierarchical structure of the values taxonomy
+  - ~visualizations/~ :: Generated charts and diagrams
+  - ~analysis/~ :: Example analyses of values in texts
+- ~values_compass/~ :: Mathematical foundation modules
+- ~values_explorer/~ :: Core analysis modules
 
-Claude's response to human values varies:
-- It often mirrors positive human values (e.g., responding to "authenticity" with "authenticity")
-- It counters values like "deception" with "ethical integrity" and "honesty"
+** Getting Started
+
+*** Setup
+#+BEGIN_SRC shell
+# Clone the repository
+git clone https://github.com/aygp-dr/values-compass.git
+cd values-compass
+
+# Set up the environment
+make setup
+
+# Download the data
+make download
+
+# Run the basic analysis
+make run
+#+END_SRC
+
+*** Key Commands
+- ~make setup~ :: Create virtual environment and install dependencies
+- ~make download~ :: Download required data files
+- ~make run~ :: Run the main module
+- ~make test~ :: Run tests
+- ~make data-help~ :: See available data commands
+
+** Documentation
+
+- [[file:notebooks/exploration.org][Dataset Exploration]]: Basic exploration of the Values-in-the-Wild dataset
+- [[file:docs/guides/initial-analysis.org][Initial Analysis]]: Summary of initial findings from the dataset
+- [[file:docs/guides/mathematical-foundation.org][Mathematical Foundation]]: Formal mathematical structure for the values ontology
+- [[file:docs/hierarchy/README.md][Hierarchy Documentation]]: Explanation of the values taxonomy structure
+- [[file:docs/visualizations/priorities/priority_summary.md][Priority Analysis]]: Analysis of value priorities based on frequency
 
 ** References
 
 1. Anthropic. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://www.anthropic.com/research/values-wild][Anthropic Research]]
 
-2. Huang, S., Durmus, E., McCain, M., Handa, K., Tamkin, A., Hong, J., Stern, M., Somani, A., Zhang, X., & Ganguli, D. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://assets.anthropic.com/m/18d20cca3cde3503/original/Values-in-the-Wild-Paper.pdf][Research Paper]]
+2. Huang, S., et al. (2025). Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions. [[https://assets.anthropic.com/m/18d20cca3cde3503/original/Values-in-the-Wild-Paper.pdf][Research Paper]]
 
-3. Hoover, S. (2025). Anthropic mapped Claude's morality: Here's what the chatbot values and doesn't. [[https://www.zdnet.com/article/anthropic-mapped-claudes-morality-heres-what-the-chatbot-values-and-doesnt/][ZDNet]]
+** License
 
-4. Borges, J.L. (1941). "The Library of Babel," in *The Garden of Forking Paths*.
+MIT
 
-5. Saunders, G. (2021). "A Swim in a Pond in the Rain: In Which Four Russians Give a Master Class on Writing, Reading, and Life."
+** Acknowledgments
 
-** Dataset Access
-
-The dataset is available on Hugging Face:
-#+BEGIN_SRC python
-from datasets import load_dataset
-dataset_values_frequencies = load_dataset("Anthropic/values-in-the-wild", "values_frequencies")
-dataset_values_tree = load_dataset("Anthropic/values-in-the-wild", "values_tree")
-#+END_SRC
-
-** Project Structure
-
-This repository contains tools for exploring and analyzing the Values-in-the-Wild dataset:
-
-#+BEGIN_SRC
-values_explorer/
-├── .gitignore
-├── README.org
-├── requirements.txt
-├── setup.py
-├── notebooks/                                 # Interactive notebooks for data exploration
-│   └── exploration.org
-├── docs/                                      # Documentation and guides
-│   ├── guides/
-│   │   ├── initial-analysis.org
-│   │   └── mathematical-foundation.org
-│   └── images/
-├── stories/                                   # Creative explorations (not primary analysis)
-│   ├── README.org
-│   └── images/
-├── values_compass/                            # Mathematical foundation modules
-│   ├── __init__.py
-│   ├── formalize_relations.py                 # Formal partial order structure
-│   ├── validate_pairs.py                      # Galois connection validation
-│   ├── visualize.py                           # Visualization tools
-│   └── structures/
-│       ├── __init__.py
-│       └── lattice.py                         # Lattice implementation
-└── values_explorer/                           # Core analysis modules
-    ├── __init__.py
-    ├── data/
-    │   └── loader.py
-    ├── analysis/
-    │   ├── __init__.py
-    │   ├── clustering.py
-    │   └── visualization.py
-    └── utils/
-        ├── __init__.py
-        └── helpers.py
-#+END_SRC
-
-** Getting Started
-
-1. Clone this repository
-2. Install dependencies: ~pip install -e .~
-3. Set up virtual environment: ~make setup~
-4. Activate environment: ~source scripts/activate.sh~
-
-** Notebooks
-
-Interactive notebooks for exploring the dataset:
-
-- [[file:notebooks/exploration.org][Dataset Exploration]]: Basic exploration of the Values-in-the-Wild dataset
-
-** Guides
-
-Detailed guides for understanding and analyzing the dataset:
-
-- [[file:docs/guides/initial-analysis.org][Initial Analysis]]: Summary of initial findings from the dataset
-- [[file:docs/guides/mathematical-foundation.org][Mathematical Foundation]]: Formal mathematical structure for the values ontology
+This project builds on Anthropic's Values-in-the-Wild dataset and research on values taxonomy.

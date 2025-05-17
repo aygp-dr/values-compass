@@ -1,23 +1,38 @@
-# Tomorrow's Tasks (2025-05-04)
+# Next Steps for Values Compass
 
-## Moral Auditor Project
+This file tracks planned next steps for the Values Compass project.
 
-1. Consider adding more documents mentioned in the 'Expansion Possibilities' section:
-   - Historical taxonomy versions
-   - Employee records for Nikitina
-   - System logs for algorithm deployment
+## High Priority Tasks
 
-2. Improve narrative coherence:
-   - Ensure consistent date codes across all documents
-   - Add cross-references between related documents
-   - Consider adding 'Personal notes from Gavrilov' as hidden metadata
+- [ ] Improve visualization documentation with examples
+- [ ] Create a web-based interactive visualization dashboard
+- [ ] Fix cluster visualization for large taxonomies
+- [ ] Implement value similarity search functionality
 
-3. Technical enhancements:
-   - Implement basic functionality for the visualization tools
-   - Create interactive browser for taxonomy exploration
-   - Add search functionality across the document universe
+## Visualization Improvements
 
-4. Documentation improvements:
-   - Create version history for the taxonomy
-   - Add more depth to character backstories via subtle references
-   - Develop Institute policy documents on human-AI collaboration
+- [ ] Add color legend to all visualizations
+- [ ] Make diagrams more accessible (alt text, color blindness friendly)
+- [ ] Create zoomable/interactive versions of large diagrams
+- [ ] Add export options for different formats (SVG, PDF, PNG)
+
+## Analysis Enhancements
+
+- [ ] Add statistical analysis of value correlations
+- [ ] Create comparison tool for value distributions across texts
+- [ ] Implement automated value extraction from text
+- [ ] Develop embeddings-based value similarity measures
+
+## Documentation
+
+- [ ] Add tutorials for common analysis tasks
+- [ ] Create comprehensive API documentation
+- [ ] Add more examples for different use cases
+- [ ] Create quick-start guide for new users
+
+## Infrastructure
+
+- [ ] Add CI/CD pipeline for automated testing
+- [ ] Set up documentation site
+- [ ] Create pre-built Docker container for easy use
+- [ ] Set up automated data updates

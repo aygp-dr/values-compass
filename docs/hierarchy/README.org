@@ -1,0 +1,65 @@
+#+TITLE: AI Values Hierarchy
+#+AUTHOR: aygp-dr
+#+DATE: 2025-05-17
+#+PROPERTY: header-args :mkdirp yes
+
+* AI Values Hierarchy
+
+This directory contains the complete hierarchical taxonomy of AI values with lookup tables and visualizations.
+
+** Structure
+
+- [[file:ai_values_hierarchy.md][ai_values_hierarchy.md]] :: Complete hierarchical listing of all values
+- *JSON Lookup Tables*:
+  - =l3_lookup.json= :: Level 3 (top categories)
+  - =l2_lookup.json= :: Level 2 (mid categories)
+  - =l1_lookup.json= :: Level 1 (specific values)
+  - =l3_children.json= :: L3 → L2 children mappings
+  - =l2_children.json= :: L2 → L1 children mappings
+  - =l2_to_l3.json= :: L2 → parent L3 mappings
+  - =l1_to_l2.json= :: L1 → parent L2 mappings
+- =visualizations/= :: Visual representations of the hierarchy
+
+** Hierarchy Levels
+
+The taxonomy consists of three levels:
+
+1. *Level 3 (L3)*: 5 top-level categories
+   - Practical values (31.43%)
+   - Epistemic values (22.20%)
+   - Social values (21.41%)
+   - Protective values (13.86%)
+   - Personal values (11.10%)
+
+2. *Level 2 (L2)*: 26 mid-level categories, including:
+   - Professional and technical excellence (17.77%)
+   - Community and relationship bonds (15.19%)
+   - Clarity and precision (8.47%)
+   - Ethical responsibility (7.75%)
+   - Business effectiveness (7.12%)
+
+3. *Level 1 (L1)*: 266 specific values, including:
+   - Professional standards and conduct (6.29%)
+   - Prosocial altruism (5.98%)
+   - Ethical and transparent governance (4.48%)
+   - Quality and excellence (4.35%)
+   - Communicative clarity and precision (4.32%)
+
+** Key Visualizations
+
+- [[file:visualizations/ai_values_sunburst.png][Sunburst Chart]] :: Concentric circles showing the hierarchy
+- [[file:visualizations/ai_values_treemap.png][Treemap]] :: Area-based visualization of relative frequencies
+- *Category Breakdowns*:
+  - [[file:visualizations/practical_values_breakdown.png][Practical Values]]
+  - [[file:visualizations/epistemic_values_breakdown.png][Epistemic Values]]
+  - [[file:visualizations/social_values_breakdown.png][Social Values]]
+  - [[file:visualizations/protective_values_breakdown.png][Protective Values]]
+  - [[file:visualizations/personal_values_breakdown.png][Personal Values]]
+
+** Usage
+
+The files in this directory can be used to:
+
+1. *Explore the hierarchy*: Use =ai_values_hierarchy.md= to browse the complete structure
+2. *Programmatic access*: Use the JSON lookup tables for automated analysis
+3. *Visual understanding*: Use the visualizations to see patterns and relationships

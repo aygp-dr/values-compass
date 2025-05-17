@@ -1,0 +1,17 @@
+# Values Analysis Examples
+
+This directory contains example analyses of values in different texts and speech transcripts. These are works-in-progress that demonstrate possible approaches to applying values taxonomy to various source materials.
+
+## Contents
+
+- **[mussolini-dof-values-academic-analysis.org](mussolini-dof-values-academic-analysis.org)** - Analysis of values expressed in Doctrine of Fascism text
+- **[rfk-mlk-speech-social-values-analysis.org](rfk-mlk-speech-social-values-analysis.org)** - Analysis of values expressed in speeches by RFK and MLK
+
+## Methodology
+
+These analyses use a combination of:
+1. Manual identification of expressed values
+2. Mapping to the values taxonomy from Anthropic's Values-in-the-Wild dataset
+3. Comparison of value categories and frequencies across different texts
+
+The analyses are preliminary and provided as examples of possible approaches to textual values analysis.

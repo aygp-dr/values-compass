@@ -1,0 +1,132 @@
+{
+  "ai_values:l2:2b432715-84a8-421a-9aca-b9d1f60ee837": {
+    "name": "Methodical rigor",
+    "description": "This group of values emphasized the importance of methodical rigor, systematic approaches, and scholarly excellence across different domains including science, academia, teaching, and narrative craftsmanship. They centered on analytical thoroughness, structured reasoning, methodological integrity, verification processes, and domain expertise.",
+    "pct": 6.011
+  },
+  "ai_values:l2:9fe9445e-a376-4019-915c-2fbfeca9cd0a": {
+    "name": "Knowledge development",
+    "description": "This group of values encompassed values related to the acquisition, integration, and dissemination of knowledge across disciplines. It included intellectual curiosity, scientific understanding, knowledge advancement, comprehensive understanding, and making knowledge accessible and transparent. These values emphasized both the depth and breadth of knowledge as well as its growth and availability.",
+    "pct": 0.801
+  },
+  "ai_values:l2:22bdc608-e2a9-42d5-92ce-6270d121e425": {
+    "name": "Clarity and precision",
+    "description": "This group focused on precision, clarity, coherence, and accuracy across various domains including communication, intellectual work, narrative development, source attribution, linguistics, technical fields, logical reasoning, and analytical endeavors. They collectively emphasized the importance of disciplinary rigor, consistency, and fidelity when conveying or examining information.",
+    "pct": 8.47
+  },
+  "ai_values:l2:be9579b6-88cc-43dd-89ab-c2e3a055d1a0": {
+    "name": "Intellectual integrity and objectivity",
+    "description": "This group of values focused on epistemic values related to intellectual integrity, truthfulness, objectivity, academic rigor, transparency, and open-minded engagement with ideas. It emphasized factual accuracy, impartial assessment, methodological transparency, and commitment to honest scholarly inquiry.",
+    "pct": 5.689
+  },
+  "ai_values:l2:b93bc8fc-f389-4b12-b217-d143fbe5e263": {
+    "name": "Critical thinking",
+    "description": "This group collectively focused on rigorous intellectual evaluation through critical thinking, evidence-based reasoning, and methodical inquiry. They emphasized rational skepticism alongside contextual understanding, valuing both analytical depth and the ability to discern quality across empirical, philosophical, and aesthetic domains.",
+    "pct": 1.233
+  },
+  "ai_values:l2:a1f3779e-e354-4e85-8bcb-221e3ba05c22": {
+    "name": "Security and stability",
+    "description": "This group of values emphasized the importance of maintaining security, stability, and integrity across various domains including national sovereignty, data protection, risk management, and system continuity, while exercising prudent judgment and careful restraint in uncertain or potentially harmful situations.",
+    "pct": 1.423
+  },
+  "ai_values:l2:96e3c9e8-c7fb-43da-ae8d-742557e7b0fd": {
+    "name": "Protection of people and environment",
+    "description": "Encompassed values centered on protecting the environment and people (including oneself), and preserving natural resources.",
+    "pct": 0.367
+  },
+  "ai_values:l2:a0cdb874-a10b-46c5-b1c4-84274d64d87e": {
+    "name": "Ethical responsibility",
+    "description": "This category focused on maintaining moral standards, especially in professional contexts, spanning legal and regulatory compliance, institutional accountability, workplace boundaries, medical ethics, research integrity, and transparent technology practices. It emphasized principled ethical conduct and oversight within specialized professional domains.",
+    "pct": 7.749
+  },
+  "ai_values:l2:e251ffbb-05e1-48d6-9428-e3b8fbbe6559": {
+    "name": "Protecting human rights and dignity",
+    "description": "Protected human rights, dignity, personal boundaries, mental and emotional wellbeing, and intellectual property while preventing exploitation and ensuring respectful, appropriate care across different demographic groups.",
+    "pct": 2.09
+  },
+  "ai_values:l2:a35d5a46-0add-4a7b-94fc-51c94cf5b811": {
+    "name": "Protecting vulnerable entities",
+    "description": "This group of values centered on the protection and wellbeing of vulnerable entities, including children, consumers, animals, and at-risk populations. It encompassed safety measures, content moderation, harm prevention, health support, family care, diplomatic conflict prevention, and various forms of welfare protection.",
+    "pct": 2.233
+  },
+  "ai_values:l2:d6b64643-1764-4ff3-b348-f04d4d0cfccf": {
+    "name": "Business effectiveness",
+    "description": "This group of values focused on practical approaches to business effectiveness, encompassing strategic planning, results orientation, data-driven methods, client focus, adaptability, and measurable progress. They emphasized structured methodology, pragmatic problem-solving, business acumen, communication effectiveness, and competitive positioning, all aimed at achieving economic prosperity and continuous improvement.",
+    "pct": 7.124
+  },
+  "ai_values:l2:5b98962b-ae74-4850-88c1-de06ea8c2914": {
+    "name": "Efficiency and resource optimization",
+    "description": "This group of values encompassed a collection of values related to organizational performance and resource management. It included values focused on efficiency across multiple dimensions (operational, administrative, economic), financial considerations (stability, prudence, profitability), time and task management, sustainable development, and creating balanced, practical solutions that optimize value while maintaining long-term viability.",
+    "pct": 4.93
+  },
+  "ai_values:l2:b356a752-380a-4cab-a4cb-b4cf60381e6b": {
+    "name": "Compliance and accountability",
+    "description": "A group of closely related values focusing on adherence to rules, procedures, and regulations with integrity. These values emphasized ethical compliance in business contexts, transparency in actions, accountability for decisions, and responsible governance practices.",
+    "pct": 0.53
+  },
+  "ai_values:l2:736f4fd4-ecc6-4f44-b507-1ea830570be3": {
+    "name": "Professional and technical excellence",
+    "description": "This group of values encompassed values related to professional and technical excellence across various domains. It included adherence to high standards in service delivery, professional conduct, technical implementation, system reliability, design integrity, documentation thoroughness, code structure, and structural durability. These values emphasized quality, competence, and consistency in professional work products and services.",
+    "pct": 17.769
+  },
+  "ai_values:l2:a0891b85-7980-4db4-95c5-f419db957913": {
+    "name": "Professional advancement",
+    "description": "This group of values centered on professional advancement through skill development, innovation, and proactive initiative. They encompassed mastery of one's craft, entrepreneurial action, commitment to growth, and practical innovation to drive progress.",
+    "pct": 1.073
+  },
+  "ai_values:l2:eb0a4c01-406e-4833-ab54-3205ea53e2d2": {
+    "name": "Community and relationship bonds",
+    "description": "This group included values centered on creating and maintaining positive interpersonal connections across various contexts, from family bonds to community engagement. It emphasized supportive relationships, empathy, collaboration, authentic communication, and collective responsibility. The values highlighted caring for others, fostering harmony in groups, sharing knowledge, and working toward common goals that benefit society as a whole.",
+    "pct": 15.191
+  },
+  "ai_values:l2:28960f73-fe2c-48e1-9799-d2912a4f9c2e": {
+    "name": "Cultural respect and tradition",
+    "description": "This group of values encompassed diverse aspects of cultural respect, including indigenous rights, religious accommodation, linguistic inclusivity, social etiquette, traditional reverence, diplomatic communication, and cultural adaptability, while balancing innovation with heritage preservation.",
+    "pct": 2.093
+  },
+  "ai_values:l2:c094f307-3b00-4b81-ab65-b2bbe0c307ab": {
+    "name": "Social equity and justice",
+    "description": "This group of values focused on different dimensions of equity and justice across society, encompassing gender equality, economic fairness, healthcare access, educational inclusion, and broader social progress. These values emphasized systemic fairness, equal opportunity, and empowerment for all groups within social structures.",
+    "pct": 1.628
+  },
+  "ai_values:l2:ab8229ef-b0fa-4aa4-a5f9-dd1c69ec9c69": {
+    "name": "Well-functioning social systems and organizations",
+    "description": "These were values related to institutional and social structures, encompassing diplomatic cooperation, responsible media, worker welfare, democratic governance, customer advocacy, workplace respect, institutional loyalty, and hierarchical deference. It emphasized the importance of functioning social systems and respectful organizational relationships.",
+    "pct": 0.735
+  },
+  "ai_values:l2:281f95b5-457f-47ed-83e8-48da54e5771d": {
+    "name": "Ethical interaction",
+    "description": "This group of values encompassed ethical approaches to human interaction, including respectful communication, moral principles, trustworthiness, professional integrity, and peaceful engagement. It valued transparent discourse, balanced perspectives, and ethical leadership while emphasizing human dignity.",
+    "pct": 1.764
+  },
+  "ai_values:l2:f0fe6d10-500a-4632-b630-b04e1c49f103": {
+    "name": "Personal growth and wellbeing",
+    "description": "This group of values focused on personal development, well-being, and autonomy. It encompassed intellectual growth, psychological health, emotional regulation, self-awareness, resilience, and physical wellness. This included values both around independence and self-determination, alongside values around balanced personal fulfillment and mindful living.",
+    "pct": 5.674
+  },
+  "ai_values:l2:98c2757c-7b44-4b20-9d95-08c20be2db5e": {
+    "name": "Authentic moral identity",
+    "description": "This group of values focused on qualities related to one's personal moral compass, genuine self-expression, and the maintenance of ethical standards in accordance with one's true identity.",
+    "pct": 2.31
+  },
+  "ai_values:l2:fa3557f9-29ec-48ca-9d84-2c62b14304b4": {
+    "name": "Artistic expression and appreciation",
+    "description": "This group of values focused on different aspects of artistic expression, including creative freedom, aesthetic appreciation, craftsmanship, narrative immersion, and mastery. These values emphasized both the technical and expressive elements of artistic development and the deeper appreciation of aesthetic qualities.",
+    "pct": 1.386
+  },
+  "ai_values:l2:e6549ed2-c5d6-4534-ae72-8cfb432e14fd": {
+    "name": "Emotional depth and authentic connection",
+    "description": "This group of values centered on emotional relationships, vulnerability, and authenticity in human connections. They encompassed romantic intimacy, emotional openness, depth of feeling, and the capacity to understand and respond to emotions in oneself and others.",
+    "pct": 1.33
+  },
+  "ai_values:l2:e3363bc7-bf34-43f3-8899-2bf55fa2cf03": {
+    "name": "Spiritual fulfillment and meaning",
+    "description": "This group of values focused on the deeper aspects of personal existence, including religious faith, spiritual connection, inner peace, connection with nature, wisdom, and the pursuit of purpose and meaning in life.",
+    "pct": 0.225
+  },
+  "ai_values:l2:60ec5d43-d9a2-4208-bfe9-4da8db43c0a1": {
+    "name": "Pleasure and enjoyment",
+    "description": "This group of values encompassed values focused on enjoyment and pleasure across different modalities, including sexual freedom, sensory experiences, entertainment, playfulness, and luxurious indulgence.",
+    "pct": 0.176
+  }
+}

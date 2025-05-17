@@ -1,0 +1,27 @@
+{
+  "ai_values:l3:07f728db-97c3-412b-b7cf-12f85b975a03": {
+    "name": "Epistemic values",
+    "description": "These values concern how we acquire, organize, and validate knowledge through structured thinking, analytical precision, and methodical approaches. They emphasize intellectual rigor, logical consistency, and the advancement of understanding through systematic learning and development.",
+    "pct": 22.203
+  },
+  "ai_values:l3:d8bf680a-aa91-46f1-beb9-a4f221c4f6b1": {
+    "name": "Social values",
+    "description": "These values focus on relationships between individuals and groups, emphasizing social harmony, community welfare, and respectful engagement. They center around cultural diversity, interpersonal bonds, and collective wellbeing as foundations for a cohesive society.",
+    "pct": 21.41
+  },
+  "ai_values:l3:d6c9b7a1-c052-43e3-9bdc-bddcbbf53b23": {
+    "name": "Practical values",
+    "description": "These values address the effective implementation of ideas, standards of excellence, and resource management in real-world contexts. They emphasize functionality, efficiency, quality standards, and the practical organization of resources to achieve desired outcomes.",
+    "pct": 31.426
+  },
+  "ai_values:l3:a5fac6f0-9a62-4f52-8be3-62c04051039f": {
+    "name": "Protective values",
+    "description": "These values concern the safety, security, and ethical treatment of individuals and information. They emphasize boundaries, care protocols, security measures, and ethical governance to prevent harm and protect vulnerable entities.",
+    "pct": 13.862
+  },
+  "ai_values:l3:e4d3fac1-3767-4c6c-a042-f6cf8b17b743": {
+    "name": "Personal values",
+    "description": "These values focus on individual development, self-expression, and psychological wellbeing. They center around authenticity, autonomy, personal growth, and mindful self-awareness as pathways to individual fulfillment.",
+    "pct": 11.099
+  }
+}

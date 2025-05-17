@@ -39,7 +39,7 @@ deps: .venv README.md
 deps-data: .venv
 	. .venv/bin/activate && uv pip install -e ".[data]"
 	@echo "Data processing dependencies installed."
-	
+
 # Install spaCy model for embedding analysis
 deps-nlp: deps
 	. .venv/bin/activate && uv pip install spacy
@@ -145,6 +145,10 @@ $(DATA_DIR)/value_similarities.txt: $(DATA_DIR)/top_values.csv
 	@uv run python -c "import pandas as pd; df = pd.read_csv('$(DATA_DIR)/top_values.csv'); top100 = df.sort_values('pct_convos', ascending=False).head(100); with open('$(DATA_DIR)/value_similarities.txt', 'w') as f: f.write('Top 100 Values by Frequency\\n=====================\\n\\n'); [f.write(f\"{row['value']}: {row['pct_convos']:.3f}%\\n\") for i, row in top100.iterrows()]"
 	@echo "✓ Generated value similarities analysis"
 
+
+values-transit-map:
+	cd docs/visualizations && pdflatex values_transit_map.tex
+
 # Format code
 format: .venv
 	. .venv/bin/activate && uv run ruff check --fix .
@@ -166,7 +170,6 @@ org-tangle:
 org-execute: 
 	@# Ensure data is available 
 	curl -s -o $(DATA_DIR)/values_tree.csv https://huggingface.co/datasets/Anthropic/values-in-the-wild/raw/main/values_tree.csv 2>/dev/null || true
-	
 	@# Run the analysis steps in sequence
 	bash $(SCRIPTS_DIR)/setup_db.sh
 	. .venv/bin/activate && python $(SCRIPTS_DIR)/top_20.py

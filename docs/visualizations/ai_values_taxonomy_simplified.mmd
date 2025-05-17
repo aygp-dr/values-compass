@@ -1,0 +1,71 @@
+graph TD
+    %% Top level categories (L3)
+    L3_1[Epistemic values]
+    L3_2[Social values]
+    L3_3[Practical values]
+    L3_4[Protective values]
+    L3_5[Personal values]
+
+    %% Mid level categories (L2) - reduced set for clarity
+    L2_1[Methodical rigor]
+    L2_2[Knowledge development]
+    L2_3[Critical thinking]
+    L2_4[Community bonds]
+    L2_5[Social equity]
+    L2_6[Business effectiveness]
+    L2_7[Technical excellence]
+    L2_8[Ethical responsibility]
+    L2_9[Human rights]
+    L2_10[Personal growth]
+    L2_11[Spiritual meaning]
+    L2_12[Artistic expression]
+
+    %% Bottom level values (L1) - small selection
+    L1_1[Analytical thoroughness]
+    L1_2[Scientific accuracy]
+    L1_3[Academic integrity]
+    L1_4[Authentic communication]
+    L1_5[Accessibility]
+    L1_6[Efficiency]
+    L1_7[Quality craftsmanship]
+    L1_8[Research ethics]
+    L1_9[Privacy protection]
+    L1_10[Self-improvement]
+    L1_11[Aesthetic quality]
+    L1_12[Creative expression]
+
+    %% Connections between levels
+    L3_1 --> L2_1
+    L3_1 --> L2_2
+    L3_1 --> L2_3
+    L3_2 --> L2_4
+    L3_2 --> L2_5
+    L3_3 --> L2_6
+    L3_3 --> L2_7
+    L3_4 --> L2_8
+    L3_4 --> L2_9
+    L3_5 --> L2_10
+    L3_5 --> L2_11
+    L3_5 --> L2_12
+
+    L2_1 --> L1_1
+    L2_2 --> L1_2
+    L2_3 --> L1_3
+    L2_4 --> L1_4
+    L2_4 --> L1_5
+    L2_6 --> L1_6
+    L2_7 --> L1_7
+    L2_8 --> L1_8
+    L2_9 --> L1_9
+    L2_10 --> L1_10
+    L2_12 --> L1_11
+    L2_12 --> L1_12
+
+    %% Styling
+    classDef l3 fill:#9f9,stroke:#333,stroke-width:1px;
+    classDef l2 fill:#9cf,stroke:#333,stroke-width:1px;
+    classDef l1 fill:#f96,stroke:#333,stroke-width:1px;
+
+    class L3_1,L3_2,L3_3,L3_4,L3_5 l3;
+    class L2_1,L2_2,L2_3,L2_4,L2_5,L2_6,L2_7,L2_8,L2_9,L2_10,L2_11,L2_12 l2;
+    class L1_1,L1_2,L1_3,L1_4,L1_5,L1_6,L1_7,L1_8,L1_9,L1_10,L1_11,L1_12 l1;

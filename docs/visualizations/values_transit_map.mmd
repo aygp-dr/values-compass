@@ -1,100 +1,160 @@
-graph LR
-    %% Just anti-values without station names
+graph TB
+    %% Red Line (Honesty Domain)
+    alfcl(Secrecy) --- davis(Evasiveness)
+    davis --- portr(Deception)
+    portr --- harsq(Dishonesty)
+    harsq --- cntsq(Falsehood)
+    cntsq --- knncl(Misinformation)
+    knncl --- chmnl(Manipulation)
+    chmnl --- pktrm(Thoughtlessness)
+    pktrm --- dwnxg(Corruption)
+    dwnxg --- sstat(Disinformation)
+    sstat --- brdwy(Forgery)
+    brdwy --- andrw(Fabrication)
+    andrw --- jfk(Falsification)
     
-    %% RED LINE connections
-    Secrecy --- Evasiveness
-    Evasiveness --- Deception
-    Deception --- Dishonesty
-    Dishonesty --- Falsehood
-    Falsehood --- Misinformation
-    Misinformation --- Manipulation
-    Manipulation --- Thoughtlessness
-    Thoughtlessness ---|honesty| Corruption
-    Corruption --- Disinformation
-    Disinformation --- Forgery
-    Forgery --- Fabrication
-    Fabrication --- Falsification
+    %% Red Line branches
+    jfk --- shmnl(Distortion)
+    shmnl --- fldcr(Misrepresentation)
+    fldcr --- smmnl(Prevarication)
+    smmnl --- asmnl(Mendacity)
     
-    %% RED LINE branches
-    Falsification --- Distortion
-    Distortion --- Misrepresentation
-    Misrepresentation --- Prevarication
-    Prevarication --- Mendacity
+    jfk --- nqncy(Concealment)
+    nqncy --- wlsta(Duplicity)
+    wlsta --- qnctr(Misdirection)
+    qnctr --- qamnl(Deceit)
+    qamnl --- brntn(Treachery)
     
-    Falsification --- Concealment
-    Concealment --- Duplicity
-    Duplicity --- Misdirection
-    Misdirection --- Deceit
-    Deceit --- Treachery
+    %% Orange Line (Fairness Domain)
+    ogmnl(Prejudice) --- mlmnl(Intolerance)
+    mlmnl --- welln(Dogmatism)
+    welln --- sull(Bias)
+    sull --- ccmnl(Inflexibility)
+    ccmnl --- north(Rigidity)
+    north --- haecl(Partiality)
+    haecl --- state(Discrimination)
+    state --- dwnxg
+    dwnxg --- chncl(Inconsistency)
+    chncl --- tumnl(Favoritism)
+    tumnl --- bbsta(Partisanship)
+    bbsta --- masta(Overreaction)
+    masta --- rugg(Extremism)
+    rugg --- rcmnl(Chauvinism)
+    rcmnl --- jaksn(Nepotism)
+    jaksn --- sbmnl(Elitism)
+    sbmnl --- grnst(Tribalism)
+    grnst --- forhl(Insularity)
     
-    %% ORANGE LINE connections
-    Prejudice --- Intolerance
-    Intolerance --- Dogmatism
-    Dogmatism --- Bias
-    Bias --- Inflexibility
-    Inflexibility --- Rigidity
-    Rigidity --- Partiality
-    Partiality ---|fairness| Discrimination
-    Discrimination ---|fairness| Inconsistency
-    Inconsistency ---|fairness| Corruption
-    Corruption --- Favoritism
-    Favoritism --- Partisanship
+    %% Blue Line (Clarity Domain)
+    wondl(Vagueness) --- rbmnl(Ambiguity)
+    rbmnl --- bmmnl(Confusion)
+    bmmnl --- sdmnl(Incomprehensibility)
+    sdmnl --- orhte(Imprecision)
+    orhte --- wimnl(Inaccuracy)
+    wimnl --- aport(Uncertainty)
+    aport --- mvbcl(Obscurity)
+    mvbcl --- aqucl(Obfuscation)
+    aqucl --- state
+    state --- gover(Opacity)
+    gover --- bomnl(Misleading)
     
-    %% BLUE LINE connections
-    Vagueness --- Ambiguity
-    Ambiguity --- Confusion
-    Confusion --- Incomprehensibility
-    Incomprehensibility --- Imprecision
-    Imprecision --- Inaccuracy
-    Inaccuracy --- Uncertainty
-    Uncertainty --- Obscurity
-    Obscurity --- Obfuscation
-    Obfuscation --- Inconsistency
-    Inconsistency ---|clarity| Opacity
-    Opacity --- Misleading
+    %% Green Line - Main Trunk (Competence Domain)
+    gover --- pktrm
+    pktrm --- boyls(Unreliability)
+    boyls --- armnl(Ineptitude)
+    armnl --- coecl(Unfulfillment)
+    coecl --- hymnl(Inadequacy)
+    hymnl --- kencl(Mediocrity)
     
-    %% GREEN LINE connections
-    Unreliability --- Ineptitude
-    Ineptitude --- Unfulfillment
-    Unfulfillment --- Inadequacy
-    Inadequacy --- Mediocrity
-    Mediocrity --- Inappropriateness
-    Inappropriateness --- Tastelessness
-    Tastelessness --- Thoughtlessness
-    Thoughtlessness ---|competence| Opacity
-    Opacity ---|competence| Discrimination
-    Discrimination ---|competence| Partiality
-
-    %% GREEN LINE faked for render for Riverside
-    Partiality --- Shortsightedness
-    Shortsightedness --- Negligence
-    Negligence --- Recklessness
-    Recklessness --- Carelessness
-    Carelessness --- Irresponsibility
-    Irresponsibility --- Incompetence
-    Incompetence --- Unprofessionalism
-    Unprofessionalism --- Superficiality
-    %% Superficiality --- Unreliability
+    %% Green Line B Branch - Compressed version
+    kencl --- bueast(Inappropriateness)
+    bueast --- bucntrl(Tastelessness)
+    bucntrl --- blandfd(Shortsightedness)
+    blandfd --- bcoll(Negligence)
     
-    %% Highlight Transfer Stations
-    subgraph CrossDomainValues ["Cross-Domain Values"]
-        Thoughtlessness
-        Corruption
-        Inconsistency
-        Opacity
-        Discrimination
-        Partiality
-    end
+    %% Green Line C Branch - Compressed version
+    kencl --- stpaul(Carelessness)
+    stpaul --- coolidge(Recklessness)
+    coolidge --- clevelc(Irresponsibility)
+    
+    %% Green Line D Branch - Compressed version
+    kencl --- fenwy(Incompetence)
+    fenwy --- longw(Unprofessionalism)
+    longw --- bvmnl(Superficiality)
+    bvmnl --- river(Haphazardness)
+    
+    %% Green Line E Branch - Compressed version
+    coecl --- pructl(Imprudence)
+    pructl --- symph(Weakness)
+    symph --- heath(Fragility)
+    
+    %% Green Line Extension - Added
+    north --- scpark(Inefficiency)
+    scpark --- lechmr(Wastefulness)
+    
+    %% Green Line Union Square Branch
+    lechmr --- esom(Squandering)
+    esom --- union(Profligacy)
+    
+    %% Green Line Medford Branch
+    esom --- gilman(Mismanagement)
+    gilman --- magoun(Disorganization)
+    magoun --- ball(Chaos)
+    ball --- medford(Entropy)
+    
+    %% Line endpoint labels
+    asmnl -.- RL1[RL]
+    brntn -.- RL2[RL]
+    alfcl -.- RL3[RL]
+    ogmnl -.- OL1[OL]
+    forhl -.- OL2[OL]
+    wondl -.- BL1[BL]
+    bomnl -.- BL2[BL]
+    river -.- GLD[GL-D]
+    bcoll -.- GLB[GL-B]
+    clevelc -.- GLC[GL-C]
+    heath -.- GLE1[GL-E]
+    union -.- GLE2[GL-E]
+    medford -.- GLD2[GL-D]
     
     %% Styling
-    classDef redstation fill:#ffdddd,stroke:#ff0000,stroke-width:2px,color:#000
-    classDef orangestation fill:#ffe8cc,stroke:#ff8000,stroke-width:2px,color:#000
-    classDef greenstation fill:#ddffdd,stroke:#00b000,stroke-width:2px,color:#000
-    classDef bluestation fill:#ddddff,stroke:#0000ff,stroke-width:2px,color:#000
-    classDef transferstation fill:#fff,stroke:#000,stroke-width:5px,color:#000,rx:10,ry:10
+    classDef redLine fill:#E12D27,color:white;
+    classDef orangeLine fill:#E87200,color:white;
+    classDef blueLine fill:#2F5DA6,color:white;
+    classDef greenLine fill:#00843D,color:white;
+    classDef redLabel fill:#E12D27,color:white,font-weight:bold;
+    classDef orangeLabel fill:#E87200,color:white,font-weight:bold;
+    classDef blueLabel fill:#2F5DA6,color:white,font-weight:bold;
+    classDef greenLabel fill:#00843D,color:white,font-weight:bold;
     
-    class Secrecy,Evasiveness,Deception,Dishonesty,Falsehood,Misinformation,Manipulation,Disinformation,Forgery,Fabrication,Falsification,Distortion,Misrepresentation,Prevarication,Mendacity,Concealment,Duplicity,Misdirection,Deceit,Treachery redstation
-    class Prejudice,Intolerance,Dogmatism,Bias,Inflexibility,Rigidity,Favoritism,Partisanship orangestation
-    class Shortsightedness,Negligence,Recklessness,Carelessness,Irresponsibility,Incompetence,Unprofessionalism,Superficiality,Unreliability,Ineptitude,Unfulfillment,Inadequacy,Mediocrity,Inappropriateness,Tastelessness greenstation
-    class Vagueness,Ambiguity,Confusion,Incomprehensibility,Imprecision,Inaccuracy,Uncertainty,Obscurity,Obfuscation,Misleading bluestation
-    class Thoughtlessness,Corruption,Inconsistency,Opacity,Discrimination,Partiality transferstation
+    %% Apply styles to Red Line
+    class alfcl,davis,portr,harsq,cntsq,knncl,chmnl redLine;
+    class sstat,brdwy,andrw,jfk redLine;
+    class shmnl,fldcr,smmnl,asmnl redLine;
+    class nqncy,wlsta,qnctr,qamnl,brntn redLine;
+    
+    %% Apply styles to Orange Line
+    class ogmnl,mlmnl,welln,sull,ccmnl,north,haecl orangeLine;
+    class chncl,tumnl,bbsta,masta,rugg,rcmnl,jaksn,sbmnl,grnst,forhl orangeLine;
+    
+    %% Apply styles to Blue Line
+    class wondl,rbmnl,bmmnl,sdmnl,orhte,wimnl,aport,mvbcl,aqucl,bomnl blueLine;
+    
+    %% Apply styles to Green Line
+    class boyls,armnl,coecl,hymnl,kencl greenLine;
+    class fenwy,longw,bvmnl,river greenLine;
+    class bueast,bucntrl,blandfd,bcoll greenLine;
+    class stpaul,coolidge,clevelc greenLine;
+    class pructl,symph,heath greenLine;
+    class scpark,lechmr,esom,union greenLine;
+    class gilman,magoun,ball,medford greenLine;
+    
+    %% Mark transfer stations
+    classDef transferStation fill:white,stroke:#000,stroke-width:2,color:black;
+    class pktrm,dwnxg,state,gover,north,haecl transferStation;
+    
+    %% Apply styles to line labels
+    class RL1,RL2,RL3 redLabel;
+    class OL1,OL2 orangeLabel;
+    class BL1,BL2 blueLabel;
+    class GLB,GLC,GLD,GLE1,GLE2,GLD2 greenLabel;

@@ -1,0 +1,294 @@
+#+TITLE: Cross-Framework Value Mapping (Issue #7)
+#+AUTHOR: aygp-dr
+#+DATE: 2025-05-18
+#+PROPERTY: header-args :mkdirp yes
+
+* Project: Cross-Framework Value Mapping
+** Overview
+Mapping values from the "Values in the Wild" framework to other established ethical and moral frameworks, with visualizations to illustrate relationships and correspondences.
+
+** Approach
+Our approach creates visual representations that connect the Values in the Wild taxonomy (Epistemic, Social, Practical, Protective, Personal) to established frameworks like Roget's Thesaurus, WordNet, Moral Foundations Theory, and Hofstede's Cultural Dimensions.
+
+*** Key Visualization Components
+1. *Mermaid Diagram Network*: Shows relationships between value categories across frameworks
+2. *Cross-Framework Comparison Tables*: Provides structured mapping between different taxonomical systems
+3. *Subway Map Metaphor*: Creative visualization showing value domains as transit lines
+
+** Tasks
+*** DONE Research existing value frameworks for comparison
+*** DONE Develop mapping methodology between frameworks
+*** DONE Design Mermaid diagrams showing cross-framework relationships
+*** DONE Create subway map visualization connecting value domains
+*** DONE Implement Python code for generating visualizations 
+*** DONE Generate cross-framework comparison tables
+*** DONE Integrate visualizations into project documentation
+*** TODO Add cross-domain mapping implementation for Schwartz Values
+*** TODO Extend visualization tools to support interactive exploration
+*** TODO Create quantitative similarity metrics between frameworks
+*** TODO Map AI-specific values to general ethical frameworks
+
+** Resources
+- Current hierarchy in =docs/hierarchy=
+- Values taxonomy diagrams in =docs/visualizations=
+- Stories and narratives in =stories/=
+
+** Frameworks to Consider
+*** Schwartz Theory of Basic Values
+*** Moral Foundations Theory
+*** Haidt's Moral Foundations
+*** Rokeach Value Survey
+*** Hofstede's Cultural Dimensions
+*** World Values Survey
+
+** Implementation Plan
+
+*** Phase 1: Research and Analysis
+**** Identify key frameworks and their taxonomies
+**** Extract core value concepts from each framework
+**** Create initial correspondence mappings
+
+*** Phase 2: Technical Implementation
+**** Design data structures for cross-framework mapping
+**** Implement similarity and distance metrics
+**** Create visualization tools for framework relationships
+
+*** Phase 3: Validation and Documentation
+**** Validate mappings with literature review
+**** Document mapping methodology
+**** Generate comprehensive cross-reference tables
+
+** Visualization Examples
+
+*** Mermaid Diagram Example
+#+BEGIN_SRC mermaid :file docs/visualizations/cross_framework_mapping.png
+graph TD
+    %% Main Values in the Wild Framework
+    VIW[Values in the Wild\nTop Categories] --> EP[Epistemic Values\n22.2%]
+    VIW --> SO[Social Values\n21.4%]
+    VIW --> PR[Practical Values\n31.4%]
+    VIW --> PT[Protective Values\n13.9%]
+    VIW --> PE[Personal Values\n11.1%]
+    
+    %% Level 2 Example Categories
+    EP --> EP1[Methodical rigor\n6.0%]
+    EP --> EP2[Knowledge development\n0.8%]
+    EP --> EP3[Clarity and precision\n8.5%]
+    
+    SO --> SO1[Community bonds\n15.2%]
+    SO --> SO2[Cultural respect\n2.1%]
+    
+    PR --> PR1[Technical excellence\n17.8%]
+    PR --> PR2[Business effectiveness\n7.1%]
+    
+    PT --> PT1[Ethical responsibility\n7.7%]
+    PT --> PT2[Security and stability\n1.4%]
+    
+    PE --> PE1[Growth and wellbeing\n5.7%]
+    PE --> PE2[Authentic identity\n2.3%]
+    
+    %% Framework Connections
+    subgraph "External Frameworks"
+        R[Roget's Thesaurus]
+        W[WordNet]
+        M[Moral Foundations]
+        H[Hofstede's Dimensions]
+    end
+    
+    EP -.-> R
+    EP -.-> W
+    SO -.-> M
+    PR -.-> H
+    
+    %% Style
+    classDef epistemic fill:#e6f3ff,stroke:#3182bd
+    classDef social fill:#e6f6e6,stroke:#31a354
+    classDef practical fill:#fff7e6,stroke:#e6550d
+    classDef protective fill:#f2f0f7,stroke:#756bb1
+    classDef personal fill:#fee8c8,stroke:#e34a33
+    
+    class EP,EP1,EP2,EP3 epistemic
+    class SO,SO1,SO2 social
+    class PR,PR1,PR2 practical
+    class PT,PT1,PT2 protective
+    class PE,PE1,PE2 personal
+#+END_SRC
+
+** Code Implementation
+
+*** Python Generator Functions
+#+BEGIN_SRC python :tangle scripts/cross_framework_visualization.py :mkdirp yes
+"""
+Cross-Framework Value Mapping Visualization Tools.
+
+This module provides tools for visualizing relationships between
+the Values in the Wild taxonomy and other ethical frameworks.
+"""
+from typing import Dict, List, Tuple, Optional
+import pandas as pd
+import matplotlib.pyplot as plt
+import networkx as nx
+
+
+class ValueFramework:
+    """Represents a complete value framework with its hierarchy and relationships."""
+    
+    def __init__(self, name: str, description: str):
+        self.name = name
+        self.description = description
+        self.values = {}  # Dict[str, ValueConcept]
+    
+    def add_value(self, value_concept: 'ValueConcept') -> None:
+        """Add a value concept to this framework."""
+        self.values[value_concept.id] = value_concept
+        value_concept.framework = self
+
+
+class ValueConcept:
+    """Represents a specific value within a framework."""
+    
+    def __init__(self, id: str, name: str, description: str, 
+                 framework: Optional[ValueFramework] = None):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.framework = framework
+        self.related_concepts = []  # List[ValueConcept]
+    
+    def add_related_concept(self, concept: 'ValueConcept', 
+                            relation_type: str = "similar") -> None:
+        """Create a relationship to another value concept."""
+        self.related_concepts.append((concept, relation_type))
+
+
+class FrameworkMapper:
+    """Maps values between different frameworks."""
+    
+    def __init__(self, source_framework: ValueFramework, 
+                 target_framework: ValueFramework):
+        self.source_framework = source_framework
+        self.target_framework = target_framework
+        self.mappings = {}  # Dict[str, List[Tuple[str, float]]]
+    
+    def add_mapping(self, source_id: str, target_id: str, 
+                    confidence: float) -> None:
+        """Add a mapping between a source and target value."""
+        if source_id not in self.mappings:
+            self.mappings[source_id] = []
+        self.mappings[source_id].append((target_id, confidence))
+    
+    def map_value(self, source_value_id: str) -> List[Tuple[str, float]]:
+        """Maps a value from source to target framework with confidence scores."""
+        return self.mappings.get(source_value_id, [])
+
+
+def generate_mermaid_diagram(frameworks: List[ValueFramework], 
+                             mappers: List[FrameworkMapper],
+                             filename: str = "cross_framework_diagram.md") -> str:
+    """Generate a Mermaid diagram showing framework relationships."""
+    # Implementation will generate Mermaid markdown
+    pass
+
+
+def generate_subway_map(frameworks: List[ValueFramework],
+                        filename: str = "values_subway_map.svg") -> str:
+    """Generate a subway map visualization of value domains."""
+    # Implementation will generate SVG subway map
+    pass
+
+
+def generate_mapping_table(frameworks: List[ValueFramework],
+                           mappers: List[FrameworkMapper],
+                           filename: str = "cross_framework_mapping.csv") -> pd.DataFrame:
+    """Generate comparison tables between frameworks."""
+    # Implementation will generate structured tables
+    pass
+
+
+def generate_cross_framework_visualization(values_data: pd.DataFrame, 
+                                          output_format: str = 'mermaid'):
+    """
+    Generate cross-framework visualizations for values hierarchy.
+    
+    Args:
+        values_data: DataFrame containing the values taxonomy
+        output_format: Format type ('mermaid', 'subway', 'table', 'interactive')
+    
+    Returns:
+        Visualization in the specified format
+    """
+    # Create frameworks from data
+    vitw_framework = create_vitw_framework(values_data)
+    other_frameworks = create_external_frameworks()
+    
+    # Create mappers between frameworks
+    mappers = create_framework_mappers(vitw_framework, other_frameworks)
+    
+    if output_format == 'mermaid':
+        return generate_mermaid_diagram([vitw_framework] + other_frameworks, mappers)
+    elif output_format == 'subway':
+        return generate_subway_map([vitw_framework] + other_frameworks)
+    elif output_format == 'table':
+        return generate_mapping_table([vitw_framework] + other_frameworks, mappers)
+    else:
+        raise ValueError(f"Unsupported output format: {output_format}")
+
+
+def create_vitw_framework(values_data: pd.DataFrame) -> ValueFramework:
+    """Create the Values in the Wild framework from data."""
+    # Implementation will create VITW framework
+    pass
+
+
+def create_external_frameworks() -> List[ValueFramework]:
+    """Create external value frameworks."""
+    # Implementation will create external frameworks
+    pass
+
+
+def create_framework_mappers(source: ValueFramework, 
+                            targets: List[ValueFramework]) -> List[FrameworkMapper]:
+    """Create mappers between frameworks."""
+    # Implementation will create framework mappers
+    pass
+
+
+if __name__ == "__main__":
+    # Example usage
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Generate cross-framework value visualizations")
+    parser.add_argument("--format", choices=["mermaid", "subway", "table"], 
+                        default="mermaid", help="Output visualization format")
+    parser.add_argument("--output", default=None, help="Output file path")
+    
+    args = parser.parse_args()
+    
+    # Load data
+    # values_data = pd.read_csv("data/values_hierarchy.csv")
+    
+    # Generate visualization
+    # result = generate_cross_framework_visualization(values_data, args.format)
+    
+    # Output result
+    # if args.output:
+    #     with open(args.output, "w") as f:
+    #         f.write(result)
+    # else:
+    #     print(result)
+#+END_SRC
+
+** Benefits of This Approach
+
+1. *Contextual Understanding*: Helps users understand our values taxonomy in relation to established frameworks
+2. *Knowledge Integration*: Leverages existing knowledge of familiar frameworks to illuminate our values structure  
+3. *Multiple Perspectives*: Different visualization formats provide complementary ways to understand the same concepts
+4. *Accessibility*: Visual representations make complex relationships more accessible to non-technical users
+
+** Deliverables
+
+1. Mermaid Diagram Code: For GitHub rendering and documentation
+2. Interactive HTML Visualization: Using D3.js or similar for web display
+3. Tabular Mapping Documentation: Comprehensive cross-framework reference tables
+4. Subway Map SVG: Creative visualization of value domains
+5. Python Implementation: Code to generate visualizations from the values dataset

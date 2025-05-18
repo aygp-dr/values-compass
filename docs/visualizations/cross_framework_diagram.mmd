@@ -1,0 +1,126 @@
+graph TD
+    %% Framework nodes
+    VIW["Values in the Wild"]
+    ROGET["Roget's Thesaurus"]
+    WN["WordNet"]
+    MFT["Moral Foundations Theory"]
+    HOF["Hofstede Cultural Dimensions"]
+    
+    %% Values for Values in the Wild
+    VIW_EP["Epistemic Values\n22.2%"]
+    VIW_SO["Social Values\n21.4%"]
+    VIW_PR["Practical Values\n31.4%"]
+    VIW_PT["Protective Values\n13.9%"]
+    VIW_PE["Personal Values\n11.1%"]
+    
+    VIW --> VIW_EP
+    VIW --> VIW_SO
+    VIW --> VIW_PR
+    VIW --> VIW_PT
+    VIW --> VIW_PE
+    
+    %% Values for Roget's Thesaurus
+    ROGET_INTELLECT["IV. INTELLECT"]
+    ROGET_VOLITION["V. VOLITION"]
+    ROGET_AFFECTIONS["VI. AFFECTIONS"]
+    
+    ROGET --> ROGET_INTELLECT
+    ROGET --> ROGET_VOLITION
+    ROGET --> ROGET_AFFECTIONS
+    
+    %% Values for WordNet
+    WN_COGNITION["noun.cognition"]
+    WN_ACT["noun.act"]
+    WN_FEELING["noun.feeling"]
+    WN_GROUP["noun.group"]
+    WN_ATTRIBUTE["noun.attribute"]
+    
+    WN --> WN_COGNITION
+    WN --> WN_ACT
+    WN --> WN_FEELING
+    WN --> WN_GROUP
+    WN --> WN_ATTRIBUTE
+    
+    %% Values for Moral Foundations Theory
+    MFT_CARE["Care/Harm"]
+    MFT_FAIRNESS["Fairness/Cheating"]
+    MFT_LOYALTY["Loyalty/Betrayal"]
+    MFT_AUTHORITY["Authority/Subversion"]
+    MFT_SANCTITY["Sanctity/Degradation"]
+    MFT_LIBERTY["Liberty/Oppression"]
+    
+    MFT --> MFT_CARE
+    MFT --> MFT_FAIRNESS
+    MFT --> MFT_LOYALTY
+    MFT --> MFT_AUTHORITY
+    MFT --> MFT_SANCTITY
+    MFT --> MFT_LIBERTY
+    
+    %% Values for Hofstede
+    HOF_UA["Uncertainty Avoidance"]
+    HOF_IC["Individualism/Collectivism"]
+    HOF_LT["Long-Term Orientation"]
+    HOF_MF["Masculinity/Femininity"]
+    HOF_PD["Power Distance"]
+    
+    HOF --> HOF_UA
+    HOF --> HOF_IC
+    HOF --> HOF_LT
+    HOF --> HOF_MF
+    HOF --> HOF_PD
+    
+    %% Cross-framework connections
+    VIW_EP -. "90%" .-> ROGET_INTELLECT
+    VIW_EP -. "80%" .-> WN_COGNITION
+    VIW_EP -.-> MFT_FAIRNESS
+    VIW_EP -.-> HOF_UA
+    
+    VIW_SO -. "90%" .-> ROGET_AFFECTIONS
+    VIW_SO -. "85%" .-> WN_GROUP
+    VIW_SO -. "80%" .-> MFT_CARE
+    VIW_SO -. "75%" .-> MFT_LOYALTY
+    VIW_SO -. "70%" .-> HOF_IC
+    
+    VIW_PR -. "80%" .-> ROGET_VOLITION
+    VIW_PR -. "85%" .-> WN_ACT
+    VIW_PR -. "70%" .-> MFT_AUTHORITY
+    VIW_PR -. "75%" .-> HOF_LT
+    VIW_PR -. "65%" .-> HOF_MF
+    
+    VIW_PT -.-> ROGET_VOLITION
+    VIW_PT -.-> WN_ATTRIBUTE
+    VIW_PT -. "85%" .-> MFT_SANCTITY
+    VIW_PT -. "75%" .-> MFT_CARE
+    VIW_PT -. "80%" .-> HOF_PD
+    VIW_PT -. "70%" .-> HOF_UA
+    
+    VIW_PE -.-> ROGET_AFFECTIONS
+    VIW_PE -. "85%" .-> WN_FEELING
+    VIW_PE -. "75%" .-> MFT_LIBERTY
+    VIW_PE -. "65%" .-> MFT_SANCTITY
+    VIW_PE -. "70%" .-> HOF_IC
+    
+    %% Style definitions
+    classDef vitw fill:#e6f3ff,stroke:#3182bd,stroke-width:2px
+    classDef roget fill:#e6f6e6,stroke:#31a354,stroke-width:2px
+    classDef wordnet fill:#fff7e6,stroke:#e6550d,stroke-width:2px
+    classDef mft fill:#f2f0f7,stroke:#756bb1,stroke-width:2px
+    classDef hofstede fill:#fee8c8,stroke:#e34a33,stroke-width:2px
+    
+    classDef vitwvalue fill:#e6f3ff,stroke:#3182bd
+    classDef rogetvalue fill:#e6f6e6,stroke:#31a354
+    classDef wordnetvalue fill:#fff7e6,stroke:#e6550d
+    classDef mftvalue fill:#f2f0f7,stroke:#756bb1
+    classDef hofstedevalue fill:#fee8c8,stroke:#e34a33
+    
+    class VIW vitw
+    class ROGET roget
+    class WN wordnet
+    class MFT mft
+    class HOF hofstede
+    
+    class VIW_EP,VIW_SO,VIW_PR,VIW_PT,VIW_PE vitwvalue
+    class ROGET_INTELLECT,ROGET_VOLITION,ROGET_AFFECTIONS rogetvalue
+    class WN_COGNITION,WN_ACT,WN_FEELING,WN_GROUP,WN_ATTRIBUTE wordnetvalue
+    class MFT_CARE,MFT_FAIRNESS,MFT_LOYALTY,MFT_AUTHORITY,MFT_SANCTITY,MFT_LIBERTY mftvalue
+    class HOF_UA,HOF_IC,HOF_LT,HOF_MF,HOF_PD hofstedevalue

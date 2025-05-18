@@ -25,7 +25,7 @@
 - *Goal*: Map and evaluate AI value systems across frameworks
 - Based on Anthropic's "Values in the Wild" taxonomy
 - 5 top-level categories, 26 mid-level, 266 individual values
-- [[file:images/value_categories.png]]
+- [[file:images/presentations/value_categories.png]]
 
 * Approach
 ** Cross-Framework Mapping
@@ -34,7 +34,7 @@
 - *Solution*: Multi-framework mapping approach
 #+BEGIN_CENTER
 #+ATTR_LATEX: :width 0.8\textwidth
-[[file:images/framework_mapping.png]]
+[[file:images/presentations/framework_mapping.png]]
 #+END_CENTER
 
 ** Dataset Exploration
@@ -80,9 +80,9 @@ def create_value_graph(values_df, level_column='level',
 
 #+BEGIN_EXPORT latex
 \begin{center}
-\includegraphics[width=0.45\textwidth]{images/value_hierarchy_sample.png}
+\includegraphics[width=0.45\textwidth]{images/presentations/value_hierarchy_sample.png}
 \hspace{0.05\textwidth}
-\includegraphics[width=0.45\textwidth]{images/subway_map_sample.png}
+\includegraphics[width=0.45\textwidth]{images/presentations/subway_map_sample.png}
 \end{center}
 #+END_EXPORT
 
@@ -118,7 +118,7 @@ Practical (31.4\%) & Act & Authority & VOLITION \\
 - Example: Dishonesty hierarchy visualization
 #+BEGIN_CENTER
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:images/dishonesty_hierarchy.png]]
+[[file:images/presentations/dishonesty_hierarchy.png]]
 #+END_CENTER
 
 * Applications and Future Work

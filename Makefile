@@ -2,7 +2,7 @@
 # Include the data processing targets
 include Makefile.data
 
-.PHONY: all setup clean test run lint lint-org lint-shell tangle-all download format deps org-pipeline org-tangle org-execute org-execute-block org-eval-file help validate
+.PHONY: all setup clean test run lint lint-org lint-shell tangle-all download format deps org-pipeline org-tangle org-execute org-execute-block org-eval-file help validate presentation.pdf github_repo_qr.svg github_repo_qr.png setup-presentation
 
 # Python command to use (using uv for better dependency isolation)
 PYTHON = uv run python
@@ -149,6 +149,23 @@ $(DATA_DIR)/value_similarities.txt: $(DATA_DIR)/top_values.csv
 values-transit-map:
 	cd docs/visualizations && pdflatex values_transit_map.tex
 
+# Generate QR code for GitHub repository in SVG format
+github_repo_qr.svg:
+	qrencode -l H -s 8 -t SVG -o $@ "https://github.com/aygp-dr/values-compass"
+
+# Generate QR code for GitHub repository in PNG format
+github_repo_qr.png:
+	qrencode -l H -s 8 -o $@ "https://github.com/aygp-dr/values-compass"
+
+# Install dependencies for presentation generation and viewing
+setup-presentation:
+	@echo "Installing presentation dependencies..."
+	@scripts/presentations/setup_presentation.sh
+
+# Generate PDF from presentation.org using Emacs and org-mode export
+presentation.pdf: presentation.org github_repo_qr.svg
+	$(EMACS) --batch --eval "(require 'org)" --file=$< --eval "(org-latex-export-to-pdf)" --kill
+
 # Format code
 format: .venv
 	. .venv/bin/activate && uv run ruff check --fix .
@@ -230,5 +247,9 @@ help:
 	@echo "  org-execute         - Execute the tangled scripts"
 	@echo "  org-execute-block   - Execute a specific code block by ID (BLOCK_ID=name)"
 	@echo "  org-eval-file       - Evaluate all code blocks in the org file"
+	@echo "  presentation.pdf   - Generate PDF from presentation.org"
+	@echo "  github_repo_qr.svg - Generate QR code for GitHub repo (SVG format)"
+	@echo "  github_repo_qr.png - Generate QR code for GitHub repo (PNG format)"
+	@echo "  setup-presentation - Install presentation dependencies (LaTeX, pdfpc, etc.)"
 	@echo ""
 	@echo "See 'make data-help' for dataset-specific targets"

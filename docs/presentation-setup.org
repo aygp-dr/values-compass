@@ -1,0 +1,77 @@
+#+TITLE: Presentation Setup Guide
+#+AUTHOR: aygp-dr
+#+DATE: 2025-05-18
+#+PROPERTY: header-args :mkdirp yes
+
+* Prerequisites
+
+To build and present the Values Compass presentation, you'll need:
+
+- Linux environment (tested on Ubuntu/Debian)
+- LaTeX with Beamer support
+- PDF presentation tools
+- QR code utilities
+
+* Automated Setup
+
+Run the automated setup script to install all required dependencies:
+
+#+begin_src bash
+make setup-presentation
+#+end_src
+
+This will install:
+- LaTeX packages for presentation (beamer class, etc.)
+- PDF presentation tool (pdfpc)
+- QR code generation and scanning tools
+- Additional LaTeX utilities (latexmk, latexdiff)
+
+* Building the Presentation
+
+Generate the presentation PDF:
+
+#+begin_src bash
+make presentation.pdf
+#+end_src
+
+This will:
+1. Generate the QR code for the GitHub repository
+2. Compile the presentation.org file using Emacs and org-mode
+3. Output the final presentation.pdf file
+
+* Presenting
+
+Present the PDF with pdfpc for presenter notes, timer, and dual-screen support:
+
+#+begin_src bash
+pdfpc presentation.pdf
+#+end_src
+
+* Manual Setup
+
+If you prefer to install dependencies manually:
+
+#+begin_src bash
+# Install LaTeX packages
+sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended \
+                        texlive-fonts-extra texlive-latex-recommended \
+                        texlive-publishers
+
+# Install PDF presentation tool
+sudo apt-get install -y pdfpc
+
+# Install QR code tools
+sudo apt-get install -y qrencode zbar-tools
+
+# Install additional LaTeX utilities
+sudo apt-get install -y latexdiff latexmk
+#+end_src
+
+* Troubleshooting
+
+If you encounter issues with the presentation:
+
+1. Verify LaTeX packages are installed: =dpkg -l | grep texlive=
+2. Check for Beamer class: =kpsewhich beamer.cls=
+3. Ensure QR code is generated: =make github_repo_qr.svg=
+4. Verify QR code scans correctly: =zbarimg github_repo_qr.png=

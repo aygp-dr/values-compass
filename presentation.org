@@ -1,0 +1,197 @@
+#+TITLE: Values-Compass: Mapping and Evaluating AI Value Systems
+#+AUTHOR: AI Values Analysis Project
+#+OPTIONS: toc:nil num:nil
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation, aspectratio=169]
+#+BEAMER_THEME: Frankfurt
+#+BEAMER_COLOR_THEME: seahorse
+#+BEAMER_FONT_THEME: structurebold
+#+BEAMER_HEADER: \setbeamertemplate{navigation symbols}{}
+#+BEAMER_HEADER: \setbeamertemplate{footline}[frame number]
+#+BEAMER_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Outline}\tableofcontents[currentsection]\end{frame}}
+
+# For code highlighting and better figure support
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \definecolor{codebg}{rgb}{0.95,0.95,0.95}
+#+LATEX_HEADER: \setminted{bgcolor=codebg,fontsize=\footnotesize,frame=single}
+#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \bibliographystyle{plainnat}
+#+LATEX_HEADER: \setbeamertemplate{bibliography item}[text]
+
+* Introduction
+** Values-Compass Project
+#+ATTR_BEAMER: :overlay <+->
+- *Goal*: Map and evaluate AI value systems across frameworks
+- Based on Anthropic's "Values in the Wild" taxonomy
+- 5 top-level categories, 26 mid-level, 266 individual values
+- [[file:images/value_categories.png]]
+
+* Approach
+** Cross-Framework Mapping
+#+ATTR_BEAMER: :overlay <+->
+- *Challenge*: Connect modern AI ethics to established frameworks
+- *Solution*: Multi-framework mapping approach
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:images/framework_mapping.png]]
+#+END_CENTER
+
+** Dataset Exploration
+#+ATTR_BEAMER: :overlay <+->
+- Analysis of 3,307+ values in the Anthropic dataset
+- Distribution across domains:
+  - Practical Values (31.4%)
+  - Epistemic Values (22.2%)
+  - Social Values (21.4%)
+  - Protective Values (13.9%)
+  - Personal Values (11.1%)
+
+* Technical Implementation
+** Python Implementation
+#+ATTR_BEAMER: :overlay <+->
+#+BEGIN_SRC python
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def create_value_graph(values_df, level_column='level', 
+                       parent_column='parent_cluster_id'):
+    """Create a network graph from values taxonomy."""
+    G = nx.DiGraph()
+    
+    for _, row in values_df.iterrows():
+        G.add_node(row['cluster_id'], 
+                  name=row['name'],
+                  level=row[level_column],
+                  pct=row['pct_total_occurrences'])
+        
+        if pd.notna(row[parent_column]):
+            G.add_edge(row[parent_column], row['cluster_id'])
+    
+    return G
+#+END_SRC
+
+** Visualization Approaches
+#+ATTR_BEAMER: :overlay <+->
+- Network diagrams show relational structure
+- Tabular mappings connect across frameworks
+- Subway map metaphor provides intuitive navigation
+
+#+BEGIN_EXPORT latex
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/value_hierarchy_sample.png}
+\hspace{0.05\textwidth}
+\includegraphics[width=0.45\textwidth]{images/subway_map_sample.png}
+\end{center}
+#+END_EXPORT
+
+* Results and Insights
+** Cross-Framework Alignments
+#+ATTR_BEAMER: :overlay <+->
+- *Key Discovery*: Strong alignment between frameworks despite terminology differences
+- Epistemic Values → WordNet Cognition (0.82 similarity)
+- Social Values → Moral Foundations Care/Loyalty (0.79 similarity)
+- Practical Values → Roget's VOLITION (0.77 similarity)
+
+#+BEGIN_EXPORT latex
+\begin{center}
+\small
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Values in the Wild} & \textbf{WordNet} & \textbf{Moral Foundations} & \textbf{Roget} \\
+\hline
+Epistemic (22.2\%) & Cognition & Fairness & INTELLECT \\
+Social (21.4\%) & Group/Person & Care/Loyalty & AFFECTIONS \\
+Practical (31.4\%) & Act & Authority & VOLITION \\
+\hline
+\end{tabular}
+\end{center}
+#+END_EXPORT
+
+** Anti-Values Analysis
+#+ATTR_BEAMER: :overlay <+->
+- Mathematical properties enforced for consistent taxonomies:
+  - Antisymmetry
+  - Transitivity
+  - Acyclicity
+- Example: Dishonesty hierarchy visualization
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:images/dishonesty_hierarchy.png]]
+#+END_CENTER
+
+* Applications and Future Work
+** Practical Applications
+#+ATTR_BEAMER: :overlay <+->
+- Value alignment in LLM evaluations
+- Cross-cultural AI ethics frameworks
+- Automated value detection in text
+
+** Next Steps
+#+ATTR_BEAMER: :overlay <+->
+- Expand to non-Western value frameworks
+- Develop automated tools for value detection
+- Create interactive visualization dashboard
+- Further mathematical formalization of the hierarchy
+
+* Conclusion
+** Key Takeaways
+#+ATTR_BEAMER: :overlay <+->
+- The Values-Compass project provides a robust framework for AI ethics evaluation
+- Cross-framework mapping connects modern AI ethics to established systems
+- Visualizations make complex value relationships accessible
+- Mathematical foundations ensure logical consistency
+
+** Thank You
+#+ATTR_BEAMER: :overlay <+->
+- GitHub: github.com/aygp-dr/values-compass
+- Scan for repository access:
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.3\textwidth
+[[file:github_repo_qr.svg]]
+#+END_CENTER
+
+- Questions?
+
+* References
+** References
+#+BEGIN_EXPORT latex
+\begin{thebibliography}{99}
+
+\bibitem[Anthropic, 2025]{anthropic2025}
+Anthropic (2025).
+\newblock Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions.
+\newblock \emph{Anthropic Research}.
+\newblock \url{https://www.anthropic.com/research/values-wild}
+
+\bibitem[Huang et al., 2025]{huang2025}
+Huang, S., et al. (2025).
+\newblock Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions.
+\newblock \emph{Research Paper}.
+\newblock \url{https://assets.anthropic.com/m/18d20cca3cde3503/original/Values-in-the-Wild-Paper.pdf}
+
+\bibitem[Schwartz, 2012]{schwartz2012}
+Schwartz, S. H. (2012).
+\newblock An Overview of the Schwartz Theory of Basic Values.
+\newblock \emph{Online Readings in Psychology and Culture, 2(1)}.
+\newblock \url{https://doi.org/10.9707/2307-0919.1116}
+
+\bibitem[Roget, 1879]{roget1879}
+Roget, P. M. (1879).
+\newblock Thesaurus of English Words and Phrases.
+\newblock \emph{London: Longmans, Green, and Co.}
+
+\bibitem[Miller, 1995]{miller1995}
+Miller, G. A. (1995).
+\newblock WordNet: A Lexical Database for English.
+\newblock \emph{Communications of the ACM, 38(11)}, 39-41.
+
+\bibitem[Haidt \& Graham, 2007]{haidt2007}
+Haidt, J., \& Graham, J. (2007).
+\newblock When Morality Opposes Justice: Conservatives Have Moral Intuitions that Liberals May Not Recognize.
+\newblock \emph{Social Justice Research, 20(1)}, 98-116.
+
+\end{thebibliography}
+#+END_EXPORT

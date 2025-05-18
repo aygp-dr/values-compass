@@ -105,4 +105,16 @@ scripts/top_20.py
 # Generated docs and analyses
 ORG-BABEL-SETUP.org
 
+# LaTeX intermediate files
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+# Make exception for specific PDF files we want to include
+!presentation.pdf
+
 tmp/

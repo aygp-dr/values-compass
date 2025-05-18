@@ -150,7 +150,7 @@ Practical (31.4\%) & Act & Authority & VOLITION \\
 
 #+BEGIN_CENTER
 #+ATTR_LATEX: :width 0.3\textwidth
-[[file:github_repo_qr.svg]]
+[[file:github_repo_qr.png]]
 #+END_CENTER
 
 - Questions?

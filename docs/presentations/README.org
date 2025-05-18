@@ -1,0 +1,78 @@
+#+TITLE: Values Compass Presentations
+#+AUTHOR: aygp-dr
+#+DATE: 2025-05-18
+#+PROPERTY: header-args :mkdirp yes
+
+* Presentation Materials
+
+This directory contains presentation materials for the Values Compass project.
+
+** Main Presentation
+
+The main presentation can be built from the root directory using:
+
+#+begin_src bash
+make presentation.pdf
+#+end_src
+
+The presentation covers:
+- Values Compass project overview
+- Cross-framework mapping approach
+- Technical implementation
+- Results and insights
+- Applications and future work
+
+** QR Code Generation
+
+QR codes for repository access are generated automatically as part of the presentation build. These can also be generated separately:
+
+#+begin_src bash
+# Generate SVG version
+make github_repo_qr.svg
+
+# Generate PNG version
+make github_repo_qr.png
+#+end_src
+
+** Environment Setup
+
+Before building the presentation, ensure you have the required dependencies:
+
+#+begin_src bash
+make setup-presentation
+#+end_src
+
+This will install:
+- LaTeX packages needed for beamer presentations
+- PDF presentation tools (pdfpc)
+- QR code generation tools
+
+** Presenting
+
+To present the PDF with presenter notes, use:
+
+#+begin_src bash
+pdfpc presentation.pdf
+#+end_src
+
+This provides a dual-screen view with timer, notes, and navigation controls.
+
+* Development Notes
+
+** Adding Images
+
+Place presentation images in the =images/presentations/= directory.
+
+** Custom Slide Themes
+
+The current presentation uses:
+- Beamer theme: Frankfurt
+- Color theme: seahorse
+- Font theme: structurebold
+
+To modify these settings, edit the header of =presentation.org=.
+
+** Related Documentation
+
+- [[file:../presentation-setup.org][Presentation Setup Guide]]
+- [[https://github.com/aygp-dr/values-compass][GitHub Repository]]

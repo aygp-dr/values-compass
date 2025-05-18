@@ -164,7 +164,7 @@ setup-presentation:
 
 # Generate PDF from presentation.org using Emacs and org-mode export
 presentation.pdf: presentation.org github_repo_qr.svg
-	$(EMACS) --batch --eval "(require 'org)" --file=$< --eval "(org-latex-export-to-pdf)" --kill
+	$(EMACS) --batch --load "scripts/presentations/setup_org_beamer.el" --file=$< --eval "(org-latex-export-to-pdf)" --kill
 
 # Format code
 format: .venv

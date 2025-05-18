@@ -114,6 +114,7 @@ ORG-BABEL-SETUP.org
 *.nav
 *.snm
 *.vrb
+_minted-*/
 # Make exception for specific PDF files we want to include
 !presentation.pdf
 

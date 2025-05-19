@@ -1,0 +1,160 @@
+{
+  "thesaurus_section": {
+    "section_number": "100",
+    "section_title": "Epistemic Values",
+    "section_description": "Values concerning how we acquire, organize, and validate knowledge through structured thinking, analytical precision, and methodical approaches. They emphasize intellectual rigor, logical consistency, and the advancement of understanding through systematic learning and development.",
+    
+    "categories": [
+      {
+        "category_number": "110",
+        "category_name": "Critical Thinking",
+        "category_description": "Values focusing on evaluative, analytical, and discerning approaches to knowledge and information processing.",
+        
+        "subcategories": [
+          {
+            "subcategory_number": "110a",
+            "subcategory_name": "Evidence-Based Reasoning",
+            "terms": {
+              "nouns": [
+                "evidence", "data", "facts", "empiricism", "verification",
+                "validation", "substantiation", "corroboration", "proof", "confirmation"
+              ],
+              "adjectives": [
+                "empirical", "evidence-based", "factual", "verifiable", "substantiated",
+                "proven", "validated", "confirmed", "corroborated", "demonstrable"
+              ],
+              "verbs": [
+                "verify", "validate", "substantiate", "corroborate", "confirm",
+                "evidence", "prove", "authenticate", "check", "demonstrate"
+              ],
+              "phrases": [
+                "empirical validation", "factual substantiation", "evidence-based conclusion",
+                "verified information", "data-supported reasoning", "validated findings"
+              ]
+            },
+            "cross_references": [
+              {"ref": "110c", "relationship": "see also", "name": "Empirical Evidence and Validation"},
+              {"ref": "130b", "relationship": "complementary", "name": "Accuracy and Truthfulness"}
+            ]
+          },
+          
+          {
+            "subcategory_number": "110b",
+            "subcategory_name": "Critical Thought and Discernment",
+            "terms": {
+              "nouns": [
+                "discernment", "discrimination", "judgment", "evaluation", "appraisal",
+                "assessment", "consideration", "reflection", "deliberation", "critique"
+              ],
+              "adjectives": [
+                "discerning", "discriminating", "critical", "evaluative", "judicious",
+                "reflective", "thoughtful", "analytical", "deliberative", "appraising"
+              ],
+              "verbs": [
+                "discern", "discriminate", "evaluate", "judge", "assess",
+                "appraise", "reflect", "deliberate", "consider", "critique"
+              ],
+              "phrases": [
+                "thoughtful consideration", "critical evaluation", "reflective judgment",
+                "discerning assessment", "careful appraisal", "judicious analysis"
+              ]
+            },
+            "cross_references": [
+              {"ref": "110i", "relationship": "see also", "name": "Methodical Critical Inquiry"},
+              {"ref": "110d", "relationship": "related to", "name": "Ethical and Philosophical Examination"}
+            ]
+          },
+
+          {
+            "subcategory_number": "110c",
+            "subcategory_name": "Empirical Evidence and Validation",
+            "terms": {
+              "nouns": [
+                "experimentation", "testing", "observation", "measurement", "verification",
+                "trial", "demonstration", "replication", "investigation", "confirmation"
+              ],
+              "adjectives": [
+                "empirical", "experimental", "observable", "measurable", "testable",
+                "verifiable", "demonstrable", "replicable", "confirmable", "investigative"
+              ],
+              "verbs": [
+                "experiment", "test", "observe", "measure", "verify",
+                "validate", "demonstrate", "replicate", "investigate", "confirm"
+              ],
+              "phrases": [
+                "empirical testing", "experimental validation", "observational evidence",
+                "measured outcomes", "replicated findings", "verified results"
+              ]
+            },
+            "cross_references": [
+              {"ref": "110a", "relationship": "related to", "name": "Evidence-Based Reasoning"},
+              {"ref": "150b", "relationship": "complementary", "name": "Sound Scientific Methodology"}
+            ]
+          }
+        ]
+      },
+      
+      {
+        "category_number": "120",
+        "category_name": "Clarity and Precision",
+        "category_description": "Values focused on precision, clarity, coherence, and accuracy across various domains including communication, intellectual work, and technical fields.",
+        
+        "subcategories": [
+          {
+            "subcategory_number": "120a",
+            "subcategory_name": "Communicative Clarity and Precision",
+            "terms": {
+              "nouns": [
+                "clarity", "precision", "articulation", "explicitness", "specificity",
+                "exactitude", "intelligibility", "comprehensibility", "lucidity", "perspicuity"
+              ],
+              "adjectives": [
+                "clear", "precise", "articulate", "explicit", "specific",
+                "exact", "intelligible", "comprehensible", "lucid", "perspicuous"
+              ],
+              "verbs": [
+                "clarify", "specify", "articulate", "explicate", "elucidate",
+                "express", "define", "detail", "explain", "delineate"
+              ],
+              "phrases": [
+                "clear communication", "precise articulation", "explicit explanation",
+                "specific details", "comprehensible expression", "lucid presentation"
+              ]
+            },
+            "cross_references": [
+              {"ref": "120e", "relationship": "related to", "name": "Linguistic Precision"},
+              {"ref": "120g", "relationship": "see also", "name": "Logical Coherence and Consistency"}
+            ]
+          },
+          
+          {
+            "subcategory_number": "120b",
+            "subcategory_name": "Analytical Rigor and Precision",
+            "terms": {
+              "nouns": [
+                "rigor", "thoroughness", "exactitude", "precision", "meticulousness",
+                "diligence", "carefulness", "accuracy", "scrupulousness", "fastidiousness"
+              ],
+              "adjectives": [
+                "rigorous", "thorough", "exact", "precise", "meticulous",
+                "diligent", "careful", "accurate", "scrupulous", "fastidious"
+              ],
+              "verbs": [
+                "analyze", "examine", "scrutinize", "investigate", "inspect",
+                "explore", "review", "study", "consider", "evaluate"
+              ],
+              "phrases": [
+                "rigorous analysis", "thorough examination", "precise investigation",
+                "meticulous review", "careful evaluation", "accurate assessment"
+              ]
+            },
+            "cross_references": [
+              {"ref": "150a", "relationship": "related to", "name": "Methodical Rigor"},
+              {"ref": "130d", "relationship": "complementary", "name": "Impartiality and Objectivity"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

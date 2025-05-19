@@ -1,0 +1,37 @@
+#+TITLE: Roget's Thesaurus Reference Images
+#+AUTHOR: aygp-dr
+#+DATE: <2025-05-19>
+
+* Reference Images
+
+** File 1: roget_thesaurus_1920_page26.jpg (Table of Contents)
+- Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/26/mode/2up
+- Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0038.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
+
+** File 2: roget_thesaurus_1920_page_example.jpg (Content Page Example)
+- Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/171/mode/2up
+- Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0183.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
+
+** File 3: roget_thesaurus_1920_page186.jpg (Additional Example Page)
+- Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/186/mode/2up
+- Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0199.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
+
+* Source Information
+Thesaurus of English words & phrases
+by Roget, Peter Mark, 1779-1869; Boyle, Andrew; Rhys, Ernest, 1859-1946; Innis, Mary Quayle (autograph); Innis, Harold Adams, 1894-1952 (association)
+
+- Publication date: 1920
+- Publisher: London : Toronto : J. M. Dent & Sons Ltd.
+- Collection: thomasfishercanadiana; thomasfisher; toronto; university_of_toronto
+- Contributor: Fisher - University of Toronto
+- Language: English
+
+Retrieved: May 19, 2025
+
+* Usage Notes
+These images are used for research and documentation purposes in the Values Compass project, specifically to reference the structure and organization of Roget's original thesaurus as inspiration for the Epistemic Values Thesaurus format.
+
+The references demonstrate:
+1. The hierarchical organization structure (Table of Contents)
+2. The presentation of related terms with cross-references
+3. The grouping of terms by semantic relationships rather than alphabetical order

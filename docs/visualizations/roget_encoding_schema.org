@@ -1,0 +1,135 @@
+#+TITLE: Roget-Style Encoding Schema for Values Taxonomy
+#+AUTHOR: aygp-dr
+#+DATE: <2025-05-19>
+#+PROPERTY: header-args :mkdirp yes
+
+* Overview
+
+This document describes a JSON schema for encoding values in a structure inspired by Roget's Thesaurus. The goal is to create a comprehensive, hierarchical organization of values that allows for efficient navigation, cross-referencing, and lookup.
+
+* Reference to Original Roget's Thesaurus
+
+The schema is inspired by the organizational principles found in Peter Mark Roget's original thesaurus (1920 edition), examples of which can be found in the reference images directory:
+
+- =roget_thesaurus_1920_page26.jpg= - Table of contents showing the hierarchical organization
+- =roget_thesaurus_1920_page_example.jpg= - Example content page showing detailed term organization
+- =roget_thesaurus_1920_page186.jpg= - Additional example showing cross-references and term groupings
+
+* Schema Structure
+
+The encoding schema follows a hierarchical organization:
+
+** Section Level
+Major category (e.g., "Epistemic Values")
+#+begin_src json
+{
+  "section_number": "100",
+  "section_title": "Epistemic Values",
+  "section_description": "Values concerning how we acquire, organize, and validate knowledge...",
+  "categories": [...]
+}
+#+end_src
+
+** Category Level
+Subdivision of a section (e.g., "Critical Thinking")
+#+begin_src json
+{
+  "category_number": "110",
+  "category_name": "Critical Thinking",
+  "category_description": "Values focusing on evaluative, analytical, and discerning approaches...",
+  "subcategories": [...]
+}
+#+end_src
+
+** Subcategory Level
+Specific concept within a category (e.g., "Evidence-Based Reasoning")
+#+begin_src json
+{
+  "subcategory_number": "110a",
+  "subcategory_name": "Evidence-Based Reasoning",
+  "terms": {...},
+  "cross_references": [...]
+}
+#+end_src
+
+** Terms Organization
+Words and phrases organized by part of speech:
+#+begin_src json
+{
+  "nouns": ["evidence", "data", "facts", "empiricism", "verification"...],
+  "adjectives": ["empirical", "evidence-based", "factual", "verifiable"...],
+  "verbs": ["verify", "validate", "substantiate", "corroborate"...],
+  "phrases": ["empirical validation", "factual substantiation"...]
+}
+#+end_src
+
+** Cross-References
+Links to related concepts with relationship types:
+#+begin_src json
+[
+  {"ref": "110c", "relationship": "see also", "name": "Empirical Evidence and Validation"},
+  {"ref": "130b", "relationship": "complementary", "name": "Accuracy and Truthfulness"}
+]
+#+end_src
+
+* Relationship Types
+- =see also= - Related concept
+- =contrast with= - Opposite or contrasting concept
+- =complementary= - Concept that works alongside
+- =related to= - General association
+
+* Example for Epistemic Values
+An example implementation of this schema can be found in the accompanying JSON file =epistemic_values_roget_style.json=, which includes:
+
+- Critical Thinking (with subcategories)
+- Clarity and Precision (with subcategories)
+
+Each subcategory contains carefully organized terms by part of speech, along with appropriate cross-references.
+
+* Key Differences from Modern Thesauri
+
+Modern thesauri typically focus primarily on synonyms, while this Roget-inspired approach:
+
+1. Organizes concepts hierarchically by semantic domain
+2. Includes words of different parts of speech
+3. Provides cross-references with relationship types
+4. Includes phrases in addition to single words
+5. Contains both conceptual categories and specific terms
+
+* Advantages for Values Taxonomy
+
+This approach offers several benefits for organizing value concepts:
+
+- Provides rich context for each value
+- Facilitates exploration of related values
+- Enables precise navigation through the value space
+- Supports both top-down browsing and specific term lookup
+- Creates a comprehensive framework that can accommodate additional values
+
+* Implementation Guidelines
+
+When implementing this schema:
+
+1. Maintain consistent numbering conventions for categories
+2. Ensure all cross-references are bidirectional
+3. Organize terms by frequency of usage or relevance
+4. Include approximately 8-12 terms per part of speech
+5. Balance breadth and depth in the hierarchy
+
+* Proposed Extensions for L1, L2, L3 Integration
+To integrate with the existing values hierarchy (L1, L2, L3 clusters):
+
+#+begin_src json
+{
+  "subcategory_number": "110a",
+  "subcategory_name": "Evidence-Based Reasoning",
+  "cluster_level": "L1",
+  "hierarchy_id": "ai_values:l1:XXXX-XXXX-XXXX",
+  "parent_clusters": [
+    {"level": "L2", "id": "ai_values:l2:XXXX-XXXX-XXXX", "name": "Critical Thinking"},
+    {"level": "L3", "id": "ai_values:l3:XXXX-XXXX-XXXX", "name": "Epistemic Values"}
+  ],
+  "terms": {...},
+  "cross_references": [...]
+}
+#+end_src

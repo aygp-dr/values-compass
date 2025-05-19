@@ -1,0 +1,106 @@
+{
+  "thesaurus_section": {
+    "section_number": "500",
+    "section_title": "Intellectual Values",
+    "section_description": "Values related to intellect, knowledge acquisition, rational thinking, and cognitive processes",
+    
+    "categories": [
+      {
+        "category_number": "510",
+        "category_name": "Critical Thinking",
+        "category_description": "Values associated with evaluative and analytical thought processes",
+        
+        "subcategories": [
+          {
+            "subcategory_number": "510a",
+            "subcategory_name": "Methodical Analysis",
+            "terms": {
+              "nouns": [
+                "analysis", "critique", "examination", "scrutiny", "assessment",
+                "evaluation", "inquiry", "investigation", "study", "review"
+              ],
+              "adjectives": [
+                "analytical", "critical", "discerning", "discriminating", "evaluative",
+                "investigative", "methodical", "penetrating", "rigorous", "thorough"
+              ],
+              "verbs": [
+                "analyze", "assess", "critique", "dissect", "evaluate",
+                "examine", "investigate", "review", "scrutinize", "study"
+              ],
+              "phrases": [
+                "methodical examination", "critical assessment", "thorough investigation",
+                "systematic analysis", "comprehensive review", "rigorous evaluation"
+              ]
+            },
+            "cross_references": [
+              {"ref": "520c", "relationship": "see also", "name": "Logic & Reasoning"},
+              {"ref": "550a", "relationship": "contrast with", "name": "Intuitive Thinking"}
+            ]
+          },
+          
+          {
+            "subcategory_number": "510b",
+            "subcategory_name": "Rational Skepticism",
+            "terms": {
+              "nouns": [
+                "skepticism", "doubt", "questioning", "verification", "scrutiny",
+                "incredulity", "disbelief", "suspicion", "challenge", "reservation"
+              ],
+              "adjectives": [
+                "skeptical", "questioning", "doubting", "doubtful", "critical",
+                "cautious", "suspicious", "wary", "uncertain", "unconvinced"
+              ],
+              "verbs": [
+                "doubt", "question", "challenge", "dispute", "scrutinize",
+                "distrust", "suspect", "query", "contest", "examine"
+              ],
+              "phrases": [
+                "healthy skepticism", "critical questioning", "rational doubt",
+                "reserved judgment", "cautious assessment", "intellectual suspicion"
+              ]
+            },
+            "cross_references": [
+              {"ref": "515a", "relationship": "see also", "name": "Evidence-Based Reasoning"},
+              {"ref": "560d", "relationship": "contrast with", "name": "Intellectual Trust"}
+            ]
+          }
+        ]
+      },
+      
+      {
+        "category_number": "520",
+        "category_name": "Intellectual Clarity",
+        "category_description": "Values concerning precise expression and understanding of ideas",
+        
+        "subcategories": [
+          {
+            "subcategory_number": "520a",
+            "subcategory_name": "Communicative Precision",
+            "terms": {
+              "nouns": [
+                "precision", "clarity", "exactitude", "articulation", "specificity",
+                "coherence", "definition", "distinctness", "explicitness", "lucidity"
+              ],
+              "adjectives": [
+                "precise", "clear", "explicit", "exact", "specific",
+                "articulate", "defined", "distinct", "lucid", "unambiguous"
+              ],
+              "verbs": [
+                "clarify", "define", "specify", "articulate", "express",
+                "formulate", "explicate", "elucidate", "delineate", "particularize"
+              ],
+              "phrases": [
+                "clear expression", "precise definition", "exact terminology",
+                "specific language", "unambiguous communication", "articulate presentation"
+              ]
+            },
+            "cross_references": [
+              {"ref": "525b", "relationship": "see also", "name": "Linguistic Precision"},
+              {"ref": "540a", "relationship": "complementary", "name": "Intellectual Integrity"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

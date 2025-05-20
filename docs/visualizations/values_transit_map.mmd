@@ -102,30 +102,29 @@ graph TB
     magoun --- ball(Chaos)
     ball --- medford(Entropy)
     
-    %% Line endpoint labels
-    asmnl -.- RL1[RL]
-    brntn -.- RL2[RL]
-    alfcl -.- RL3[RL]
-    ogmnl -.- OL1[OL]
-    forhl -.- OL2[OL]
-    wondl -.- BL1[BL]
-    bomnl -.- BL2[BL]
-    river -.- GLD[GL-D]
-    bcoll -.- GLB[GL-B]
-    clevelc -.- GLC[GL-C]
-    heath -.- GLE1[GL-E]
-    union -.- GLE2[GL-E]
-    medford -.- GLD2[GL-D]
+    %% Domain labels with dotted connections and grey styling
+    asmnl -..- Honesty1["HONESTY"]
+    brntn -..- Honesty2["HONESTY"]
+    alfcl -..- Honesty3["HONESTY"]
+    ogmnl -..- Fairness1["FAIRNESS"]
+    forhl -..- Fairness2["FAIRNESS"]
+    wondl -..- Clarity1["CLARITY"]
+    bomnl -..- Clarity2["CLARITY"]
+    river -..- Competence1["COMPETENCE"]
+    bcoll -..- Competence2["COMPETENCE"]
+    clevelc -..- Competence3["COMPETENCE"]
+    heath -..- Competence4["COMPETENCE"]
+    union -..- Competence5["COMPETENCE"]
+    medford -..- Competence6["COMPETENCE"]
     
-    %% Styling
+    %% Styling for stations
     classDef redLine fill:#E12D27,color:white;
     classDef orangeLine fill:#E87200,color:white;
     classDef blueLine fill:#2F5DA6,color:white;
     classDef greenLine fill:#00843D,color:white;
-    classDef redLabel fill:#E12D27,color:white,font-weight:bold;
-    classDef orangeLabel fill:#E87200,color:white,font-weight:bold;
-    classDef blueLabel fill:#2F5DA6,color:white,font-weight:bold;
-    classDef greenLabel fill:#00843D,color:white,font-weight:bold;
+    
+    %% New grey domain label style
+    classDef domainLabel fill:#555555,color:white,font-weight:bold,stroke:#333333,stroke-width:2,padding:10px,border-radius:5px;
     
     %% Apply styles to Red Line
     class alfcl,davis,portr,harsq,cntsq,knncl,chmnl redLine;
@@ -153,8 +152,5 @@ graph TB
     classDef transferStation fill:white,stroke:#000,stroke-width:2,color:black;
     class pktrm,dwnxg,state,gover,north,haecl transferStation;
     
-    %% Apply styles to line labels
-    class RL1,RL2,RL3 redLabel;
-    class OL1,OL2 orangeLabel;
-    class BL1,BL2 blueLabel;
-    class GLB,GLC,GLD,GLE1,GLE2,GLD2 greenLabel;
+    %% Apply domain label style
+    class Honesty1,Honesty2,Honesty3,Fairness1,Fairness2,Clarity1,Clarity2,Competence1,Competence2,Competence3,Competence4,Competence5,Competence6 domainLabel;

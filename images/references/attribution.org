@@ -4,17 +4,32 @@
 
 * Reference Images
 
-** File 1: roget_thesaurus_1920_page26.jpg (Table of Contents)
+** File 1: Table of Contents
 - Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/26/mode/2up
 - Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0038.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
 
-** File 2: roget_thesaurus_1920_page_example.jpg (Content Page Example)
+*** Thumbnail
+[[./small/roget_thesaurus_1920_page26_thumb.jpg]]
+
+*** [[./roget_thesaurus_1920_page26.jpg][Click for full-size image]]
+
+** File 2: Content Page Example
 - Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/171/mode/2up
 - Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0183.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
 
-** File 3: roget_thesaurus_1920_page186.jpg (Additional Example Page)
+*** Thumbnail
+[[./small/roget_thesaurus_1920_page_example_thumb.jpg]]
+
+*** [[./roget_thesaurus_1920_page_example.jpg][Click for full-size image]]
+
+** File 3: Additional Example Page
 - Original URL: https://archive.org/details/thesaurusofengli00roge_1/page/186/mode/2up
 - Image URL: https://ia803407.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/thesaurusofengli00roge_1/thesaurusofengli00roge_1_jp2.zip&file=thesaurusofengli00roge_1_jp2/thesaurusofengli00roge_1_0199.jp2&id=thesaurusofengli00roge_1&scale=4&rotate=0
+
+*** Thumbnail
+[[./small/roget_thesaurus_1920_page186_thumb.jpg]]
+
+*** [[./roget_thesaurus_1920_page186.jpg][Click for full-size image]]
 
 * Source Information
 Thesaurus of English words & phrases

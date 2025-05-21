@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "* Values Compass",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aygp-dr/values-compass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aygp-dr/values-compass/issues"
+  },
+  "homepage": "https://github.com/aygp-dr/values-compass#readme",
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.2",
+    "puppeteer": "^24.9.0"
+  }
+}

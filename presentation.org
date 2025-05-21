@@ -121,6 +121,31 @@ Practical (31.4\%) & Act & Authority & VOLITION \\
 [[file:images/presentations/dishonesty_hierarchy.png]]
 #+END_CENTER
 
+* Detailed Visualizations
+** AI Values Taxonomy Structure
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:images/presentations/ai_values_taxonomy_mermaid.png]]
+#+END_CENTER
+
+** AI Values Sunburst Hierarchy
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:images/presentations/ai_values_sunburst.png]]
+#+END_CENTER
+
+** Value Priority Heatmap
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:images/presentations/priority_level_heatmap.png]]
+#+END_CENTER
+
+** AI Values Taxonomy with Priorities
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:images/presentations/ai_values_taxonomy_with_priorities.png]]
+#+END_CENTER
+
 * Applications and Future Work
 ** Practical Applications
 #+ATTR_BEAMER: :overlay <+->

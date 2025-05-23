@@ -49,7 +49,7 @@ deps-nlp: deps
 # Project setup (creates virtual environment and installs dependencies)
 setup: .venv deps deps-nlp deps-data
 
-# Create shell with environment loaded
+# Create shell with environment loaded (useful for interactive development)
 shell:
 	@echo "Activating virtual environment..."
 	@bash -c "source scripts/activate.sh && exec bash"
@@ -64,7 +64,7 @@ clean:
 	find . -type d -name ".pytest_cache" -exec rm -rf {} +
 	find . -type d -name ".coverage" -exec rm -rf {} +
 
-# Extends the clean-all target from Makefile.data
+# Complete project cleanup including virtual environment (extends clean-all from Makefile.data)
 clean-all-project: clean
 	rm -rf .venv/
 	rm -rf .direnv/
@@ -104,7 +104,7 @@ lint-shell:
 		done; \
 	}
 
-# Tangle all org files
+# Extract code blocks from all org files (useful for literate programming workflow)
 tangle-all:
 	@echo "Tangling all org files..."
 	@for file in $(ORG_FILES); do \
@@ -176,7 +176,7 @@ format: .venv
 run: .venv
 	. .venv/bin/activate && $(PYTHON) -m values_explorer.main
 
-# Values Tree Analysis Pipeline
+# Complete analysis pipeline using org-mode literate programming approach
 org-pipeline: org-tangle org-execute
 
 # Tangle the org file to extract all code blocks

@@ -19,6 +19,12 @@ The Values Compass project enables deep exploration of Anthropic's values taxono
 - Automated clustering of values based on similarity
 - Priority classification based on occurrence frequency
 - Visual representations (sunburst, treemap, transit maps)
+- Anti-values analysis and negative pattern detection
+- Epistemic values thesaurus in Roget style format
+- Cross-framework mapping (Schwartz universal values, etc.)
+- Database-driven analysis with SQLite backend
+- Presentation generation tools for academic talks
+- Formal ontological structure building
 
 ** Dataset Structure
 
@@ -76,6 +82,17 @@ make run
 - ~make run~ :: Run the main module
 - ~make test~ :: Run tests
 - ~make data-help~ :: See available data commands
+
+*** Advanced Commands
+- ~make clean-all-project~ :: Complete cleanup including virtual environments
+- ~make shell~ :: Start interactive shell with environment loaded
+- ~make tangle-all~ :: Extract code from all org files
+- ~make org-pipeline~ :: Run complete analysis pipeline from org-mode files
+- ~make presentation.pdf~ :: Generate presentation PDF from presentation.org
+- ~make github_repo_qr.png~ :: Generate QR code for repository
+- ~make format~ :: Format all code using ruff, black, and isort
+- ~make lint~ :: Run all linters (Python, Org-mode, Shell)
+- ~make validate~ :: Run linting and tests (use before commits)
 
 ** Documentation
 

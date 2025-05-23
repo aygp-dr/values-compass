@@ -1,6 +1,5 @@
-import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-import numpy as np
+import matplotlib.pyplot as plt
 
 # Set the figure size and background color
 plt.figure(figsize=(16, 12), facecolor='white')
@@ -36,7 +35,7 @@ stations = {
         {'pos': (14, 1.2), 'name': 'Andrew'},
         {'pos': (14.5, 0.4), 'name': 'JFK/UMass'},
     ],
-    
+
     # Blue Line (East to West) - Keep all
     'blue': [
         {'pos': (20, 10), 'name': 'Wonderland'},
@@ -52,7 +51,7 @@ stations = {
         {'pos': (10, 3.2), 'name': 'Government Center'},
         {'pos': (9, 3.0), 'name': 'Bowdoin'},
     ],
-    
+
     # Green Line - D Branch + Northeast extension to Tufts
     'green': [
         # D Branch
@@ -78,7 +77,7 @@ stations = {
         {'pos': (15, 2.0), 'name': 'Union Square'},
         {'pos': (15.5, 1.7), 'name': 'Tufts'},
     ],
-    
+
     # Orange Line (North to South) - Ending at Forest Hills
     'orange': [
         {'pos': (10.3, 11.0), 'name': 'Oak Grove'},
@@ -123,52 +122,52 @@ terminals = {
 # Draw transit lines
 for line_color, line_stations in stations.items():
     # All lines are now simple
-    plt.plot([p['pos'][0] for p in line_stations], [p['pos'][1] for p in line_stations], 
+    plt.plot([p['pos'][0] for p in line_stations], [p['pos'][1] for p in line_stations],
             color=colors[line_color], linewidth=line_width, zorder=1, solid_capstyle='round')
 
 # Draw stations
 for line_color, line_stations in stations.items():
     for station in line_stations:
         x, y = station['pos']
-        
+
         # Regular stations - white circle with colored border
-        circle = plt.Circle((x, y), station_radius, facecolor='white', 
+        circle = plt.Circle((x, y), station_radius, facecolor='white',
                            edgecolor=colors[line_color], linewidth=1.5, zorder=2)
         ax.add_patch(circle)
-        
+
         # Add station name - adjust position based on location
         if line_color == 'blue' and x > 15:  # East side of Blue Line
-            plt.text(x + 0.3, y, station['name'], ha='left', va='center', 
+            plt.text(x + 0.3, y, station['name'], ha='left', va='center',
                     fontsize=8, fontweight='bold', zorder=4)
         elif line_color == 'red' and y < 0:  # Lower branches of Red Line
-            plt.text(x, y - 0.3, station['name'], ha='center', va='top', 
+            plt.text(x, y - 0.3, station['name'], ha='center', va='top',
                     fontsize=8, fontweight='bold', zorder=4)
         elif line_color == 'green' and x < 7:  # West branches of Green Line
-            plt.text(x, y + 0.3, station['name'], ha='center', va='bottom', 
+            plt.text(x, y + 0.3, station['name'], ha='center', va='bottom',
                     fontsize=8, fontweight='bold', zorder=4)
         elif line_color == 'green' and x > 12:  # Northeast extension of Green Line
-            plt.text(x + 0.3, y, station['name'], ha='left', va='center', 
+            plt.text(x + 0.3, y, station['name'], ha='left', va='center',
                     fontsize=8, fontweight='bold', zorder=4)
         elif line_color == 'orange':  # Orange Line
-            plt.text(x - 0.3, y, station['name'], ha='right', va='center', 
+            plt.text(x - 0.3, y, station['name'], ha='right', va='center',
                     fontsize=8, fontweight='bold', zorder=4)
         else:  # Default positioning
-            plt.text(x, y - 0.3, station['name'], ha='center', va='top', 
+            plt.text(x, y - 0.3, station['name'], ha='center', va='top',
                     fontsize=8, fontweight='bold', zorder=4)
 
 # Add terminal labels for each line
 for line_color, terminals_list in terminals.items():
     for terminal in terminals_list:
         x, y = terminal['pos']
-        
+
         # Create colored box for terminal label
-        rect = patches.Rectangle((x-0.3, y-0.2), 0.6, 0.4, 
-                                facecolor=colors[line_color], edgecolor='none', 
+        rect = patches.Rectangle((x-0.3, y-0.2), 0.6, 0.4,
+                                facecolor=colors[line_color], edgecolor='none',
                                 alpha=0.9, zorder=5)
         ax.add_patch(rect)
-        
+
         # Add terminal text
-        plt.text(x, y, terminal['name'], ha='center', va='center', 
+        plt.text(x, y, terminal['name'], ha='center', va='center',
                 fontsize=9, fontweight='bold', color='white', zorder=6)
 
 # Add MBTA logo
@@ -178,7 +177,7 @@ plt.text(2.5, 2.7, 'MBTA', ha='center', va='center', fontsize=16, fontweight='bo
 plt.text(2.5, 2.3, 'Boston', ha='center', va='center', fontsize=10)
 
 # Add title
-plt.text(4.5, 2.5, "Boston's MBTA Subway System", 
+plt.text(4.5, 2.5, "Boston's MBTA Subway System",
          fontsize=16, fontweight='bold')
 
 # Set the view limits

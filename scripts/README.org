@@ -28,11 +28,57 @@ This directory contains Python scripts for analyzing and visualizing the Anthrop
 - [[file:visualize_prioritized_clusters.py][visualize_prioritized_clusters.py]] :: Creates visualizations with priority information
 - [[file:ai_values_taxonomy_with_priorities.py][ai_values_taxonomy_with_priorities.py]] :: Enhanced taxonomy diagram with priorities
 
+** Database and Analysis Scripts
+
+- [[file:db_analysis.py][db_analysis.py]] :: Database analysis and statistics generation
+- [[file:setup_db.sh][setup_db.sh]] :: Database setup and initialization scripts
+- [[file:fix_db.py][fix_db.py]] :: Database repair and maintenance utilities
+- [[file:export.sh][export.sh]] :: Data export utilities and scripts
+- [[file:top_20.py][top_20.py]] :: Top 20 values analysis and extraction
+- [[file:plot_top_10.py][plot_top_10.py]] :: Top 10 values visualization generation
+- [[file:simple_top_values.py][simple_top_values.py]] :: Basic top values analysis without complex dependencies
+- [[file:value_similarity.py][value_similarity.py]] :: Value similarity calculations and analysis
+
+** Anti-Values Analysis
+
+- [[file:anti_value_clusters.py][anti_value_clusters.py]] :: Analysis of anti-values and negative patterns in the dataset
+
+** Epistemic Values Processing
+
+- [[file:create_epistemic_thesaurus.py][create_epistemic_thesaurus.py]] :: Creates Roget-style thesaurus for epistemic values
+- [[file:extract_epistemic_values.py][extract_epistemic_values.py]] :: Extracts epistemic values from the dataset
+- [[file:extract_epistemic_values_simple.py][extract_epistemic_values_simple.py]] :: Simplified epistemic values extraction
+
+** Cross-Framework Integration
+
+- [[file:cross_framework_visualization.py][cross_framework_visualization.py]] :: Visualizations across different value frameworks
+- [[file:schwartz_values_mapper.py][schwartz_values_mapper.py]] :: Maps values to Schwartz universal values framework
+
+** Clustering and Similarity Analysis
+
+- [[file:embedding_clusters.py][embedding_clusters.py]] :: Embedding-based clustering of values using NLP techniques
+- [[file:static_value_clusters.py][static_value_clusters.py]] :: Static clustering analysis without complex dependencies
+
+** Ontology and Formal Structure
+
+- [[file:build_values_ontology.py][build_values_ontology.py]] :: Builds formal ontological structure for values
+
 ** Visualization Scripts
 
 - [[file:generate_values_taxonomy_image.py][generate_values_taxonomy_image.py]] :: Generates static images of the taxonomy
 - [[file:values_transit_map.py][values_transit_map.py]] :: Creates a transit map representation of values
 - [[file:leventhal_map.py][leventhal_map.py]] :: Generates a Leventhal-style map for values
+
+** Utility Scripts
+
+- [[file:activate.sh][activate.sh]] :: Environment activation helper script
+- [[file:presentations/][presentations/]] :: Directory containing presentation generation scripts and tools
+
+*** Presentation Tools
+
+- [[file:presentations/setup_presentation.sh][presentations/setup_presentation.sh]] :: Sets up presentation dependencies (LaTeX, pdfpc, etc.)
+- [[file:presentations/setup_org_beamer.el][presentations/setup_org_beamer.el]] :: Emacs Lisp configuration for org-beamer presentations
+- [[file:presentations/prepare_presentation_images.sh][presentations/prepare_presentation_images.sh]] :: Prepares and optimizes images for presentations
 
 ** Usage Examples
 
@@ -44,6 +90,22 @@ uv run python scripts/ai_values_clusters.py
 
 # Create taxonomy lookup tables
 uv run python scripts/create_value_hierarchy_lookup.py
+
+# Simple top values analysis
+uv run python scripts/simple_top_values.py
+#+END_SRC
+
+*** Database Setup and Analysis
+
+#+BEGIN_SRC bash
+# Set up the database
+bash scripts/setup_db.sh
+
+# Run database analysis
+uv run python scripts/db_analysis.py
+
+# Generate top 20 values
+uv run python scripts/top_20.py
 #+END_SRC
 
 *** Priority Analysis
@@ -56,6 +118,26 @@ uv run python scripts/priority_classifier.py data/values_tree.csv
 uv run python scripts/analyze_ai_values_by_level.py
 #+END_SRC
 
+*** Epistemic Values Processing
+
+#+BEGIN_SRC bash
+# Extract epistemic values (simple version)
+uv run python scripts/extract_epistemic_values_simple.py
+
+# Create epistemic thesaurus
+uv run python scripts/create_epistemic_thesaurus.py
+#+END_SRC
+
+*** Clustering Analysis
+
+#+BEGIN_SRC bash
+# Static clustering without dependencies
+uv run python scripts/static_value_clusters.py
+
+# Embedding-based clustering (requires NLP dependencies)
+uv run python scripts/embedding_clusters.py
+#+END_SRC
+
 *** Generate Visualizations
 
 #+BEGIN_SRC bash
@@ -64,4 +146,20 @@ uv run python scripts/visualize_correct_hierarchy.py
 
 # Generate enhanced diagram with priorities
 uv run python scripts/ai_values_taxonomy_with_priorities.py
+
+# Generate static taxonomy image
+uv run python scripts/generate_values_taxonomy_image.py
+
+# Create transit map visualization
+uv run python scripts/values_transit_map.py
+#+END_SRC
+
+*** Cross-Framework Analysis
+
+#+BEGIN_SRC bash
+# Map to Schwartz values framework
+uv run python scripts/schwartz_values_mapper.py
+
+# Cross-framework visualizations
+uv run python scripts/cross_framework_visualization.py
 #+END_SRC

@@ -4,14 +4,14 @@ Schwartz Values to Values in the Wild Mapping Implementation.
 This module extends the cross-framework mapping to include
 Schwartz Values Survey data.
 """
-from typing import Dict, List, Tuple, Optional
-import pandas as pd
-import numpy as np
 import json
 
 from cross_framework_visualization import (
-    ValueFramework, ValueConcept, FrameworkMapper, 
-    generate_mermaid_diagram, generate_mapping_table
+    FrameworkMapper,
+    ValueConcept,
+    ValueFramework,
+    generate_mapping_table,
+    generate_mermaid_diagram,
 )
 
 
@@ -26,7 +26,7 @@ def create_schwartz_framework() -> ValueFramework:
         name="Schwartz Value Theory",
         description="Schwartz's theory of basic human values identifies ten motivationally distinct values"
     )
-    
+
     # Create the 10 basic values as ValueConcepts
     values = [
         ValueConcept(
@@ -46,7 +46,7 @@ def create_schwartz_framework() -> ValueFramework:
         ),
         ValueConcept(
             id="achievement",
-            name="Achievement", 
+            name="Achievement",
             description="Personal success through demonstrating competence according to social standards"
         ),
         ValueConcept(
@@ -80,11 +80,11 @@ def create_schwartz_framework() -> ValueFramework:
             description="Understanding, appreciation, tolerance, and protection for the welfare of all people"
         )
     ]
-    
+
     # Add values to the framework
     for value in values:
         schwartz.add_value(value)
-    
+
     return schwartz
 
 
@@ -100,13 +100,13 @@ def map_schwartz_to_vitw(vitw_framework: ValueFramework) -> FrameworkMapper:
     """
     # Create Schwartz framework
     schwartz_framework = create_schwartz_framework()
-    
+
     # Create mapper
     mapper = FrameworkMapper(
         source_framework=schwartz_framework,
         target_framework=vitw_framework
     )
-    
+
     # Define mappings with confidence scores
     # Format: source_id, target_id, confidence (0-1)
     mappings = [
@@ -114,56 +114,56 @@ def map_schwartz_to_vitw(vitw_framework: ValueFramework) -> FrameworkMapper:
         ("self_direction", "epistemic_autonomy", 0.9),
         ("self_direction", "personal_authenticity", 0.7),
         ("self_direction", "epistemic_curiosity", 0.6),
-        
+
         # Stimulation
         ("stimulation", "personal_growth", 0.8),
         ("stimulation", "epistemic_curiosity", 0.7),
         ("stimulation", "personal_creativity", 0.6),
-        
+
         # Hedonism
         ("hedonism", "personal_wellbeing", 0.9),
         ("hedonism", "personal_satisfaction", 0.8),
-        
+
         # Achievement
         ("achievement", "practical_excellence", 0.9),
         ("achievement", "personal_growth", 0.7),
         ("achievement", "practical_efficiency", 0.6),
-        
+
         # Power
         ("power", "social_influence", 0.8),
         ("power", "practical_impact", 0.7),
         ("power", "social_leadership", 0.6),
-        
+
         # Security
         ("security", "protective_stability", 0.9),
         ("security", "protective_safety", 0.8),
         ("security", "social_community", 0.6),
-        
+
         # Conformity
         ("conformity", "social_cohesion", 0.8),
         ("conformity", "protective_regulation", 0.7),
         ("conformity", "social_harmony", 0.7),
-        
+
         # Tradition
         ("tradition", "social_cultural", 0.9),
         ("tradition", "protective_continuity", 0.7),
-        
+
         # Benevolence
         ("benevolence", "social_care", 0.9),
         ("benevolence", "social_empathy", 0.8),
         ("benevolence", "social_community", 0.7),
-        
+
         # Universalism
         ("universalism", "epistemic_understanding", 0.8),
         ("universalism", "social_fairness", 0.8),
         ("universalism", "protective_sustainability", 0.7),
     ]
-    
+
     # Add mappings to the mapper
     for source_id, target_id, confidence in mappings:
         if source_id in schwartz_framework.values and target_id in vitw_framework.values:
             mapper.add_mapping(source_id, target_id, confidence)
-    
+
     return mapper
 
 
@@ -180,23 +180,23 @@ def export_schwartz_mapping(mapper: FrameworkMapper, filename: str = "schwartz_v
         "target_framework": mapper.target_framework.name,
         "mappings": {}
     }
-    
+
     for source_id, mappings in mapper.mappings.items():
         source_name = mapper.source_framework.values[source_id].name
         mapping_data["mappings"][source_name] = []
-        
+
         for target_id, confidence in mappings:
             target_name = mapper.target_framework.values[target_id].name
             mapping_data["mappings"][source_name].append({
                 "value": target_name,
                 "confidence": confidence
             })
-    
+
     with open(filename, 'w') as f:
         json.dump(mapping_data, f, indent=2)
 
 
-def visualize_schwartz_mapping(mapper: FrameworkMapper, 
+def visualize_schwartz_mapping(mapper: FrameworkMapper,
                               output_format: str = "mermaid",
                               output_file: str = None):
     """
@@ -208,17 +208,17 @@ def visualize_schwartz_mapping(mapper: FrameworkMapper,
         output_file: Output filename
     """
     frameworks = [mapper.source_framework, mapper.target_framework]
-    
+
     if output_format == "mermaid":
         if not output_file:
             output_file = "schwartz_vitw_diagram.mmd"
         return generate_mermaid_diagram(frameworks, [mapper], output_file)
-    
+
     elif output_format == "table":
         if not output_file:
             output_file = "schwartz_vitw_mapping.csv"
         return generate_mapping_table(frameworks, [mapper], output_file)
-    
+
     else:
         raise ValueError(f"Unsupported output format: {output_format}")
 
@@ -230,12 +230,12 @@ if __name__ == "__main__":
         name="Values in the Wild",
         description="Framework capturing values observed in technical communities"
     )
-    
+
     # Add some example values
     vitw_values = [
         ValueConcept(id="epistemic_autonomy", name="Epistemic Autonomy",
                    description="Freedom and independence in knowledge-seeking"),
-        ValueConcept(id="epistemic_curiosity", name="Epistemic Curiosity", 
+        ValueConcept(id="epistemic_curiosity", name="Epistemic Curiosity",
                    description="Desire to learn and explore"),
         ValueConcept(id="epistemic_understanding", name="Epistemic Understanding",
                    description="Deep comprehension of concepts"),
@@ -284,18 +284,18 @@ if __name__ == "__main__":
         ValueConcept(id="personal_satisfaction", name="Personal Satisfaction",
                    description="Fulfillment of desires")
     ]
-    
+
     for value in vitw_values:
         vitw.add_value(value)
-    
+
     # 2. Create mapper
     mapper = map_schwartz_to_vitw(vitw)
-    
+
     # 3. Export mapping
     export_schwartz_mapping(mapper, "docs/visualizations/schwartz_vitw_mapping.json")
-    
+
     # 4. Visualize mapping
-    visualize_schwartz_mapping(mapper, "mermaid", 
+    visualize_schwartz_mapping(mapper, "mermaid",
                               "docs/visualizations/schwartz_vitw_diagram.mmd")
     visualize_schwartz_mapping(mapper, "table",
                               "docs/visualizations/schwartz_vitw_mapping.csv")

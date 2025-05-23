@@ -16,11 +16,8 @@ import csv
 import json
 import os
 import sys
-from pathlib import Path
-from typing import Dict, List, Set, Tuple, Any, Optional
-import pandas as pd
-import networkx as nx
 from collections import defaultdict
+from typing import Any, Dict, List, Tuple
 
 from values_compass.structures.lattice import ValueLattice
 
@@ -45,7 +42,7 @@ def load_values_data(filepath: str) -> List[Dict[str, Any]]:
             if 'pct_convos' in row:
                 row['pct_convos'] = float(row['pct_convos'])
             values_data.append(row)
-    
+
     return values_data
 
 
@@ -60,21 +57,21 @@ def extract_antonym_pairs(values_data: List[Dict[str, Any]]) -> List[Tuple[str, 
         List of tuples (value, anti_value)
     """
     antonym_pairs = []
-    
+
     # Group values by root_value
     by_root = defaultdict(list)
     for entry in values_data:
         by_root[entry['root_value']].append(entry)
-    
+
     # Find value/anti-value pairs
     for root, entries in by_root.items():
         values = [e['value'] for e in entries if not e['is_anti_value']]
         anti_values = [e['value'] for e in entries if e['is_anti_value']]
-        
+
         for value in values:
             for anti_value in anti_values:
                 antonym_pairs.append((value, anti_value))
-    
+
     return antonym_pairs
 
 
@@ -92,13 +89,13 @@ def validate_galois_connection(lattice: ValueLattice, pair1: Tuple[str, str], pa
     """
     value1, anti_value1 = pair1
     value2, anti_value2 = pair2
-    
+
     # Check if the pairs form a Galois connection
     condition1 = lattice.is_less_than_or_equal(anti_value1, value2)
     condition2 = lattice.is_less_than_or_equal(value1, anti_value2)
-    
+
     is_galois = (condition1 == condition2)
-    
+
     return {
         "pair1": {"value": value1, "anti_value": anti_value1},
         "pair2": {"value": value2, "anti_value": anti_value2},
@@ -128,27 +125,27 @@ def validate_all_pairs(lattice: ValueLattice, antonym_pairs: List[Tuple[str, str
         },
         "pair_validations": []
     }
-    
+
     # Validate all combinations of pairs
     total_combinations = 0
     for i, pair1 in enumerate(antonym_pairs):
         for pair2 in antonym_pairs[i:]:
             total_combinations += 1
-            
+
             # Skip the same pair
             if pair1 == pair2:
                 continue
-            
+
             result = validate_galois_connection(lattice, pair1, pair2)
             validation_results["pair_validations"].append(result)
-            
+
             if result["is_galois_connection"]:
                 validation_results["summary"]["valid_galois_connections"] += 1
             else:
                 validation_results["summary"]["invalid_galois_connections"] += 1
-    
+
     validation_results["summary"]["total_pair_combinations"] = total_combinations
-    
+
     return validation_results
 
 
@@ -166,13 +163,13 @@ def generate_validation_report(values_data: List[Dict[str, Any]], taxonomy_path:
     """
     # Load the lattice structure
     lattice = ValueLattice(taxonomy_path)
-    
+
     # Extract value/anti-value pairs
     antonym_pairs = extract_antonym_pairs(values_data)
-    
+
     # Validate Galois connection properties
     validation_results = validate_all_pairs(lattice, antonym_pairs)
-    
+
     # Add metadata
     validation_report = {
         "metadata": {
@@ -186,11 +183,11 @@ def generate_validation_report(values_data: List[Dict[str, Any]], taxonomy_path:
         },
         "validation_results": validation_results
     }
-    
+
     # Save to JSON
     with open(output_path, 'w') as f:
         json.dump(validation_report, f, indent=2)
-    
+
     return validation_report
 
 
@@ -205,35 +202,35 @@ def parse_arguments() -> argparse.Namespace:
                         help='Path to formal taxonomy JSON file')
     parser.add_argument('--output', required=True,
                         help='Path to output validation report JSON file')
-    
+
     return parser.parse_args()
 
 
 def main() -> int:
     """Main execution function."""
     args = parse_arguments()
-    
+
     # Ensure input files exist
     if not os.path.exists(args.input):
         print(f"Error: Input file {args.input} does not exist")
         return 1
-    
+
     if not os.path.exists(args.taxonomy):
         print(f"Error: Taxonomy file {args.taxonomy} does not exist")
         return 1
-    
+
     # Ensure output directory exists
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
-    
+
     try:
         # Load values data
         values_data = load_values_data(args.input)
-        
+
         # Generate validation report
         report = generate_validation_report(values_data, args.taxonomy, args.output)
-        
+
         # Print summary
         print(f"Validation report created successfully and saved to {args.output}")
         print("\nSummary:")
@@ -243,9 +240,9 @@ def main() -> int:
         print(f"  Invalid Galois connections: {report['validation_results']['summary']['invalid_galois_connections']}")
         print(f"  Is lattice: {report['lattice_properties']['is_lattice']}")
         print(f"  Is complete lattice: {report['lattice_properties']['is_complete_lattice']}")
-        
+
         return 0
-    
+
     except Exception as e:
         print(f"Error: {str(e)}")
         import traceback

@@ -1,7 +1,6 @@
 """Helper utilities for working with the Values-in-the-Wild dataset."""
 import json
 import os
-from typing import Dict, List, Optional
 
 
 def save_json(data, filepath: str):
@@ -13,7 +12,7 @@ def save_json(data, filepath: str):
         filepath: Path to save file
     """
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    
+
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
 

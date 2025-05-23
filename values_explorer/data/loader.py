@@ -1,6 +1,7 @@
 """Data loading utilities for the Values-in-the-Wild dataset."""
+from typing import Dict, Optional
+
 from datasets import load_dataset
-from typing import Dict, Optional, Union
 
 
 def load_values_dataset(config: str = "values_tree", split: str = "train") -> Dict:

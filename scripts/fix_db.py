@@ -3,8 +3,8 @@
 Fix the values database by creating properly typed views.
 """
 
-import sqlite3
 import os
+import sqlite3
 
 # Connect to the database
 db_path = os.path.join('data', 'values.db')

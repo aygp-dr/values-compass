@@ -62,6 +62,14 @@ The following texts engage with the value clusters identified above through pers
     - Explores evolution of cooperation and related values from mathematical perspective
     - Relevant to values: cooperation, altruism, fairness, reciprocity
 
+*** Jonathan Haidt: *The Righteous Mind* (2012)
+    - Develops Moral Foundations Theory identifying six fundamental moral intuitions
+    - Relevant to values: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, sanctity/degradation, liberty/oppression
+
+*** Geert Hofstede: *Culture's Consequences* (1980)
+    - Establishes framework for understanding cultural values across dimensions
+    - Relevant to values: power distance, individualism/collectivism, uncertainty avoidance, masculinity/femininity
+
 ** Epistemology (Truth, Knowledge, Transparency)
 
 *** Thomas Kuhn: *The Structure of Scientific Revolutions* (1962)
@@ -185,6 +193,31 @@ The following texts engage with the value clusters identified above through pers
      - https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf
      - System card for Claude 4 models with training and value alignment details
      - Relevant to values: constitutional AI, value implementation, safety assessments
+
+*** AI Alignment and Constitutional AI Papers
+
+**** Bai et al.: /Constitutional AI: Harmlessness from AI Feedback/ (2022)
+     - https://arxiv.org/abs/2212.08073
+     - Introduces Constitutional AI method for training harmless AI assistants
+     - Relevant to values: AI safety, value alignment through principles, self-supervision
+
+**** Bowman et al.: /Measuring Progress on Scalable Oversight for Large Language Models/ (2022)
+     - https://arxiv.org/abs/2211.03540
+     - Methods for evaluating AI alignment and oversight at scale
+     - Relevant to values: alignment verification, scalable oversight, value measurement
+
+**** Stuart Russell: *Human Compatible: AI and the Problem of Control* (2019)
+     - Comprehensive treatment of AI alignment problem and value learning
+     - Relevant to values: value alignment, inverse reward design, beneficial AI
+
+**** Nick Bostrom: *Superintelligence: Paths, Dangers, Strategies* (2014)
+     - Foundational text on AI safety and alignment challenges
+     - Relevant to values: long-term AI safety, value loading, coherent extrapolated volition
+
+**** Christiano et al.: /Deep Reinforcement Learning from Human Preferences/ (2017)
+     - https://arxiv.org/abs/1706.03741
+     - RLHF methodology that underlies modern AI alignment approaches
+     - Relevant to values: learning from human feedback, preference modeling, value specification
 
 * Further Exploration
 

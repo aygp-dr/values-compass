@@ -76,6 +76,7 @@ data/downloads/
 notebooks/images/
 *.pkl
 sql/
+docs/papers/
 
 # Emacs temp files
 .#*

@@ -121,6 +121,16 @@ download:
 	@curl -s -o $(DATA_DIR)/values_frequencies.csv https://huggingface.co/datasets/Anthropic/values-in-the-wild/raw/main/values_frequencies.csv
 	@echo "Download complete."
 
+# Download Claude model cards
+download-claude-model-cards:
+	@mkdir -p docs/papers
+	@echo "Downloading Claude 3 Model Card..."
+	@curl -s -L -o docs/papers/claude-3-model-card.pdf https://assets.anthropic.com/m/61e7d27f8c8f5919/original/Claude-3-Model-Card.pdf
+	@echo "✓ Claude 3 Model Card downloaded to docs/papers/claude-3-model-card.pdf"
+	@echo "Downloading Claude 4 System Card..."
+	@curl -s -L -o docs/papers/claude-4-system-card.pdf https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf
+	@echo "✓ Claude 4 System Card downloaded to docs/papers/claude-4-system-card.pdf"
+
 # Generate top values CSV from values_frequencies.csv
 $(DATA_DIR)/top_values.csv: $(DATA_DIR)/values_frequencies.csv
 	@echo "Generating top values CSV..."
@@ -238,6 +248,7 @@ help:
 	@echo "  lint-shell          - Run ShellCheck on shell scripts"
 	@echo "  format              - Format code"
 	@echo "  download            - Download all data files"
+	@echo "  download-claude-model-cards - Download Claude 3 and Claude 4 model cards"
 	@echo "  tangle-all          - Tangle all org files"
 	@echo "  run                 - Run the main application"
 	@echo ""

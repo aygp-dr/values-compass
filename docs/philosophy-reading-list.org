@@ -162,6 +162,30 @@ The following texts engage with the value clusters identified above through pers
     - Critique of representational theories of knowledge and defense of pragmatism
     - Relevant to values: epistemic humility, intellectual honesty, clarity
 
+** AI and Values Research
+
+*** Contemporary Articles on AI Values and Alignment
+
+**** Daily Nous: /Philosophers and Anthropic's Claude/ (2025)
+     - https://dailynous.com/2025/05/28/philosophers-and-anthropics-claude/
+     - Discusses philosophical contributions to AI development and value alignment
+     - Relevant to values: AI ethics, philosophical methodology, value specification
+
+**** arXiv: /Evaluating Value Alignment/ (2024)
+     - https://arxiv.org/abs/2401.05566
+     - Technical paper on measuring and evaluating value alignment in AI systems
+     - Relevant to values: value measurement, alignment metrics, empirical ethics
+
+**** Anthropic: /Claude 3 Model Card - The Claude 3 Model Family: Opus, Sonnet, Haiku/ (2024)
+     - https://assets.anthropic.com/m/61e7d27f8c8f5919/original/Claude-3-Model-Card.pdf
+     - Technical documentation on Claude 3 family models and their capabilities
+     - Relevant to values: AI safety, benchmark evaluations, multilingual capabilities
+
+**** Anthropic: /Claude Opus 4 & Claude Sonnet 4 System Card/ (2025)
+     - https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf
+     - System card for Claude 4 models with training and value alignment details
+     - Relevant to values: constitutional AI, value implementation, safety assessments
+
 * Further Exploration
 
 The values dataset suggests a philosophical tension between:
